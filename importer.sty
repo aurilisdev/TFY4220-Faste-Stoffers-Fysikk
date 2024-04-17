@@ -1,0 +1,59 @@
+% --- Template av Sebastian Siljuholtet Johansen ---
+% Oppdatert 08.04.2024
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{importer}[2024/03/14 Importer]
+
+\usepackage{graphicx} % Må ha for bilder
+\usepackage{float}
+\usepackage[norsk]{babel} % Norsk
+\usepackage[norwegian=guillemets]{csquotes}
+\usepackage{import} % For å kunne ha underdokument
+\usepackage{pgfplots}
+\pgfplotsset{width=4cm,compat=1.9}
+\usepgfplotslibrary{fillbetween}
+\usepackage{enumitem}   
+
+
+% --- Custom Commands ---
+\newcommand{\subsubsubsection}[1]{\paragraph{#1}\mbox{}\\}
+\setcounter{tocdepth}{4}
+\newcommand{\twomatrix}[4]{\begin{pmatrix} #1 & #2 \\ #3 & #4 \end{pmatrix}}
+\newcommand{\threematrix}[9]{\begin{pmatrix} #1 & #2 & #3 \\ #4 & #5 & #6 \\ #7 & #8 & #9 \end{pmatrix}}
+\newcommand{\twodiag}[2]{\twomatrix{#1}{0}{0}{#2}}
+\newcommand{\threediag}[3]{\threematrix{#1}{0}{0}{0}{#2}{0}{0}{0}{#3}}
+\newcommand{\fourdiag}[4]{\begin{pmatrix} #1 & 0 & 0 & 0 \\ 0 & #2 & 0 & 0 \\ 0 & 0 & #3 & 0 \\ 0 & 0 & 0 & #4 \end{pmatrix}}
+\newcommand{\twovec}[2]{\left(\!\!{\scriptsize\begin{array}{c}#1\\#2\end{array}}\!\!\right)}
+\newcommand{\threevec}[2]{\left(\!\!{\scriptsize\begin{array}{c}#1\\#2\end{array}}\!\!\right)}
+\newcommand{\fourvec}[2]{\left(\!\!{\scriptsize\begin{array}{c}#1\\#2\end{array}}\!\!\right)}
+\newcommand\tab[1][1cm]{\hspace*{#1}}
+\newcommand*{\defeq}{\stackrel{\text{def}}{=}}
+\newcommand{\eqexplain}[1]{  \tab[0.3cm] \leftarrow \tab[0.3cm] \text{\scriptsize{#1}}}
+% Spesialiserte bunn- og topp tekst
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\usepackage[colorlinks=true, allcolors=blue]{hyperref}
+\renewcommand{\headrulewidth}{0.5pt}
+\renewcommand{\footrulewidth}{0.5pt}
+\fancyfoot[C]{\thepage}
+\fancyheadoffset{0pt} % Juster disse verdiene etter behov
+\fancyfootoffset{0pt} % Juster disse verdiene etter behov
+\fancyhead[LE, RO]{\scriptsize \slshape \rightmark} %% Section number and title.
+\fancyhead[RE, LO]{\scriptsize \slshape \leftmark} %% Chapter number and title.
+
+% --- Sideinnstillinger ---
+\usepackage[a4paper, total={170mm, 245mm, footskip = 14mm}]{geometry}
+\setlength{\parindent}{0em}
+\setlength{\parskip}{0.8em}
+
+% --- Mattematikk og fysikk ---
+\usepackage{siunitx}    % Si enheter
+\usepackage{bm}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{slashed}
+\usepackage{braket}
+\usepackage[compat=1.1.0]{tikz-feynman}
+\usepackage{feynmp-auto}
+\usepackage{leftindex}
+\usepackage{feyn}
