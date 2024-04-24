@@ -20,6 +20,62 @@ Skrevet av studenter. Notater er tatt under forelesningene i TFY4220 Faste Stoff
 
 \newpage
 \section{Kapittel I: }
+Hvordan atomer er ordnet kalles for \enquote{struktur}. Denne strukturen bestemmer egneskapene til et materiale. Altså hvordan det oppfører seg.
+
+Vi diskuterer to slike typer av krystallinske materialer:
+\begin{itemize}
+    \item Amorfisk (glass, væsker, ...): som betyr tilfeldig.
+    \item Krystallinske: som betyr periodisk i rom (i realiteten finnes det defekter).
+\end{itemize}
+Av disse krystallinske materialene har vi to typer:
+\begin{itemize}
+    \item Enkeltkrystaller: Som betyr at de har en uniform struktur.
+    \item Polykrystaller: Disse er bygd opp av flere ulike periodiske strukturer i et materiale. På en måte en slags kobling av flere enkeltkrystaller. Hver enkelt av disse delene kalles for ulike korn. 
+\end{itemize}
+En tegning av disse er:
+\begin{figure}
+    \centering
+    \includegraphics[width=0.5\linewidth]{bilder/enkelt_poly_krystaller.png}
+    \caption{Enkelt krystall(over) og poly-krystall(under)}
+    \label{fig:enkelt_poly_krystaller}
+\end{figure}
+I disse enkeltkrystallene har vi en eller annen translasjonell symmetri i domenet deres. Slik som en rotasjon, en speiling eller rene translasjoner.
+\subsection{Bravais Gitter}
+Et slikt gitter er bygd opp av en uendelig mengde med punkter som ser likt ut fra hvert eneste punkt. I en viss dimensjon d kan vi definere ethvert slikt punkt som:
+\begin{align*}
+    \vec{R} = \sum_{i} n_i \vec{a}_i
+\end{align*}
+I 2 dimensjoner finnes det kun 5 gyldige Bravais-gittere som alle er repeterende versjoner av 5 ulike figurer. Disse er repeterende firkant-, rektangulært-, heksagonalt-, sentrert-rektangulært og skråmønstere. Videre finnes det i 3 dimensjoner:
+\begin{itemize}
+    \item Triklinisk: $a\ne b\ne c$, $\alpha \ne \beta \ne \gamma \ne 90$ = 3D prisme
+    \item Monoklinisk: $a \ne b \ne c$, $\beta \ne 90$, $\alpha = \gamma = 90$
+    \item Ortorombisk: $a \ne b \ne c$, $\alpha = \beta = \gamma = 90$
+    \item Tetragonalt: $a = b \ne c$, $\alpha = \beta = \gamma = 90$
+    \item Kubisk: $a = b = c$, $\alpha = \beta = \gamma$. Dette er det vi vil se på.
+\end{itemize}
+Totalt finnes det 14 stykker av disse.
+\subsubsection{Kubiske systemer}
+Det finnes flere forskjellige kubiske systemer. Det er tre stykker vi ser på her. Disse kan tegnes som under \cite{kubiske_systemer}:
+\begin{figure}[h!]
+  \centering
+  \begin{subfigure}{0.3\textwidth}
+    \includegraphics[width=\linewidth]{bilder/enkelt_kubisk.png}
+    \caption{Enkelt kubisk}
+    \label{fig:enkelt_kubisk}
+  \end{subfigure}
+  \begin{subfigure}{0.3\textwidth}
+    \includegraphics[width=\linewidth]{bilder/romsentert_kubisk.png}
+    \caption{Romsentrert kubisk}
+    \label{fig:romsentert_kubisk}
+  \end{subfigure}
+  \begin{subfigure}{0.3\textwidth}
+    \includegraphics[width=\linewidth]{bilder/flatesentrert_kubisk.png}
+    \caption{Flatesentrert kubisk}
+    \label{fig:flatesentrert_kubisk}
+  \end{subfigure}
+  \caption{Forskjellige typer kubiske systemer}
+  \label{fig:kubiske_interpolasjoner}
+\end{figure}
 \newpage
 \section{Kapittel II: }
 \newpage
@@ -467,5 +523,8 @@ Hvor her $\mu$ er den reduserte massen til elektronet og hullets effektive masse
   \label{fig:kvantepunktstoff}
 \end{figure}
 
+
+\newpage
+\printbibliography
 
 \end{document}

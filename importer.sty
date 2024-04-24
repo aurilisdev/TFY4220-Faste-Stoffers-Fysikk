@@ -1,9 +1,10 @@
 % --- Template av Sebastian Siljuholtet Johansen ---
-% Oppdatert 08.04.2024
+% Oppdatert 28.04.2024
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesPackage{importer}[2024/03/14 Importer]
 
 \usepackage{graphicx} % Må ha for bilder
+\usepackage{subcaption}
 \usepackage{float}
 \usepackage[norsk]{babel} % Norsk
 \usepackage[norwegian=guillemets]{csquotes}
@@ -12,7 +13,6 @@
 \pgfplotsset{width=4cm,compat=1.9}
 \usepgfplotslibrary{fillbetween}
 \usepackage{enumitem}   
-
 
 % --- Custom Commands ---
 \newcommand{\subsubsubsection}[1]{\paragraph{#1}\mbox{}\\}
