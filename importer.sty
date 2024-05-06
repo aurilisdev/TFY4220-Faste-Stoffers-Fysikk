@@ -1,7 +1,7 @@
 % --- Template av Sebastian Siljuholtet Johansen ---
-% Oppdatert 29.04.2024
+% Oppdatert 06.05.2024
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesPackage{importer}[2024/03/14 Importer]
+\ProvidesPackage{importer}[2024/05/06 Importer]
 
 \usepackage{graphicx} % Må ha for bilder
 \usepackage{subcaption}
@@ -11,6 +11,7 @@
 \usepackage{import} % For å kunne ha underdokument
 \usepackage{pgfplots}
 \usepackage{wrapfig}
+\usepackage{adjustbox}
 
 \pgfplotsset{width=4cm,compat=1.9}
 \usepgfplotslibrary{fillbetween}
@@ -29,7 +30,17 @@
 \newcommand{\fourvec}[2]{\left(\!\!{\scriptsize\begin{array}{c}#1\\#2\end{array}}\!\!\right)}
 \newcommand\tab[1][1cm]{\hspace*{#1}}
 \newcommand*{\defeq}{\stackrel{\text{def}}{=}}
-\newcommand{\eqexplain}[1]{  \tab[0.3cm] \leftarrow \tab[0.3cm] \text{\scriptsize{#1}}}
+\newcommand{\eqexplain}[1]{\tab[0.3cm] \leftarrow \tab[0.3cm] \text{\scriptsize{#1}}}
+% Fornorskede latex kommandoer
+\newcommand{\oving}[1]{\section{Øving #1}}
+\newcommand{\oppgave}[1]{\subsection{Oppgave #1:}}
+\newcommand{\deloppgave}[1]{\subsubsection{Deloppgave #1)}}
+\newcommand{\kapittel}[1]{\section{#1}}
+\newcommand{\delkapittel}[1]{\subsection{#1}}
+\newcommand{\seksjon}[1]{\subsubsection{#1}}
+\newcommand{\delseksjon}[1]{\subsubsubsection{#1}}
+\newcommand{\nyside}{\newpage}
+
 % Spesialiserte bunn- og topp tekst
 \usepackage{fancyhdr}
 \pagestyle{fancy}

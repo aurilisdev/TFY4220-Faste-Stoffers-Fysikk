@@ -12,14 +12,14 @@
 
 \maketitle
 
-\newpage
+\nyside
 \section*{Ingress}
 Skrevet av studenter. Notater er tatt under forelesningene i TFY4220 Faste Stoffers Fysikk av Dag Werner Breiby. I tillegg har visse deler blitt utdypet og ekstra forklaringer har blitt lagt til visse deler.
-\newpage
+\nyside
 \tableofcontents
 
-\newpage
-\section{Kapittel I: }
+\nyside
+\kapittel{Kapittel I: }
 Hvordan atomer er ordnet kalles for \enquote{struktur}. Denne strukturen bestemmer egneskapene til et materiale. Altså hvordan det oppfører seg.
 
 Vi diskuterer to slike typer av krystallinske materialer:
@@ -40,7 +40,7 @@ En tegning av disse er:
     \label{fig:enkelt_poly_krystaller}
 \end{figure}
 I disse enkeltkrystallene har vi en eller annen translasjonell symmetri i domenet deres. Slik som en rotasjon, en speiling eller rene translasjoner.
-\subsection{Bravais Gitter}
+\delkapittel{Bravais Gitter}
 Et slikt gitter er bygd opp av en uendelig mengde med punkter som ser likt ut fra hvert eneste punkt. I en viss dimensjon d kan vi definere ethvert slikt punkt som:
 \begin{align*}
     \vec{R} = \sum_{i} n_i \vec{a}_i
@@ -54,7 +54,7 @@ I 2 dimensjoner finnes det kun 5 gyldige Bravais-gittere som alle er repeterende
     \item Kubisk: $a = b = c$, $\alpha = \beta = \gamma$. Dette er det vi vil se på.
 \end{itemize}
 Totalt finnes det 14 stykker av disse.
-\subsubsection{Kubiske systemer}
+\seksjon{Kubiske systemer}
 Det finnes tre forskjellige kubiske systemer. Disse kan tegnes som under \cite{kubiske_systemer}:
 \begin{figure}[H]
   \centering
@@ -76,11 +76,11 @@ Det finnes tre forskjellige kubiske systemer. Disse kan tegnes som under \cite{k
   \caption{Forskjellige typer kubiske systemer}
   \label{fig:kubiske_interpolasjoner}
 \end{figure}
-\subsubsection{Enhetsceller}
+\seksjon{Enhetsceller}
 Enhetsceller er byggeblokker. De kan for eksempel være prismer. De er da parameterisert av 6 tall. De tre lengdene som skaper et prisme og vinklene mellom den. Vi kaller en slik enhetscelle som kun inneholder ett Bravais-gitterpunkt for en primitiv enhetscelle. En enhetscelle har også som et krav at de må fylle alt av rommet nøyaktig hvis de blir flyttet og kopiert over alt rundt på Bravais-gitteret.
-\subsubsection{Wigner-Seiz-celle}
+\seksjon{Wigner-Seiz-celle}
 Et spesifikt valg av en slik enhetscelle er den hvor cellen er definert som alt volumet rundt et gitterpunkt som er nærmere det punktet enn alle de andre punktene. I et 2-dimensjonalt-firkantgitter vil disse enhetscellene kun bli en firkant rundt punktet med like lengder som firkantgitteret.
-\subsubsection{Basis}
+\seksjon{Basis}
 Alle krystallstrukturer kan bli uttrykt som konvolusjonen mellom et Bravais-gitter med en \enquote{basis}. For eksempel ville vi kunne skrevet noe som $\dots \otimes O = O O O$. En grov illustrasjon av et faktisk gitter er Perovskitt. Dette er en struktur som består av et enkeltgitter, med en basis bestående av et atom A, et atom B og tre oksygen-atomer $O_3$. Stoffet er da (ABO3) generelt, men for Perovskitt er dette (BaTiO3). Dette illustreres grovt slik:
 \begin{figure}[H]
     \centering
@@ -88,18 +88,18 @@ Alle krystallstrukturer kan bli uttrykt som konvolusjonen mellom et Bravais-gitt
     \caption{Perovskitt-gitter (ABO3)}
     \label{fig:perovskitt_gitter}
 \end{figure}
-\subsubsection{Fyllefaktor $\Phi$}
+\seksjon{Fyllefaktor $\Phi$}
 Et sentralt spørsmål for slike gittere vi snakker om er; hvor mye av rommet vil strukturen fylle, ved antagelsen av at atomene er sfæriske og tett pakket. For et enkeltgitter er dette: $\Phi_{S.C} \sim 52\%$. Derimot finnes det kun to naturlige stoffer som skaper en slik struktur: Fluorid og oksygen.
 
 For et romsentrert kubisk struktur er fyllefaktoren en del høyere:$\Phi_{B.C.C} \sim 68\%$
-\subsubsubsection{Tettpakking av sfærer}
+\delseksjon{Tettpakking av sfærer}
 F.C.C og heksagonalt-tettpakning (H.C.P) har den høyeste fyllefaktoren: $\Phi \sim 74\%$. Av grunnstoffene skaper 24 av dem et gitter i F.C.C-form og 36 i H.C.P-form.
-\subsubsection{Gitterplan}
+\seksjon{Gitterplan}
 Gitterplan er alle plan som inneholder minst 3 ikke-kolineære gitterpunkter. Altså er de plan som skapes i rommet ditt av en viss mengde punkter (langs ortonormale akser). I 3D, blir dette som skrevet over 3. De blir beskrevet av \underline{Miller-indekser}.
-\subsubsubsection{Miller-indekser}
+\delseksjon{Miller-indekser}
 Hvis vi tar for oss 3D-rom vil vi få et koordinatsystem med 3 punkter langs aksene våre. Lengden til hver av disse 3 punktene som skaper planet kaller vi for $x_1, x_2, x_3$. VI definerer da at: $h = \frac{1}{x_1}, k = \frac{1}{x_2},l = \frac{1}{x_3}$. Dette er miller-indeksene. Vi kan for eksempel ha (100) som forteller oss at vi har et plan på $x_1$ = 1, mens $x_2, x_3 = \infty$.
 
-\subsubsubsection{Gitterplan-familier}
+\delseksjon{Gitterplan-familier}
 Et annet tett knyttet tema er gitterplanfamilier. Ved å skyve et plan langs normalvektoren dens, vil man skape en familie av plan (i 2d blir det en familie av uendelig lange linjer).
 
 Vi kaller nå avstanden mellom gitterplan som er plassert på ulike gitterpunkt for d-mellomrommet. Man kan vise at for ortoromber(som inneholder kuber) så har man at
@@ -108,9 +108,9 @@ Vi kaller nå avstanden mellom gitterplan som er plassert på ulike gitterpunkt 
 \end{equation}
 
 Et viktig faktum å merke seg er at man kan bare ha 1, 2, 3, 4 og 6-foldige rotiasjoner av et gitter og fortsatt ha translasjonell symmetri. Med $n$-foldig mener jeg da  $360 / n$-graders-rotasjoner
-\newpage
-\section{Kapittel II: Bølgediffraskjon og det Resiprokale Gitteret}
-\subsection{Diffraksjon}
+\nyside
+\kapittel{Kapittel II: Bølgediffraskjon og det Resiprokale Gitteret}
+\delkapittel{Diffraksjon}
 La oss først snakke om  hva slags typer diffraksjon vi har. Mer spesifikt, hva om skaper \underline{diffraksjon}:
 \begin{itemize}
     \item Lys-mikroskop: Slike mikroskop ser på synlig lys. Altså er $\lambda \in (400, 600)$ nm. Her er også diffraksjonen begrenset av en oppløsning $\sim \frac{\lambda}{2}$
@@ -119,7 +119,7 @@ La oss først snakke om  hva slags typer diffraksjon vi har. Mer spesifikt, hva 
     \item Nøytroner: Disse er nøytrale partikler som oppfører seg som De Broglie-materiebølger og vekselvirker med atomkjernens magnetiske strukturer.
 \end{itemize}
 La oss se vekk fra linser og mikroskopi. Vi vil se på diffraksjon på periodiske krystaller.
-\subsubsection{Bragg's lov}
+\seksjon{Bragg's lov}
 \begin{wrapfigure}{r}{0.4\textwidth}
     \centering
     \fbox{\includegraphics[width=0.4\textwidth]{bilder/braggs_lov.png}}
@@ -127,7 +127,7 @@ La oss se vekk fra linser og mikroskopi. Vi vil se på diffraksjon på periodisk
     \label{fig:braggs_lov}
 \end{wrapfigure}
 Betrakt atomplan som reflekterende speil. Bølgende skaper en konstruktiv interferens i disse atomplanene når $n \lambda = 2d \sin(\theta)$. En illustrasjon av hva som skjer er til høyre i \ref{fig:braggs_lov}. Her har vi innkommende bølger fra venstre som beveger seg vekk igjen etter å ha blitt speilet, med samme vinkel som de kom inn. Atomplanene er da linjene som skapes mellom ved hvert plan. Lengden mellom disse er da $d$ og er de samme lengdene som d-mellomrommet. Hvis man da vet Miller-indeksene til et type gitter og hva slags gitter det er, kan man finne ut hvordan diffraksjon vil foregå. Ofte i motsatt reggefølge for å finne ut et stoff.
-\subsubsection{Rayleigh-Spredning}
+\seksjon{Rayleigh-Spredning}
 Rayleigh-spredning er en type spredning som forekommer ved elastisk spredning av fotoner av materie. Vi har derfor energi og impulsbevaring, og da bevaring av bølgelengden til fotonene. Altså har vi følgende:
 \begin{itemize}
     \item Energi og impulsbevaring
@@ -149,7 +149,7 @@ Rayleighs lov er da at:
 \end{equation}
 Dette fører for eksempel til at vi ser blått lys i himmelen og rødt ved en solnedgang. De minste bølgelengdene blir spredt først og de lengste sist.
 
-\subsubsection{Kinematisk Diffraksjonteori}
+\seksjon{Kinematisk Diffraksjonteori}
 For å se litt nøyere på diffraksjon tar vi for oss kinematikken bak det. La oss anta at vi har en enkelt spredningshendelse. Vi har elastisk Rayleigh-spredning med en spredningsvektor definert som $\vec{Q} \defeq \vec{k}_f - \vec{k}_i$ og $|\vec{Q}| = \frac{4\pi}{\lambda} \sin(\theta)$. Dette blir faseforskjellen til bølgene. Når vi har et momentum $k_i$ før og $k_f$ etter og bølgene ser ut som $\propto e^{i \vec{k} \cdot \vec{r}}$, vil faseforskjellen bli til $e^{-i \vec{Q} \cdot \vec{r}}$. Spredningen som kommer fra et lite volumelement i en et gitter blir da noe som:
 \begin{align*}
     dF(\vec{Q}) = \underbrace{\rho(\vec{r})}_{\text{elektron-tetthet}} \underbrace{e^{-i \vec{Q} \cdot \vec{r}}}_{\text{fasefaktor}} dV
@@ -162,7 +162,7 @@ Her ser vi da at spredningsamplituden er fourier-transformen av elektrontetthete
 
 Dessverre kan vi ikke måle F(Q). Det eneste vi kan måle er strålingsintensiteten: $I(\vec{Q}) \propto |F(\vec{Q})|^2$.
 
-\subsection{Det Resiprokale Gitteret (Impulsrommet)}
+\delkapittel{Det Resiprokale Gitteret (Impulsrommet)}
 Ved å gjøre en fourier-transformasjon kan vi komme til Impulsrommet ($\vec{r} \rightarrow \vec{Q}$. Her vil enhver vektor i det reelle rommet tilsvare noe lik inversen i impulsrommet. En lengde $d$ vil bli $d = \frac{2 \pi}{Q}$ hvor Q er lengden til en vektor i impulsrommet. For eksempel vil et gitter, bestående av deltafunksjoner, bli til en sum av planbølger i impulsrommet. Altså tilsvarer et punkt i det ene rommet, en bølge i det andre. Mer spesifikt og nyttig er at et punkt i impulsrommet, er en planbølge i posisjonsrommet med impulsen som tilsvarer det punktet i impulsrommet. Videre vil et slikt gitter, bestående av uendelig mange deltafunksjoner, bli til et nytt gitter i impulsrommet. Forskjellen her blir da at hvis dette gitteret har en gitterlengde på $a$, vil det i impulsrommet ha motsatt skalering med en faktor. I gitterrommet får vi at $a^{*} = \frac{2\pi}{a}$. Kort sagt:
 \underline{Fouriertransformen av et gitter er ett nytt gitter}.
 
@@ -182,7 +182,7 @@ Vi kan dermed definere:
    \text{Periodisk fourier-rekke: } n(\vec{r}) &= \sum_{\vec{G}} n_{\vec{G}} e^{i \vec{G} \cdot \vec{r}} \\
 \end{align*}
 Her vil vi jo da ha et mengden med periodiske elementer vil være en undermengde av alle fourierelementene. Altså $\{\vec{G}\} \in \{\vec{g}\}$
-\subsubsection{Spredning av et krystallgitter}
+\seksjon{Spredning av et krystallgitter}
 Vi har som sagt at:
 \begin{equation*}
     F(\vec{Q}) = \int \rho(\vec{r}) e^{-i \vec{Q} \cdot \vec{r}} dv \tab[2cm] I(\vec{Q}) \propto |F(\vec{Q})|^2
@@ -200,7 +200,7 @@ Her kommer da $(\vec{R_n} + \vec{r_j})$ fra at $R$ tar oss til enhetscellen, men
 Her er det nyttig hvis vi ser på disse to delene, og hva som skjer her:
 
 \begin{minipage}{0.45\textwidth}
-\subsubsubsection{Enhetscell-Strukturfaktor}
+\delseksjon{Enhetscell-Strukturfaktor}
 Strukturfaktoren er som sagt definert som: \begin{equation*}
     S = \sum_J f_j (Q) e^{-i \vec{Q} \cdot \vec{r}_j}
 \end{equation*}
@@ -217,12 +217,12 @@ Altså har vi totalt sett at strukturfaktoren, når vi har sterkest diffraksjon 
 \end{minipage}
 \hfill
 \begin{minipage}{0.45\textwidth}
-\subsubsubsection{Gittersummen}
+\delseksjon{Gittersummen}
 Her kommer $n$ til å være enorm. I tillegg kommer summen av $n$ slike eksponenter mest sannsynlig til å gå mot 1 med mindre noe presser eksponentene til å bli noe annet enn en. Uansett vil vi få en veldig stor sum hvis $\vec{Q} \cdot \vec{R}_n = 2 \pi m$. Ellers vil summen gå mot 1. Dette er jo diffraksjonsbetingelsen og dermed er $\vec{Q} = \vec{G}$ når denne summen blir stor, og da altså når spredningsamplituden er stor.
 \end{minipage}
 
 \begin{tcolorbox}[breakable,boxrule=0pt]
-  \subsubsubsection{Eksempel 1:}
+  \delseksjon{Eksempel 1:}
 
     Vi har et FCC gitter med separasjon $a = 4.05$Å.
 
@@ -243,7 +243,7 @@ Her kommer $n$ til å være enorm. I tillegg kommer summen av $n$ slike eksponen
 \end{tcolorbox}
 
 \begin{tcolorbox}[breakable,boxrule=0pt]
-  \subsubsubsection{Eksempel 2:}
+  \delseksjon{Eksempel 2:}
 
     Vi har et BCC gitter
 
@@ -263,7 +263,7 @@ Her kommer $n$ til å være enorm. I tillegg kommer summen av $n$ slike eksponen
     Dermed har vi at: $I \propto |S(Q)|^2 = \Bigg\{ \substack{4f^2\\0}$
 
 \end{tcolorbox}
-\subsubsubsection{Atomformfaktoren}
+\delseksjon{Atomformfaktoren}
 I utrykket vårt for S (se \ref{eq:strukturfaktoren}) har vi størrelsen $f_j$, som er et mål av spredningskraften til det $j$. atomet i enhetscellen. Verdien inneholder antallet og spredningen til atomets elektroner, og bølgelengden og vinkelen av spredning til strålingen. La oss gjøre en klassisk utregning av denne. Først så må vi repetere hva den var definert som:
 \begin{equation}
     \label{eq:atomformfaktoren}
@@ -281,9 +281,9 @@ Hvis nå, elektrontettheten var veldig konsentrert rundt r som vi ofte har, vil 
 \label{eq:atomformfaktor_lik_z}
     \boxed{f_j = 4 \pi \int dr n_j(r) r^2 = Z}
 \end{equation}
-\subsubsection{Brillouin-sonen}
+\seksjon{Brillouin-sonen}
 Briolouinsonen er definert av en Wigner-Seitz primitiv celle i impulsromgitteret. Denne sonen, innheolder alle bølgevektorer $\vec{k}$ som kan bli Bragg-refklektert av en krystall. La meg derfor komme med en mer rigorøs måte å skape en Wigner-Seitz-celle
-\subsubsubsection{Å lage en Wigner-Seitz celle}
+\delseksjon{Å lage en Wigner-Seitz celle}
 En primvitiv celle kan bli laget ved å følge denne prosedyren:
 \begin{enumerate}
     \item Tegn ligner mellom et gitterpunkt og alle dets nærliggende gitterpunkter.
@@ -291,9 +291,9 @@ En primvitiv celle kan bli laget ved å følge denne prosedyren:
     \item Det minste volumet rundt det originale gitterpunktet som er skapt av disse planene skaper da den primitive wigner-seitz-cellen.
 \end{enumerate}
 
-\newpage
-\section{Kapittel III: Krystallbindinger og Elastiske konstanter}
-\subsection{Leonard-Jones Potensialet}
+\nyside
+\kapittel{Kapittel III: Krystallbindinger og Elastiske konstanter}
+\delkapittel{Leonard-Jones Potensialet}
 \begin{wrapfigure}{r}{0.25\textwidth}
     \centering
     \includegraphics[width=0.25\textwidth]{bilder/leonard_jones_potensialet.png}
@@ -317,7 +317,7 @@ Typisk skriver man også om Van der Waals potensialet til:
     U(R) = 4 \epsilon \left[\left( \frac{\sigma}{R}\right)^{12} - \left( \frac{\sigma}{R}\right)^6 \right]
 \end{equation}
 Her er som normalt kreftene funnet av $F = -\frac{dU}{dR}$.
-\subsubsection{Gitterkonstantene ved Likevekt}
+\seksjon{Gitterkonstantene ved Likevekt}
 Hvis vi forkaster den kinetiske energien til atomene i den ikkereagerende gassen, vil den sammenhengende energien til en slik gaskrystall være gitt av å summe over alle par av atomer i krystallen. Hvis det er N atomer i krystallen blir da deres potensielle energi:
 \begin{equation*}
     U_{\text{tot}} = \frac{1}{2} N (4 \epsilon) \left[ \sum_j \left( \frac{\sigma}{p_{ij} R}\right)^{12} - \sum_j \left( \frac{\sigma}{p_{ij} R}\right)^6 \right]
@@ -335,7 +335,7 @@ Hvis vi nå hadde funnet likevektsavstanden for disse to strukturene (som er vel
 \frac{R_0}{\sigma} = 1.09
 \end{equation*}
 De observerte og målte verdiene til ulike stoffer er svært likt dette. For Ne (1.14), Ar(1.11), Kr(1.10) og Xe(1.09). Dette er kjempenærme og veldig merkverdig. De små forskjellene kommer av nullpunkt-kvanteeffekter.
-\subsubsection{Den Sammenhengende Energien}
+\seksjon{Den Sammenhengende Energien}
 Den sammenhengende energien til ikkereagerende gaskrystaller ved det absolutte nullpunkt og ved null trykk er funnet ved å sette inn $R_0$ i Leonard-Jones potensialet. Da får vi at:
 \begin{equation*}
     U_{\text{tot}}(R_0) = - (2.15) (4 N\epsilon)
@@ -344,10 +344,10 @@ Dette er da det samme for alle slike gassser og er den utregnede sammenhengende 
 
 Jo tyngre atomet er, jo mindre er kvantekorreksjonene.
 
-\subsection{Ioniske Krystaller}
+\delkapittel{Ioniske Krystaller}
 Ioniske krystaller er bygget opp av positive og negative ioner Det ioniske båndet har sitt opphav i de elektrostatiske vekselvirkningene til motsatt ladde ioner. To vanlig krystallstrukturer for slike ioniske krystaller er krystallstrukturene til salt og cesium-klorid som består av et FCC-gitter med en basis som har ett atom i seg over det normale gitteret. 
 
-\subsubsection{Elektrostatiske/Madelung- Energien}
+\seksjon{Elektrostatiske/Madelung- Energien}
 Den langtvirkende vekselvirkningen mellom motsatt ladde ioner er Coulomb-vekselvirkningen $\pm \frac{q^2}{r}$. Selv om vi har snakket om Van der Waals-krefter er det ikke de som skaper mesteparten av den sammenhengende energien i ioniske krystaller. Det er faktisk bare 1 til 2\% av energien som kommer av slike krefter. Merparten kommer fra elektrostatiske krefter og kalles for \underline{Madelung energien}.
 
 Hvis $U_{ij}$ er vekselvirkningsenergien mellom ion $i$ og ion $j$ kan vi definere en energi som inneholder alle vekselvirkninger med et ion som:
@@ -380,7 +380,7 @@ Man kan også skrive om denne likningen for $U_{\text{tot}}$ i forhold til likev
     U_{\text{tot}} = \underbrace{- \frac{N \alpha q^2}{R_0}}_{\defeq \text{Madelung-Energien}} \left(1 - \frac{\rho}{R_0}\right)
 \end{equation}
 Man kan også finne ut at $\rho \propto 0.1 R_0$ og dermed har denne frastøtende kraften veldig liten rekkevidde.
-\subsubsection{Utregning av Madelung-konstanten}
+\seksjon{Utregning av Madelung-konstanten}
 Ved å se på definisjonen av Madelung-konstanten kan vi bytte litt og få følgende formel:
 \begin{equation*}
     \frac{\alpha}{R} = \sum_j \frac{\pm}{r_j}
@@ -388,7 +388,7 @@ Ved å se på definisjonen av Madelung-konstanten kan vi bytte litt og få følg
 Her får vi $+$ for positive ioner og $-$ for negative ioner. Man kan da bruke denne formelen hvis man kan avstanden til de næreste naboene i en krystall så har man $R$, og hvis man vet hvordan alle de andre avstandene er fra et referanseatom kan man sette inn disse for $r_j$ og regne ut $\alpha$.
 
 \begin{tcolorbox}[breakable,boxrule=0pt]
-    \subsubsubsection{Eksempel: Uendelig linje av alternerende ioner}
+    \delseksjon{Eksempel: Uendelig linje av alternerende ioner}
     La oss forestille oss at vi har en uendelig linje av alternerende ioner. Vi velger et negativt ion som referanseione og får derfor at:
     \begin{equation*}
         \sum_j \frac{\pm}{r_j} = 2\left( \frac{1}{R} - \frac{1}{2R} + \frac{1}{3R} + \dots\right) = 2 \ln(2) / R
@@ -400,13 +400,13 @@ Her får vi $+$ for positive ioner og $-$ for negative ioner. Man kan da bruke d
     \end{align*}
 \end{tcolorbox}
 
-\subsection{Kovalente Krystaller}
+\delkapittel{Kovalente Krystaller}
 Den kovalente bindingen er det klassiske elektronpar eller den homopolare bindingen i kjemi. Spesielt i organisk kjemi. Det er en sterk binding. En slik kovalent binding er  typisk skapt av to elektroner, fra to forskjellige atomer. De pleier videre å være lokalisert i regionen mellom de to atomene som skaper bindingen. Spinnen til disse to elektronene er også antiparallelle.
 
 Bindingen til molekylært hydrogen er et enkelt eksempel av en kovalent binding. Selv om bindingen kan skje med parallelle spinn er den sterkest med antiparallelle. Grunnen til at bindingen avhenger av dette er at det er ikke på grunn av sterke magnetisk dipolkrefter mellom elektronene, men på grunn av Pauli-prinsippet. Prinsippet vil endre ladningsfordelingen i atomene i forhold til spinn-orienteringen. Denne spinn-avhengige Coulombenergien kalles for bytte-vekselvirkning.
 
 Pauli-prinsippet gir en sterk frastøtende vekselvirkning mellom atomer med fylte skall. Hvis de ikke er fylte, vil elektron-overlapp kunne skje uten eksitasjon av elektroner til høyenergi-tilstander. Da vil bindingene være kortere. Når de da ikke er fylte vil vi derfor få tiltrekkende krefter mellom dem som drar de sammen slik at elektrontilstandene som mangler blir delt mellom dem. Ser man på hydrogen, vil det faktum at enkelte hydrogenatomer kun har et atom i sitt ene orbital vise at det ikke er fylt opp. Man kan jo ha to elektroner i hver orbital. Altså vil to hydrogenatomer tiltrekkes og dele to elektroner for å få et fylt opp skall/orbital.
-\subsection{Metaller}
+\delkapittel{Metaller}
 Metaller er kjennetegnet av høy elektrisk ledningsevne, og et stort antall med elektroner i stoffet som er frie til å bevege seg rundt, ofte  en eller to per atom. Elektronene som kan bevege seg rundt kalles for ledningselektroner. Disse elektronene har sitt opphav i Valensbåndet og blir eksitert fra det gjennom eksterne elektriske potensialer. Altså spenninger. 
 
 Noe å merke seg er at metaller pleier å krystallisere seg i ganske tettpakkede strukturer som hcp, fcc og bcc. Det i motsetning til krystaller som diamanter og liknende.
@@ -416,16 +416,16 @@ Videre kan det nevnes at:
     \item Avstandene mellom atomer i alkali-metallene er relativt store fordi den kinetiske energien til ledningselektronene er lavere ved større inter-atomiske avstander. Dermed den overnevnte krystallstrukturen.
     \item I overgangsmetallene er det ekstra bindinger fra de indre elektronskallene. Dermed er disse metallene og metallene rett etterpå i den periodiske tabellen, kjennetegnet av høy bindingsenergi.
 \end{itemize}
-\subsection{Hydrogenbindinger}
+\delkapittel{Hydrogenbindinger}
 Fordi nøytralt hydrogen kun har et elektron så burde det bare skape bindinger med ett annet atom. Derimot, har man målt at i visse forhold, vil man ha at hydrogen kan skape dobbeltbindinger og fungere som et slags bindingsledd mellom stoffer som F, O og N. Dette kalles for hydrogenbindinger.
 
 Hydrogenbindinger er viktige deler av vekselvirkningen mellom vannmolekyler og er ansvarlige, sammen med elektrostatiske tiltrekninger, for elektriske dipolmomenter som gir fysiske egenskaper til vann og is. De er også viktige i visse ferroelektriske krystaller og i DNA.
-\subsection{Atomiske størrelser}
+\delkapittel{Atomiske størrelser}
 Avstander mellom atomer i krystaller kan bli målt veldig nøyaktig av røntgendiffraksjon. Ofte til $1$ del i $10^5$. Kan vi si at den observerte avstanden mellom atomer kan bli delvis gitt til atom A og atom B? kan en definitiv mening bli gitt til radiusen av et atom eller et ion, uansett hvilken krystall de er i? Strengt talt er svaret nei. Ladningsfordelingen rundt et atom er ikke en ren sfærisk grense. Uansett er konseptet av en slik atomsk radius nyttig for å forutsi avstandene mellom atomer. Eksistensen og sannsynlige gitterkonstanter til faser som ikke har blitt laget enda kan bli forutsett fra de additive egenskapene til atomers radiuser. Videre kan elektronkonfigurasjonen til bestanddelene (atomene) i krystaller, bli forutsett av å sammenligne de målte og forutsatte gitterkonstantene.
 
 Man lager derfor en mengde av selvkonsistente radiuser for ulike typer bindinger. Man regner da ut radiusene man hadde fått for de ulike bindingene man har i et krystall og legger disse sammen for å finne ut hva radiusen burde være. Motsatt vei kan man forutsi hva slags krefter som er viktige i et stoff ved å se hvor nær radiusen man har målt er til de bestemte radiusene til ulike krefter.
-\newpage
-\section{Kapittel IV: Fononer: Krystallvibrasjoner}
+\nyside
+\kapittel{Kapittel IV: Fononer: Krystallvibrasjoner}
 Fononer er termiske vibrasjoner av atomer i gitteret. Leonard-Jones potensialet tilnærmet til andre orden (harmonisk oscillator) gir en god tilnærming til små oscillasjoner rundt likevektsposisjonen. Altså har vi harmoniske potensialer, godt tilnærmede av Hook's fjærer. Tidligere var bølgene våre kontinuerlige i formen $e^{ikx}$, mens nå er de kun definert på en diskret måte rundt gitterpunktene og den atomiske strukturen $|u|$. I og med at vi har noe som $e^{ika}$ vil vi kun ha at den første Brillouinsonen er relevant for momentumet. Dette er fordi alle verdier hvor $|ka| > \pi$ vil være til at vi får samme resultat. Altså er de eneste bølgelendene vi ser på som relevante, de som er i den første Brillouin-sonen definert av $k = \frac{\pi}{a} = \frac{2\pi}{\lambda} \Rightarrow \lambda = 2a$. De tilfellene vi da ser på som relevante er når $k$ er mindre ka og dermed når $\lambda \geq 2a$. Alle andre bølger vil føre til den samme informasjonen for en elastisk bølge i gitteret.
 
 Dette med at alle bølger med kortere bølgelende vil være urelevante kan vi tegne på følgende måte:
@@ -437,7 +437,7 @@ Dette med at alle bølger med kortere bølgelende vil være urelevante kan vi te
 \end{figure}
 Haer kan vi se at begge disse bølgende vil ha samme informasjon, men ha helt forskjellig bølgelengde. Noter derimot at elektromagnetiske bølger som røntgenbølger kan ha disse verdiene og fortsatt ha en fysisk mening i og med at de beveger seg gjennom områdene mellom atomene. For en elastisk diskret lokalisert bølge som vi har her vil denne informasjonen kun være overflødig og ikke ha noe mer fysisk mening.
 
-\subsection{1D Monoatomisk kjede}
+\delkapittel{1D Monoatomisk kjede}
 Hvis vi tar for oss en 1-dimensjonal monoatomisk kjede kan vi tegne den slik:
 \begin{figure}[H]
     \centering
@@ -478,7 +478,7 @@ Denne spredningsrelasjonen ser ut som følgende:
     \label{fig:spredningsrelasjon_fononer}
 \end{figure}
 Her kan vi se at $\omega$ varierer mellom $0$ og $\omega_{\text{maks}}$ og er periodisk med $T = \frac{2\pi}{a} = \frac{4 \pi}{\lambda}$. Vi kan nå ta for oss to grenser. Når $\lambda$ er stor og $k \rightarrow 0$ og når $\lambda$ er så liten som mulig og dermed når $k \rightarrow \frac{\pi}{a}$. Altså midten eller kantene til den første Brillouinsonen.
-\subsubsection{Stor $\lambda$-grensen. Sentrum av Brillouin-sonen}
+\seksjon{Stor $\lambda$-grensen. Sentrum av Brillouin-sonen}
 Her har vi da at $k \rightarrow 0$. På grunn av dette får vi at $\sin(\dots)$ kan bli tilnærmet i småvinkeltilnærmingen. Da har vi at:
 \begin{equation*}
     \omega(k) \approx \sqrt{ \frac{\gamma}{m}} ka \eqexplain{$\sin(x) \rightarrow x$}
@@ -493,7 +493,7 @@ Videre har vi at gruppehastigheten blir: $\nu_g = \frac{\partial \omega}{\partia
     \caption{Stående bølge}
 \end{wrapfigure}
  \vspace{-1cm}
-\subsubsection{Små $\lambda$-grensen. Kanten av Brillouin-sonen}
+\seksjon{Små $\lambda$-grensen. Kanten av Brillouin-sonen}
 
 Her har vi da at $\lambda \rightarrow 2a$. Da går $k \rightarrow k_{\text{maks}} = \frac{\pi}{a}$. Da får vi at:
 \begin{equation*}
@@ -502,7 +502,7 @@ Her har vi da at $\lambda \rightarrow 2a$. Da går $k \rightarrow k_{\text{maks}
 Altså får vi en gruppehastighet: $\nu_g = \frac{\partial \omega}{\partial k} = 0$. 
 Siden vi ikke har noen gruppehastighet, beveger ikke bølgen på seg og vi har dermed stående bølger. Dette kan tegnes som til høyre.
 
-\subsubsection{Estimering av Oscillasjonsamplituden}
+\seksjon{Estimering av Oscillasjonsamplituden}
 Det kan være nyttig å se hvor sterk amplituden til disse fononene kan bli. Da tar vi først for oss hva energien vår er. Deretter kan vi sammenligne den potensielle energien og den potensielle energien for å så finne ut oscillasjonsamplituden:
 \begin{equation*}
     E = \frac{1}{2} mv^2 + \frac{1}{2} \gamma x^2
@@ -516,9 +516,9 @@ Som gir oss at:
     x = \sqrt{\frac{2 k_B T}{\gamma}}
 \end{equation}
 
-\subsection{Spredningsrelasjonen i ulike tilfeller}
+\delkapittel{Spredningsrelasjonen i ulike tilfeller}
 Videre kan det være nyttig å se litt tilbake på hvordan vi tidligere har sett på spredningsrelasjonene i andre tilfeller:
-\subsubsection{Frie partikler i kvantemekanikk}
+\seksjon{Frie partikler i kvantemekanikk}
 For frie partikler i kvantemekanikk har vi følgende:
 \begin{align*}
     E = \hbar \omega = \frac{p^2}{2m} = \frac{\hbar^2 k^2}{2m}
@@ -528,9 +528,9 @@ Altså får vi følgende spredningsrelasjon:
     \label{eq:spredningsrelasjon_kvantemekanikk}
     \omega(k) = \frac{\hbar k^2}{2m}
 \end{equation}
-\subsubsection{Lys i ulike stoffer}
+\seksjon{Lys i ulike stoffer}
 Vi må også ta for oss lys i ulike stoffer. 
-\subsubsubsection{Vakuum}
+\delseksjon{Vakuum}
 Først kan vi jo da nevne lys i vakuum. Da har vi at:
 \begin{align*}
     v\lambda &= c \\
@@ -542,13 +542,13 @@ Altså har vi for lys i vakuum at:
     \label{eq:spredningsrelasjon_lys_i_vakuum}
     \omega(k) = ck
 \end{equation}
-\subsubsubsection{Andre medier}
+\delseksjon{Andre medier}
 I andre medier har vi en liten endring i forhold til lys i vakuum. Her vil faktisk \enquote{lysets hastighet} endre seg lokalt gjennom ulike stoffer og dermed på grunn av ulike spredningsprosesser bevege seg \enquote{tregere} gjennom hele materialet. Altså har vi noe vi kaller for refraksjonsindeksen $n > 1$:
 \begin{equation}
     \label{eq:spredningsrelasjon_lys_i_medier}
     \omega(k) = k\frac{c}{n} = k c_{\text{medie}}
 \end{equation}
-\subsection{1D Diatomisk kjede}
+\delkapittel{1D Diatomisk kjede}
 En 1-dimensjonal diatomisk kjede kan bli tegnet på følgende måte:
 \begin{figure}[H]
     \centering
@@ -641,7 +641,7 @@ For hver polariseringsmode vil vi få en optisk og en akustisk gren.
 
 Noter også nå at vi for det meste ikke ser optiske fononer med mindre vi eksiterer dem selv. Slike kan eksiteres gjennom elektromagnetisk stråling som har samme energi som de tilsvarende optiske grenenergiene.
 
-\subsection{Kvantisering av Fononer}
+\delkapittel{Kvantisering av Fononer}
 Vibrasjonene som skaper fononer er egentlig kvantiserte. Altså behandler vi faste stoffer som samlinger av veldig mange kvantemekaniske oscillatorer. Fononer er da de kvantiserte oscillasjonene. Vi har følgende for disse kvantiserte fononene:
 \begin{equation}
     \omega = \sqrt{\frac{\gamma}{m}} \tab[2cm] E_n = (n + \frac{1}{2}) \hbar \omega
@@ -655,10 +655,10 @@ Vi kan også ha vekselvirkninger mellom fotoner og fononer som nevnt tidligere. 
     \caption{Lys-fonon vekselvirkninger}
     \label{lys_fonon_Vekselvirkninger}
 \end{figure}
-\newpage
-\section{Kapittel V: Fononer: Termiske egenskaper}
+\nyside
+\kapittel{Kapittel V: Fononer: Termiske egenskaper}
 Det første vi vil ta for oss er varmekapasiteten til en gass av fononer, og dermed effektene av uharmoniske gittervekselvirkninger på fononene og krystallen.
-\subsection{Fononets Varmekapasitet}
+\delkapittel{Fononets Varmekapasitet}
 Med varmekapasitet mener vi varmekapasiteten ved et konsant volum. Dette er mer fundamentalt og mer relevant for oss enn varmekapasiteten ved konstant trykk. Denne varmekapasiteten er definert som:
 \begin{equation}
     C_V \defeq \left(\frac{\partial U}{\partial T}\right)_V
@@ -670,7 +670,7 @@ Bidraget fra fononene til varmekapasiteten til et krystrall kalles for gittervar
     U_{\text{gitter}} = \sum_K \sum_p U_{K, p} = \sum_K \sum_p \underbrace{\braket{n_{K, p}}}_{\substack{\text{Termisk gjennomsnittlige antall}\\ \text{fononer i tilstand ($K, p$)}}} \hbar \omega_{K, p}
 \end{equation}
 Her modelleres dette gjennomsnittlige antallet gjennom Planck-fordelingen.
-\subsubsection{Planck-fordelingen}
+\seksjon{Planck-fordelingen}
 Vi tar for oss en mengde identiske harmoniske oscillatorer i termisk likevekt. Antall oscillatorer i ($n+1$)-tilstanden i forhold til den $n$. tilstanden vil være:
 \begin{equation*}
     \frac{N_{n+1}}{N_n}= e^{-\frac{\hbar \omega}{k_B T}}
@@ -684,7 +684,7 @@ Ved å nå bruke ulike summerelasjoner kan vi finne at:
 \begin{equation}
     \braket{n} = \frac{1}{e^{\frac{\hbar \omega}{k_B T}}-1}
 \end{equation}
-\subsubsection{Finne varmekapasiteten}
+\seksjon{Finne varmekapasiteten}
 Vi kan nå finne varmekapasiteten. Vi har da at:
 \begin{equation*}
     U = \sum_K \sum_p \frac{\hbar \omega_{K, p}}{e^{\frac{\hbar \omega_{K, p}}{k_B T}}-1}
@@ -693,18 +693,602 @@ Her har vi såpass mange mulige verdier for $K$ at vi kan bytte om denne summen 
 \begin{equation}
     U = \sum_p \int d\omega D_p(\omega) \frac{\hbar \omega}{e^{\frac{\hbar \omega}{k_B T}} - 1}
 \end{equation}
-Vi gjør nå et lite variabelskifte ($x = \frac{\hbar \omega}{k_B T}$) og bruker at $C_{\text{gitter}} = \frac{\partial U}{\partial T}$:
+Vi gjør nå et lite variabelskifte ($x = \frac{\hbar \omega}{k_B T}$) og bruker at $C_{\text{gitter}} =  \left(\frac{\partial U}{\partial T}\right)_V$:
 \begin{equation}
+\label{eq:varmekapasitet_fononer_ferdig}
     \Rightarrow C_{\text{gitter}} = k_B \sum_p \int d\omega D_p(\omega) \frac{x^2e^x}{\left(e^x-1\right)^2}
 \end{equation}
 Vi har da funnet et utrykk for varmekapasiteten til fononene. Nå er det eneste spørsmålet hva $D_p(\omega)$ faktisk er.
-\newpage
-\section{Kapittel VI: Fri elektron fermigass }
-\newpage
-\section{Kapittel VII: Energibånd }
+\seksjon{Den Klassiske modellen (Dulong-Petit)}
+Før vi ser på hvordan vi finner tilstandstetthetene er det greit med litt \enquote{historie}. I den klassiske modellen har vi som skrevet tidligere at:
+\begin{equation}
+    \label{eq:klassisk_energi_fononer}
+    E = \frac{1}{2} m \vec{v}^2 + \frac{1}{2} \gamma \vec{r}^2
+\end{equation}
+Dette blir til 6 kvadratledd i energien, som ekvipartisjonsteoremet sier at gir oss $3 k_B T$ med termisk energi. For ett mol med oscillatorer har vi da at:
+\begin{align*}
+    \braket{E} &= 3 N_A k_B T = 3 R T\\
+    \Rightarrow C_V &=  \left(\frac{\partial U}{\partial T}\right)_V = 3 R
+\end{align*}
+Altså har vi det som kalles for \underline{Dulong-Petit loven}. Denne loven fungerer bra ved høy temperatur, men er helt feil ved lav temperatur. Ved lav temperatur viser det seg at man får en $T^3$-avhengighet i varmekapasiteten. Dette kan vi tegne som:
+\begin{figure}
+    \centering
+    \includegraphics[width=0.5\linewidth]{bilder/dulong_petit_lov.png}
+    \caption{Dulong-Petit loven mot data}
+    \label{fig:dulong_petit_lov}
+\end{figure}
+Her er da den røde linjen Dulong-Petit loven, mens den svarte linjen er det man faktisk måler.
+\seksjon{Semi-Kvantiserte modellen (Einstein)}
+Einstein klarte å finne en bedre modell enn det over. Han brukte nesten samme ståsted som vi hadde øverst, med en liten forskjell. Istedenfor at vi tar hensyn til at vi kan ha forskjellige oscillatorer som tar del i varmekapasiteten som vi fant i likning (\ref{eq:varmekapasitet_fononer_ferdig}), så antok han at vi bare har en stor mengde med samme type oscillator. Altså vil i vår likning $D_p(\omega) = \delta(\omega - \omega_E) N$ for å få riktig antall oscillatorer ($N$) og kun en frekvens. Da får vi at:
+\begin{align*}
+    C_{\text{gitter}} &= 3N \left(\frac{\hbar \omega_E}{k_B T}^2\right) \frac{e^{\frac{\hbar \omega_E}{k_B T}}}{\left(\frac{\hbar \omega_E}{k_B T} - 1\right)^2}
+\end{align*}
+Denne fungerer mye bedre helt ned til en ganske så lav temperatur. Derimot fungerer den heller ikke ved en veldig lav temperatur. Dette er fordi vi her ikke har tatt hensyn til at vi kan ha mer enn en type oscillator og har antatt at alle har samme frekvens. Videre kommer 3-eren fra at vi har 3 dimensjoner
+\delkapittel{Debye modellen}
+La oss skrive opp resultatet vårt for varmekapasiteten igjen (\ref{eq:varmekapasitet_fononer_ferdig}):
+\begin{equation*}
+    \Rightarrow C_{\text{gitter}} = k_B \sum_p \int d\omega D_p(\omega) \frac{x^2e^x}{\left(e^x-1\right)^2}
+\end{equation*}
+Her vil vi i Debye modellen anta  at vi har en konstant lydhastighet for begge polariseringstypene, slik som det ville vært for et klassisk elastisk medie. Spredningsrelasjonen blir her da:
+\begin{equation}
+\label{eq:spredningsrelasjon_konstant_lydhastighet}
+    \omega = v K
+\end{equation}
+Her er da $v$ en konstant lydhastighet. Vi må uansett finne ut av hva $D_p(\omega)$ er.
+\seksjon{Tilstandstettheten i 3 dimensjoner}
+Hvis vi ser på impulsrommet, vil vi finne et volum her som ser ut som: $V_{\text{impulsrommet}} = \frac{4}{3} \pi K^3$. Siden vi har løsninger i form av $K = \frac{2\pi}{L}$ vil vi få $N$ antall tilstander, hvor hver av disse tilstandene vil ta opp et volum av $_{\text{enhetscelle}} = \left(\frac{2 \pi}{L}\right)^3$:
+\begin{align}
+    N &= \frac{V_{\text{impulsrommet}}}{V_{\text{enhetscelle}}}\\
+    &= \frac{\frac{4}{3} \pi K^3}{\left(\frac{2 \pi}{L}\right)^3} \\
+\Rightarrow D(\omega) = \frac{dN}{d \omega} &=\frac{V K^2}{ 2 \pi^2} \frac{dK}{d\omega}
+\label{eq:antall_tilstander_i_debye}
+\end{align}
+Ved å nå bruke \ref{eq:spredningsrelasjon_konstant_lydhastighet} får vi fort at:
+\begin{equation}
+    D(\omega) = \frac{V \omega^2}{2 \pi^2 v^3}
+\end{equation}
+Et viktig poeng her er at det kun vil være en viss mengde med bølgelengder man kan ta hensyn til i integralet. Siden vi ikke faktisk har et kontinuerlig stoff, men et diskret gitter av atomer, gir det ikke mening hvis bølgelengden til fononene er mindre enn det dobbelte av atomseparasjonslengden. Dette kan visualiseres slik:
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\linewidth]{bilder/debye_limit.png}
+    \caption{Grensen til Debye modellen \cite{ShortDebye}}
+    \label{fig:Debye_limit}
+\end{figure}
+Her ser vi hvordan atomene er ved ulike bølgelengder når bølgelengden er definert av:
+\begin{equation}
+    \lambda = \frac{2 L}{n}
+\end{equation}
+Altså blir den minste bølgelengden vi kan ha $\lambda_{\text{min}} = \frac{2 L}{\sqrt[3]{N}}$. Måten vi da ville funnet den høyeste gyldige frekvensen ved et viss antall atomer/primitive celler er ved å bruke likningen vår for N i \ref{eq:eq:antall_tilstander_i_debye}. Her kan vi løse likningen for N og finne ut at:
+\begin{align}
+    K^3 &= \frac{6 \pi^2 N}{V}
+    \Rightarrow \omega_{\text{maks}} \defeq  \omega_{D}^3 = \frac{6 \pi^2 v^3 N}{V}
+\end{align}
+Altså blir det frekvensen på toppen av fermioverflaten. På en måte fermifrekvensen.
+
+Som skrevet tidligere kan den termiske energien bli skrevet som:
+\begin{equation}
+    U = \int d\omega D(\omega) \braket{n(\omega)} \hbar \omega = \int_0^{\omega_D} d \omega \left( \frac{V \omega^2}{2 \pi^2 v^3}\right) \left(\frac{\hbar \omega}{e^{\frac{\hbar \omega}{k_B T}}-1}\right)
+\end{equation}
+for hver polariseringstype. Vi antar for simpelhet at alle disse er like så vi bare kan gange mer 3. Da får vi:
+\begin{equation}
+    U = \frac{3 V \hbar}{2\pi^2 v^3} \int^{\omega_D}_0 d \omega \frac{\omega^3}{e^{\frac{\hbar \omega}{k_B T}}-1} = \frac{3 V k_B^4 T^4}{2 \pi^2 v^3 \hbar^3} \int^{x_p}_0 dx \frac{x^3}{e^x - 1}
+\end{equation}
+Her har vi definert at $x = \frac{\hbar\omega}{k_B T}$. Vi har videre definert:
+\begin{equation}
+    x_D \defeq \frac{\hbar \omega_D}{k_B T} \defeq \frac{\Theta}{T}
+\end{equation}
+Hvor vi har definert \underline{Debye temperaturen $\Theta$}. Ved å sette inn utrykket for $\omega_D$ får vi dermed at:
+\begin{equation}
+    \Theta = \frac{\hbar v}{k_B} \left(\frac{6\pi^2 N}{V}\right)^{\frac{1}{3}}
+\end{equation}
+Da blir den totale energi til fononene:
+\begin{equation}
+    U = 9 N k_B T \left(\frac{T}{\Theta}\right)^3 \int^{x_D}_0 dx \frac{x^3}{e^x-1}
+\end{equation}
+
+Varmekapasiteten er da funnet ved å differensiere en av utrykkene for $U$. Vi kan dermed få at:
+\begin{equation}
+    C_V = 9 N k_B \left(\frac{T}{\Theta}\right)^3 \int_0^{x_D} dx \frac{x^4 e^x}{\left(e^x-1\right)^2}
+\end{equation}
+\seksjon{Debyes $T^3$-lov (veldig lave temperaturer)}
+Ved veldig lave temperaturer vil et eventuelt bidrag fra alle frekvenser over $\omega_D$ ha mindre og mindre å si (dette kan vises). Altså kan vi integrere helt opp til uendelig ved slike lave temperaturer. Da kan vi løse integralet for $U$ analytisk:
+\begin{equation}
+    \int^\infty_0 dx \frac{x^3}{e^x-1} = \int^\infty_0 dx x^3 \sum^\infty_{s=1} e^{-sx} = 6 \sum_1^\infty \frac{1}{s^4} = \frac{\pi^4}{15}
+\end{equation}
+Som gir oss $U$ og $C_V$:
+\begin{align}
+    U &\approx \frac{3}{5} \pi^4 N k_B T \left(\frac{T}{\Theta}\right)^3 \\
+    C_V &\approx \frac{12 \pi^4}{5} N k_B \left(\frac{T}{\Theta}\right)^3 
+\end{align}
+Hvor vi kan se at $C_V \propto T^3$. Dette er Debyes lov og passer veldig godt for stoffer ned til en veldig lav temperatur. Altså fungerer tilnærmingen bra når bare akustiske moder med lange bølgelengder er termisk eksitert. Disse er de modene som kan bli behandlet som et elastisk kontinuum med makroskopiske elastiske konstanter. Energien for modene med korte bølgelender er for høye for at de kan  bli eksitert i en stor nok grad ved disse lave temperaturene.
+
+For krystaller er temperaturen man må ned til før denne loven gjelder ganske lov. Det kan faktisk være nødvendig å gå helt ned til $\Theta/50$ for å få en ren $T^3$ oppførsel.
+
+Noe som kan være relevant nå er å se på hvordan de ulike modellene vi har sett på faktisk ser ut i impuls. Som vi så er Einsteins versjon kun en delta funksjon, mens Debyemodellen er lineær. Denne lineæriteten blir til $\omega^2$ når vi ser på $D(\omega)$. La oss derfor tegne disse to og et eksempel på eksperimentelle verdier man ser.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\linewidth]{bilder/tilstandstetthetssammenligning.png}
+    \caption{Sammenligning av ulike tilstandstettheter}
+    \label{fig:tilstandstetthetssammenligning}
+\end{figure}
+Her ser vi klart hvordan de ulike modellene skiller seg ut. Videre ser vi at Einsteins modell blir et slags snitt, mens Debye-modellen blir mye mer nøyaktig. Denne har også store problemer som man kan se, og er derfor ikke helt nøyaktig.
+
+Noe annet å nevne som vi kan se er at modellene våre fungerer ganske bra. Vi har her bare tatt hensyn til fononer. Altså kan ikke elektroner bidra veldig mye til $C_V$ i seg selv. De bidrar faktisk bare med rundt 1\% av varmekapasiteten mens resten kommer fra fononene.
+\delkapittel{Fermi-Dirac fordelingen}
+Som vi har funnet ut vil vi få følgende energi i fermisfæren:
+\begin{equation}
+    E(n) = \frac{\hbar^2}{2m} \left(3 \pi^2 \frac{N}{V}\right)^{2/3}
+\end{equation}
+Dette gir oss at:
+\begin{equation}
+    N(E) = \frac{V}{3\pi^2} \left(\frac{2m}{\hbar} E\right)^{3/2}
+\end{equation}
+Tilstandsfordelingen blir da:
+\begin{equation}
+    g(E) = \frac{V}{2\pi^2} \left(\frac{2m}{\hbar}\right)^{3/2} \sqrt{E}
+\end{equation}
+Videre vil man dermed kunne regne ut forventningsverdien til antall tilstander ved en gitt energi. Eller da sannsynligheten for at en tilstand er okkupert. Altså har vi:
+\begin{equation}
+    \braket{n(E)}= g(E) \Delta E = k_B T g(E)
+\end{equation}
+Disse funksjonene kan tegnes på følgende måte:
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\linewidth]{bilder/fermi_dirac_fordelingen.png}
+    \caption{Fermi-Dirac fordelingen}
+    \label{fig:fermi_dirac_fordelingen}
+\end{figure}
+Vi ser dermed et viktig notat å merke seg: Sannsynligheten for at ferminivået er okkupert er alltid $50 \%$.
+\delkapittel{Uharmoniske Krystallvekselvirkninger}
+Teorien til gittervibrasjoner vi har diskutert så langt har vært begrenset i at den potensielle energien til gitterposisjonene er kun kvadratiske. Dette på grunn av fjærmodellen. Dette er en harmonisk teori. Konsekvenser av at vi har brukt denne teorien er:
+\begin{itemize}
+    \item To gittervibrasjoner vil ikke vekselvirke og en enkelt bølge vil ikke endre seg eller avta over tid.
+    \item Det finnes ingen termisk utvidelse.
+    \item De adiabatiske og isotermiske elastiske konstantene er like.
+    \item De elastiske konstantene er uavhengige av trykk og temperatur.
+    \item Varmekapasiteten blir konstant ved høye temperaturer $T > \Theta$
+\end{itemize}
+I ekte krystaller er ingen av disse punktene riktige på en god måte. Avvikene kommer av at vi ikke har noen anharmoniske ledd i energien (høyere enn kvadratiske ledd). Vi vil derfor diskutere noen enkle sider ved anharmoniske effekter.
+
+Vakre demonstrasjoner av anharmoniske effekter er eksperimenter på vekselvirkninger mellom to fononer for å skape et tredje fonon slik at $\omega_1 + \omega_2 = \omega_3$. Altså at to fononer vil kunne klumpe seg sammen og bli til et nytt et. Slike tre-fonon prosesser har sitt opphav i tredje ordens ledd i gitterenergien. Dette er likt før høyere ordener. Alte blir fjerde ordens ledd til vekselvirkninger mellom 4 fononer.
+
+\seksjon{Termisk Utvidelse}
+Vi kan forstå termisk utvidelse ved å ta for oss den klassiske oscillatoren med to ekstra anharmoniske ledd. Vi antar at den potensielle energien på null temperatur er:
+\begin{equation}
+    U(x) = cx^2 - gx^3 -fx^4
+\end{equation}
+hvor alle konstantene er positive. $x^3$-leddet representerer asymmetrien til de gjensidige frastøtningene til atomene. $x-4$-leddet representerer mildningen til vibrasjonene ved store amplituder. Minimaet ved $x=0$ er ikke et absolutt minima, men er for små oscillasjoner en passende representasjon av et interatomisk potensial.
+
+Vi regner ut gjennomsnittsforskyvningen i systemet ved å bruke Boltzmanns fordelingsfunksjon. Da har vi:
+\begin{equation}
+    \braket{x} = \frac{\int^\infty_\infty dx x e^{-\beta U(x)}}{\int^\infty_\infty dx e^{-\beta U(x)}}
+\end{equation}
+Hvis vi antar at de anharmoniske leddene i energien er små i forhold til den termiske energien $k_B T$ vil vi kunne få et svar for integralet her som gir oss:
+\begin{equation}
+    \braket{x} = \frac{3g}{4c^2} k_BT
+\end{equation}
+Her har vi forkastet f siden leddet vil ikke ha noe å si når $T \rightarrow 0$. Vi ser dermed at alle lengder vil forskyves. Denne faktoren kalles som oftes for $\alpha_L$. For generelle likninger av volumstørrelser kan man skrive:
+\begin{align}
+    L &\approx L_0(1 + \alpha_L T) \\
+    V &\approx V_0(1 + \underbrace{\alpha_V}_{= \alpha_L / 3} T)
+\end{align}
+\delkapittel{Termisk Ledningsevne}
+Den termiske ledningsevnekoeffisienten $K$ til et stoff er definert med hensyn til den stabile flyten av varme ned langs en stang med en temperaturgradient $\frac{dT}{dx}$:
+\begin{equation}
+    j_U = -K \frac{dT}{dx}
+\end{equation}
+Her er $j_U fluksen$ av termisk energi gjennom stangen. Siden vi har en gradient her og ikke bare forskjellen fra den ene siden av stangen og den andre, vil dette implisere at vi har en tilfeldig prosess og ikke en ren og direkte flyt fra den ene enden til den andre. Altså har vi tilfeldig bevegelse med mange kollisjoner gjennom stangen. Derfor vil den midlere frie veilengden komme i utrykket for den termiske fluksen $j_V$.
+
+Fra kinetisk gassteori vil man kunne finne følgende utrykk for den termiske ledningsevnen:
+\begin{equation}
+    K = \frac{1}{3} C v l
+\end{equation}
+hvor $C$ er varmekapasiteten per volum, $v$ er snitthastigheten til partiklene og $l$ er den midlere frie veilengden. For fononene våre blir det da varmekapasiteten til fononene, hastigheten deres og deres midlere frie veilengde. Hastigheten her blir da lydhastigheten i et stoff. Typisk oppe i noen hundre meter per sekund.
+\seksjon{Termiske Motstand til Fonongasser}
+Den midlere frie veilengden til fononer er hovedsakelig bestemt av to prosesser. Geometrisk spredning og spredning av andre fononer. Som nevnt tidligere ville vi ikke ha slik spredning av andre fononer hvis vi ikke har noen anharmoniske ledd i energien. Det finnes derimot faktisk situasjoner hvor disse anharmoniske effektene dominerer.
+
+Anharmoniske koblinger vil føre til at vi ikke lenger har rene fononer. Videre vil vi få en kobling mellom fononer som begrenser den midlere frie veilengden. Teorien til anharmoniske koblinger og termisk motstand forteller oss at $l \propto \frac{1}{T}$ ved høyere temperaturer. Dette kan bli forstått gjennom at antall eksiterte fononer er proposjonalt med $T$. Derfor burde spredningsfrekvensen være koblet til inversen av antall fononer som disse kan vekselvirke med.
+
+For å kunne definere en termisk ledningsevne må det finnes mekanismer i krystallet som fører til at fordelingen av fononer i et lokalt område vil være i temrisk likevekt. Uten slike mekanismer kan vi ikke snakke om at den ene siden av stangen er ved en viss temperatur og den andre er i en annen viss temperatur.
+
+Det er heller ikke nok å bare ha en måte å begrense den midlere frie veien, men det må også være mulig å skape en lokal termisk likevektsfordeling av fononer. Fononkollisjoner med en statisk uregelmessighet eller en krystallgrense i seg selv vil ikke etablere termisk likevekt siden slike kollisjoner ikke vil endre energien til individuelle fononer. 
+
+\delseksjon{Tre-fononsprosesser uten termisk motstand}
+Det er også ganske merkverdig at en tre-fononsprosess heller ikke vil gjøre dette. En slik prosess er definert av:
+\begin{equation}
+    \label{eq:trefononsprossess}
+    K_1 + K_2 = K_3
+\end{equation}
+Dette er en ganske diskré effekt: den totale impulsen til fonongassen vil ikke endres av en slik kollisjon. En likevektsfordeling av fononer ved temperatur $T$ kan bevege seg nedover en krystall med en strømningshastighet som ikke er påvirket av slike tre-fononsprosesser i formen over \ref{eq:trefononsprossess}. For slike kollisjoner vil fononimpulsen $J$ være bevart:
+\begin{equation}
+    \vec{J} = \sum_{\vec{K}} n_{\vec{K}} \hbar \vec{K}
+\end{equation}
+Dette er fordi endringen i $\vec{J}$ vil være $\vec{K}_3 - \vec{K}_2 -\vec{K}_1 = 0$. Her er da $n_{\vec{K}}$ antall fononer med bølgevektor $K$.
+
+For en fordeling hvor $\vec{J} \ne 0$, vil kollisjoner som \ref{eq:trefononsprossess}, ikke ha muligheten til å skape en komplett termisk likevekt siden de lar $\vec{J}$ forbli uendret.
+
+\delseksjon{Tre-fononsprosesser med termisk motstand (Umklapp Prosesser)}
+De viktige tre-fononsprosessene som skaper termisk motstand er ikke i formen $\vec{K}_1 + \vec{K}_2 = \vec{K}_3$ hvor $\vec{K}$ er bevart, men er derimot i formen:
+\begin{equation}
+    \vec{K}_1 + \vec{K}_2 = \vec{K}_3 + \vec{G}
+\end{equation}
+Hvor $\vec{G}$ er en resiprokal gittervektor. Disse prosessene kalles for \underline{umklapp prosesser}. Vi kan huske at $\vec{G}$ kan finne sted i alle impulsbevaringslover i krsystaller. I alle lovlige prosesser som beskrevet hittil, vil energi være bevart. Argumentet er som følger: de eneste meningsfulle fononimpulsene ligger i den første Brillouinsonen. Alle impulser som er lengre enn dette må bli flyttet tilbake igjen med en resiprokal gittervektor $\vec{G}$. Disse prosessene kalles også for U prosesser. 
+
+En annen måte å si dette er: Ethvert punkt utenfor den første Brillouin-sonen kan uttrykkes som et punkt innenfor sonen. Bølgevektoren kan bli matematisk transformert til et punkt innenfor den første Brillouin-sonen gjennom en $\vec{G}$-vektor. Denne transformasjonen tillater spredningsprosesser som ellers ville brutt impulsbevaring: to bølgevektorer som peker mot høyre kan kombineres for å lage en bølgevektor som peker mot venstre. Dette fordi man da må ha en $\vec{G}$-vektor som drar den resulterende impulsen til venstre igjen. Altså: hvis $\vec{K}_1 + \vec{K}_2 = \vec{K}_3$ ikke er i den første Brillouinsonen, vil man måtte legge til en $\vec{G}$ som drar den tilbake igjen. Denne ikke-bevaringen av impuls er grunnen til at krystallimpuls ikke er ekte impuls.
+\nyside
+\kapittel{Kapittel VI: Fri elektrongass / Fermigass}
+Vi kan forstå mange fysiske egenskaper til metaller, og ikke bare for enkle metaller, i forhold til den frie elektronmodellen. Ifølge denne modellen, blir valens-elektronene til de inneboende atomene i et stoff, ledningselektroner og kan bevege seg fritt gjennom volumet til metallet. Til og med i metaller hvor den frie elektrongassmodellen fungerer best, reflekterer ladningsfordelingen til ledningselektronene de sterke elektrostatiske potensialene til ionkjernen. Nytten til den frie elektromodellen er størst for egenskaper som mer eller mindre avhenger av de kinetiske egenskapene til ledningselektronene. Vekselvirkningene til ledningselektronene med ionene i gitteret vil bli sett på i \underline{neste} kapittel
+
+De enkleste metallene er alkali-metallene: litium, sodium, potassium, cesium og rubidium. I et fritt elektron av sodium er valenselektronet i en 3s tilstand. I metallet blir dette elektron til et ledningselektron i 3s-ledningsbåndet.
+
+En monovalent(et valenselektron) krystall som har N atomer, vil ha N ledningselektroner og N positive ionkjerner. 
+
+Tolkningen av metallegenskapene i forhold til bevegelsen av frie elektroner ble utledet lenge før utviklingen av kvantemekanikk. Den klassiske teorien hadde flere oppsiktsvekkende suksesser. Spesielt utledning av Ohms lov og forholdene mellom den elektriske og termiske ledningsvnen. Den klassiske teorien derimot, mislykkes i å forklare varmekapasitet og den magnetiske mottakeligheten til ledningselektronene (Disse skyldes ikke feil i den frie elektronmodellen, men kommer av feil i den klassiske Maxwellfordelingen.)
+
+Det er videre vanskeligheter med den klassiske modellen. For mange typer forsøk er det klart at et ledningselektron i et metall kan bevege seg fritt i en bane over flere atomiske avstander, uten å bli avsporet av kollisjoner med andre ledningselektroner eller atomkjerner. I en veldig ren prøve ved lave temperaturer, kan den midlere frie veien være mer enn en hel centimeter.
+
+Hvorfor er kondensert materie så gjennomsiktig for ledningselektroner? Vel svaret på dette har to deler:
+\begin{itemize}
+    \item Et ledningselektron blir ikke avsporet av ionkjerner plassert på et periodisk gitter fordi materiebølger kan bevege seg fritt i en periodisk struktur på grunn av mattematikken vi snart vil utlede.
+    \item Et ledningselektron er veldig sjeldent spredt av et annet et. Dette kommer av Paulis eksklusjonsprinsipp. ved en \text{fri elektrongass} mener vi en gass av frie elektroner som følger Pauli-prinsippet.
+\end{itemize}
+Denne klassiske modellen kalles for \underline{Drude}-modellen og beskriver en klassisk gass som følger Maxwell-Boltzmann statistikk. Den antar at elektronene mer eller mindre kolliderer med ionene på en klassisk måte over store avstander. altså tar den ikke hensyn til elektron-elektron vekselvirkninger eller mer enn det.
+\delkapittel{Energinivåer i en dimensjon}
+ Ta for deg en fri elektrongass. Vi vet at vi vil få følgende energi og løsning for Schrödingerlikningen:
+ \begin{align}
+     E &= \frac{\hbar^2 K^2}{2m} \\
+     \psi(\vec{r}) &= \frac{1}{\sqrt{V}} e^{i \vec{k} \cdot \vec{r}}
+ \end{align}
+ Dette kommer fra å anta periodiske grensebetingelser og at $V = 0$. Vi får også en Fermi-sfære i impulsrommet definert av alle tilstandene vi har okkupert. For et atom kaller vi den øverste tilstanden for fermienergien $E_f$ og dermed vil fermienergien raskt bli:
+ \begin{equation}
+     E_F = \frac{\hbar^2 k_F^2}{2m}
+ \end{equation}
+ Spørsmålet er da: hva er fermi-impulsen. Vel det kan svares på raskt. I impulsrommet vil vi få som vi har gjort tidligere for å regne ut tilstandstettheten:
+ \begin{equation}
+     N = 2 \frac{\frac{4 \pi k_F^3}{3}}{(2 \pi / 3)^3}
+ \end{equation}
+ hvor vi her har ganget med 2 siden vi har 2 elektroner mer impulstilstand siden de kan ha motsatt spin. Altså to elektroner per orbital. Da kan vi raskt få at:
+ \begin{equation}
+     k_F = \left(\frac{3 \pi^2 N}{V}\right)^{\frac{1}{3}}
+ \end{equation}
+
+ 
+ som bare avhenger av partikkelkonsentrasjonen. NB!\ Her har vi antatt at alle elektronene er i de laveste mulige tilstandene. Altså at systemet er i grunntilstanden!
+
+ Ved å sette inn dette i energien får vi at:
+ \begin{equation}
+     E_F = \frac{\hbar^2}{2m} \left(\frac{3 \pi^2 N}{V}\right)^{\frac{2}{3}}
+ \end{equation}
+Med dette kan vi finne tilstandstettheten til systemet (tilstander per energi). Den blir:
+\begin{equation}
+    D(E) = \frac{dN}{dE} = \frac{V}{2\pi^2} \cdot \left(\frac{2m}{\hbar^2}\right)^{\frac{3}{2}} \sqrt{E} = \frac{3N}{2E}
+\end{equation}
+
+\delkapittel{Varmekapasiteten til en Fri elektrongass}
+Det spørsmålet som skapte de største vanskelighetene i den tidlige utviklingen av elektronteorien til metaller var varmekapasiteten til elektronene. Klassisk ville man tenkt at N valenselektroner ville ha en varmeenergi på $E_N = \frac{3}{2} N k_B T$. Eksperimentelt viste det seg ved romtemperatur at det faktisk var kun en hundredel av dette.
+
+Dette enorme avviket distraherte mange av de som jobbet med dette først, slik som Lorentz: Hvordan kan elektronene delta i elektriske ledningsprosesser som om de er bevegelige, men ikke bidra til varmekapasiteten? Spørsmålet ble først svart på etter oppdagelsen av Paliprinsippet. Det viser seg at de eneste elektronene som kan bli termisk eksitert er de som er innen for en vidde av $k_BT$ unna fermienergien. Altså overflaten av fermisfæren. Dermed vil ikke alle $N$ eksiteres med en energi i orden $k_B T$ men kun en liten del i orden $T / T_F$. Dermed vil vi få at den totale elektronske termiske bevegelsesenergien $U$ er i orden:
+\begin{equation}
+    U_{\text{el}} \approx \frac{N T}{T_F} k_B T
+\end{equation}
+som gir oss en varmekapasitet:
+\begin{equation}
+    C_{\text{el}} = \frac{\partial U}{\partial T} \approx N k_B \frac{T}{T_F}
+\end{equation}
+
+Varmekapasiteten vil dermed som vi har nevnt tidligere være et bidrag fra fononer i orden $T^3$ og et bidrag fra elektroner i orden $T$.
+En nøyere utregning gir:
+\begin{equation}
+\label{eq:termisk_varmekapasitet_fermigass}
+    C_{\text{el}} = \frac{1}{2} \pi^2 N k_B \left(\frac{T}{T_F} \right)
+\end{equation}
+
+\delkapittel{Elektrisk ledningsevne og Ohms lov}
+Impulsen til et fritt elektron er relatert til bølgevektoren gjennom $m \vec{v} = \hbar \vec{k}$. I et elektrisk felt $\vec{E}$ og et magnetisk felt $\vec{B}$ vil kraften $\vec{F}$ på et elektron beskrives av lorentz-kraften. Altså har vi at:
+\begin{equation}
+    \vec{F}= m \frac{d \vec{v}}{dt} = \hbar \frac{d \vec{k}}{dt} = -e \left(\vec{E} + \frac{1}{c} \vec{c} \times \vec{B}\right)
+\end{equation}
+Merk at likningen over er i CGS-enheter. Uten kollisjoner vil fermisfæren bevege seg i $\vec{k}$-rommet i en uniform hastighet av et konstant elektrisk felt. Vi integrerer likningen over med $\vec{B}= 0$, for å få $\vec{k}(t) - \vec{k}(0) = -\frac{e \vec{E} t }{}\hbar$.
+
+Hvis kraften $\vec{F} = -e \vec{E}$ er påført ved $t = 0$ på en elektrongass som fyller fermisfæren i sentrum av impulsrommet, ved denne sfæren være forflyttet til et nytt sentrum av $\delta \vec{k} = - e \vec{E} t / \hbar$
+Merk at fermisfæren er forflyttet som en hel enhet siden alle elektronene blir flyttet like mye.
+
+På grunn av kollisjoner av elektroner med urenheter på grunn av gitterurenheter og fononer, vil den forflyttede sfæren være opprettholdt i en stabil tilstand i det elektriske feltet. Hvis kollisjonstilstanden til elektronene er $\tau$ er forflytningen til færmisfæren gitt av forrige ligning med $t = \tau$. Hastigheten er som normalt da gitt av $\delta \vec{k}/ m = -e \vec{E} \tau / m $. Hvis vi er i et konstant elektrisk felt $\vec{E}$ med n elektroner av ladning $q = -e$ per enhetsvolum, vil den elektriske strømningstettheten være:
+\begin{equation}
+    \vec{j} = n q \vec{v} = n e^2 \tau \vec{E} / m
+\end{equation}
+Dette er \underline{Ohms lov}.
+
+Videre er den elektriske ledningsevnen definert av:
+\begin{align}
+    \vec{j} &= \sigma \vec{E}\\
+    \Rightarrow \sigma &= \frac{ n e^2 \tau}{m}
+\end{align}
+Den elektriske mostanden er definert som inversen av dette og derfor:
+\begin{equation}
+    \rho = \frac{m}{ne^2\tau}
+\end{equation}
+
+\delseksjon{En viskøs bremsekraft}
+Man kan også endre på hvordan frie elektroner beveger seg ved å legge til en slags bremsekraft. Altså kan vi gjøre noe som:
+\begin{equation}
+    F = m\frac{d v}{dt} = -e E - \Gamma v
+\end{equation}
+Dette vil gi en løsning for hastigheten i formen:
+\begin{equation}
+    v(t) = e^{- \Gamma t / m} - \underbrace{\frac{e}{\Gamma m} E}_{\text{Strømningshastighet}}
+\end{equation}
+Her vil elektroner fortsette å kollidere med fononer på grunn av gitterdefekter og urenheter. Ved å annerkjenne at $\Gamma = \frac{1}{\tau}$ vil vi da få en driftshastighet: $v_d = \frac{e \tau E}{m}$. Videre vil da elektronenes midlere frie veilengde bli til:
+\begin{equation}
+    l = v_F \tau
+\end{equation}
+For lave temperaturer vil vi ha få fononer og dermed få en enorm veilengde i en ballistisk skala.
+\delkapittel{Bevegelse i magnetfelt}
+La oss ta for oss det samme systemet med kollisjoner, men i et magnetisk felt. Altså har vi at:
+\begin{equation}
+    F = m \left(\frac{d}{dt} + \frac{1}{\tau}\right) = -e \left(\vec{E} + \frac{1}{c} \vec{v} \times \vec{B}\right)
+\end{equation}
+I en stabil tilstand i et statisk elektrisk felt vil alle de tidsderiverte være null. Da får vi en driftshastighet:
+\begin{align}
+    \label{eq:bevegelse_i_magnetfelt}
+    v_x &= -\frac{e \tau}{m} E_x - \omega_c \tau v_y \\
+    v_y &= -\frac{e \tau}{m} E_y + \omega_c \tau v_x \\
+    v_z &= -\frac{e \tau}{m} E_z
+\end{align}
+Her er $\omega_c = \frac{e B}{m c}$ \underline{syklotron-frekvensen}
+\seksjon{Hall effekten}
+Hallfeltet er det elektriske feltet utviklet over to sideflater av en leder, i retning $\vec{j} \times \vec{B}$ når en strøm $\Vec{j}$ strømmer over et magnetisk felt $\vec{B}$. Vi kan se for oss en stang med et langsgående elektrisk felt $E_x$ og et tversgående magnetfelt. Hvis en strøm ikke kan flyte ut av stangen i y-retningen må vi ha at $\delta v_y = 0$. Fra likningene over \ref{eq:bevegelse_i_magnetfelt} er dette bare mulig hvis:
+\begin{equation}
+    E_y = - \omega_c \tau  E_x = - \frac{e B \tau}{mc} E_x
+\end{equation}
+Mengden definert av:
+\begin{equation}
+    \boxed{R_H = \frac{E_y}{j_x B}}
+\end{equation}
+kalles for \underline{Hall koeffisienten}. For å regne ut den i vår enkle model bruker vi Ohms lov fra tidligere og har da at $j_x = n e^2 \tau E_x / m$. Vi får da at:
+\begin{equation}
+    R_H = \frac{E_y}{j_x B} = -\frac{e B \tau E_x / mc}{n e^2 \tau E_x B / m} = -\frac{1}{n e c}
+\end{equation}
+Dette utrykket er negativt for frie elektroner siden $e$ er positiv av definisjon. Altså vil vi her få likningen:
+\begin{equation}
+    E_y = R_H B j_x
+\end{equation}
+som forteller oss at vi vil få et indusert elektrisk felt i y-retningen hvis vi har et slikt tversgående magnetfelt selv om vi bare egentlig har et ekstern elektrisk felt i x-retningen.
+
+\delkapittel{Den Termiske ledningsevnen til Metaller}
+I kapittel 5 fant vi et utrykk for den termiske ledningsevnen til partikler med hastighet $v$, varmekapasitet $C_v$ og midlere fri veilengde $l$:
+\begin{equation}
+    K = \frac{1}{3} Cvl
+\end{equation}
+Den termiske ledningsevnen til en fermigass følger fra varmekapasiteten vi skrev tidligere i \ref{eq:termisk_varmekapasitet_fermigass}, sammen med $E_F = \frac{1}{2} mv_F^2$:
+\begin{equation}
+    K_{\text{el}} = \frac{\pi^2}{3} \frac{n k_B^2 T}{m v_F^2} v_F l = \frac{\pi^2 n k_B^2 T \tau}{3m} 
+\end{equation}
+hvor vi brukte at $l = v_F \tau$. Vi sa tidligere at fononene skaper varmekapasiteten, men er det elektronene eller fononene som bærer størstedelen av varmestrømmen i et metall? I rene metaller er elektronbidraget dominerende ved alle temperaturer. I urene metaller eller i uordnede legeringer, er elektronets midlere frie veibane redusert av kollisjoner med urenheter. Da kan fononbidraget bli sammenlignet med elektronbidraget.
+\seksjon{Forholdet av Termisk og Elektrisk ledningsevne}
+\underline{Widermann-Franz loven} sier at for metaler ved ikke for lave temperaturer, vil forholdet mellom den termiske- og den elektriske ledningsevnen være proporsjonal med temperatur, hvor forholdskonstanten er uavhengig av hvilket metall det er. Dette var et viktig resultat i teorien til metaller og underbygget bildet av en elektrongass som bæreren av ladning og energi. Det kan bli forklart ved å bruke formelen for $\sigma$ fra tidligere og den vi nettopp fant for $K$:
+\begin{equation}
+    \frac{K}{\sigma} = \frac{\pi^2 k_B^2 T n \tau / 3m}{n e \tau^2 / m} = \frac{\pi^2}{3} \left(\frac{k_B}{e}\right)^2 T
+\end{equation}
+\underline{Lorentz tallet} $L$ er videre definert som:
+\begin{equation}
+    L = \frac{K}{\sigma T}
+\end{equation}
+Ifølge det vi fant over for forholdstallet får vi da at:
+\begin{equation}
+    L = \frac{\pi^2}{3} \left(\frac{k_B}{e}\right)^2 = 2.45 * 10^{-8} \text{watt-ohm / deg$^2$}
+\end{equation}
+Som hverken inneholder $n$ eller $m$. Eksperimentelle verdier av $L$ ved 0 grader celsius og 100 grader celsius passer bra med tallet over.
+\nyside
+\kapittel{Kapittel VII: Energibånd }
+Den frie elektronmodelle ntil metaller gir oss godt innblikk i varmekapasiteten, den termiske ledningsevnen, den elektriske ledningsevnen og den magnetiske mottakeligheten og elektrodynamikken til medallen. Derimot mislykkes modellen i å hjelpe oss med andre store spørsmål: forskjelllen mellom metaller, halvmetaller, halvledere og isolatorer: positive verdier til Hall-koeffisienten, relasjonen av ledningselektroner til valenselektroner og mange transportegenskaper, spesielt magnetotransport. Vi trenger en mindre naiv teori, og heldigvis viser det seg at nesten alle enkle forsøk på å forbedre denne modellen vil forbedre modellen veldig.
+
+Forskjellen mellom en god leder og en god isolator er slående. Ledningsevnen til en god leder og en god isolator kan ha en forskjell på hele 30 ordener. Forskjellen er faktisk i ordenen $\propto 10^{32}$.
+
+Hvert faste stoff inneholder elektroner. Det viktige spørsmålet for elektrisk ledningsdevne er hvordan elektronene virker ved et utenforliggende elektrisk felt. Vi vil se at elektroner i krystaller vil legge seg i \underline{energibånd} skilt av energiregioner hvor ingen bølgelignende elektronorbitaler finnes. Slike \enquote{forbudte} regioner kalles for \underline{energigap} eller \underline{båndgap} og kommer av vekselvirkningene mellom ledningselektronene med ionkjernene til krystallene.
+
+Krystallet oppfører seg som en isolator hvis de tillatte energibåndene er enten fylte eller tomme. Da kan ingen elektroner bevege seg i et elektrisk felt. Hvis et eller flere bånd er delvis fylt (mellom 10\% til 90\%) vil du ha et metall. Hvis ett eller to bånd er delvis fylt eller nesten tomme har man et halvmetall eller en halvleder.
+
+For å forstå forskjellene mellom disse, må vi ta hensyn til periodisiteten til gitteret i den frie elektronmodellen. Muligheten for slike båndgap er da den viktigste nye egenskapen her.
+
+Vi vil også se andre ganske spektakulære egenskaper til elektronene i krystaller. For eksempel vil de bevege seg gjennom elektriske og magnetiske felt som om de hadde en effektiv masse $m^{*}$ som kan være mindre eller større enn elektronmassen og til og med negativ. Elektroner i krystaller reagerer på anvendte felt som om de har negative eller positive ladninger, og her ligger forklaringen til de negative og positive verdiene til Hall-koeffisienten.
+
+\delkapittel{Den nesten frie Elektronmodellen}
+I den frie elektronmodellen fikk vi tillatte energiverdier kontinuerlige fra null til uendelig i formen:
+\begin{equation}
+    E_k = \frac{\hbar^2}{2m} \left(k_x^2 + k_y^2 + k_z^2\right)
+\end{equation}
+hvor vi med periodiske grensebetingelser har at:
+\begin{equation}
+    k_i = \frac{2 \pi n_i}{L}
+\end{equation}
+og bølgefunksjoner i formen:
+\begin{equation}
+    \psi_k(r) = e^{ikr}
+\end{equation}
+som representerer bevegende bølger som bærer impulsen $\vec{p} = \hbar \vec{k}$.
+
+Båndstrukturen til en krystall kan ofte bli forklart av den nesten frie elektronmodellen hvor båndelektronene er behandlet av svake pertubasjoner fra det periodiske potensialet til ionkjernene. Denne modellene svarer nesten alle de kvalitative spørsmålene om oppførselen til elektroner i metaller.
+
+Vi vet at Bragg-refleksjon er en karakteristisk egenskap til bølgeforplanting i krystaller. Bragg-refleksjon av elektronbølger i krystaller skaper energigap ( ved Bragg-refleksjon finnes ikke bølgelignende løsninger av Schrödingerlikningen. Dette kan visualiseres som følger:
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\linewidth]{bilder/båndgap.png}
+    \caption{Båndgap}
+    \label{fig:båndgap}
+\end{figure}
+Det kan finnes flere slike gap. I tillegg spiller posisjonen til fermienergien i metallet mye å si som nevnt tidligere gjennom at antall elektroner i orbitalene har mye å si. Derfor blir energigapene svært viktige for å bestemme om et fast stoff er en isolator eller en leder.
+
+Vi forklarer fysisk opphavet til energigapene i det enkle problemet av et 1D-lineært gitter med gitterkonstant $a$. Vi vil få et energigap ved $k = \pm \pi/A$ som tegnet i figuren over \ref{fig:båndgap}. Bragg-betingelsen for refleksjon sier at $(\vec{k} + \vec{G})^2 = k^2$ som i en dimensjon med diffraksjon av en bølge med bølgevektor $\vec{k}$:
+\begin{equation}
+    k = \pm \frac{1}{2} G = \pm n \pi / a
+\end{equation}
+hvor $G = \frac{2\pi n}{a}$ er en resiprokal gittervektor og $n$ er et heltall. Den første refleksjonen og da energigapet kommer ved $k = \pm \pi/a$. Mellom disse verdiene er da den første Brillouinsonen til dette gitteret. Videre vil vi også få energigap ved de andre heltallsverdiene til $n$.
+
+Bølgefunksjonene ved $k=\pm \pi/a$ er ikke de bevegende bølger til frie elektroner, beskrevet av $e^{i \pi x / a}$ og $e^{-i \pi x / a}$. Ved disse spesielle k-verdiene vil bølgefunksjonene være laget av like deler bølger som beveger seg til høyre og venstre. Når denne Bragg-refleksjonsbetingelsen $k = \pm \pi / a$ er tilfredsstilt vil en bølge som beveger seg til høyre bli Bragg-reflektert til å bevege seg mot venstre og motsatt. Hver følgende Bragg-refleksjon vil reversere bevegelsesretningen til en bølge. En bølge som hverken går til høyre eller til venstre er bare en stående bølge som ikke går noe sted.
+
+Den tidsuavhengige tilstanden er representert av stående bølger. Vi kan skape to forskjellige stående bølger fra denne løsningen $e^{i \pm \pi x /a}$:
+\begin{align}
+    \psi(+) = e^{i \pi x / a} + e^{-i \pi x / a} = 2 \cos(2\pi x /a)\\
+    \psi(+) = e^{i \pi x / a} - e^{-i \pi x / a} = 2i \sin(2\pi x /a)
+\end{align}
+Hvor pluss- og minustegnet betegner om de bytter fortegn når man bytter $x \rightarrow -x$. Begge disse er bygget opp av like deler av venstre- og høyrerettede bevegende bølger.
+
+\seksjon{Opphavet til Energigapet}
+De to løsningene $\psi(+)$ og $\psi(-)$ konsentrerer sammen elektroner på forskjellige områder og derfor vil de to elektronene ha forskjellige verdier for den potensielle energien i feltet til ionene i gitteret. Dette er opphavet til energigapet. Sannsynlighetstettheten til en slik partikkel er $\rho = |\psi|^2$. For en ren omreisende bølge $e^{ikx}$ må vi for bevaring av ladningstetthet ha at $\rho = 1$. Derimot er ikke ladningstetheten konstant for lineærkombinasjoner av planbølger. La oss ta for oss $+$ bølgen. Vi har her at:
+\begin{equation}
+    \rho(+) \propto \cos^2(\pi x / a)
+\end{equation}
+Denne funksjonen vil konsentrere sammen elektroner (negativ ladning) på de positive ionene sentrert ved $x = 0, a, 2a, \dots$ og så videre hvor den potensielle energien er lavest i gitteret. For å få et bilde av dette tegner vi følgende graf av $u(x)$ som er gitterpotensialet:
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\linewidth]{bilder/gitterpotensialet_nestenfrimodell.png}
+    \caption{Gitterpotensialet}
+    \label{fig:gitterpotensialet_nestenfrimodell}
+\end{figure}
+HEr er da alle de merka punktene, heltallsmultipler av $a$. Dette er da posisjonene til ionkjernene.
+
+Vi kan også tegne opp hvordan sannsynlighetstetthetene i de to tilfellene vil se ut:
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\linewidth]{bilder/sannsylighetstettheter_energibånd_1.png}
+    \caption{Tegning av $u(x), \rho(+)$, og $\rho(-)$}
+    \label{fig:sannsylighetstettheter_energibånd_1}
+\end{figure}
+Den negative løsningen vil være proporsjonal med sinus i annen istedenfor cosinus. Altså vil den da konsentrere elektroner vekk fra ionkjernene.
+
+Når vi regner ut energien til disse to løsningene vil vi finne at energiforskjellen blir til $E_g$ som er det vi kaller \underline{båndgapsenergien}.
+
+Merk at det er den løsningen som konsentrerer elektroner sammen vekk fra kjernene som har høyest energi!
+
+Det vil også være nyttig å nå se på hva ulike ferminivåer tilsvarer av stoffer. Derfor tegner vi følgende figur:
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\linewidth]{bilder/femrinivåer_metall_halvleder_isolator.png}
+    \caption{Forskjellige ferminivåer til ulike stoffer}
+    \label{fig:femrinivåer_metall_halvleder_isolator}
+\end{figure}
+Her tilsvarer de røde linjene metaller. Altså får vi metaller hvis det er lett å eksitere fermielektronene til høyere energitilstander og dermed bevege seg som om de er i et ledningsbånd. Videre er den gule linjen hva ferminivået ville vært for halvledere. Her kan vi få to tilfeller for båndgapet. Enten er det større enn 3 eV eller mindre. Hvis det er større enn 3 eV har vi typisk isolatorer. Hvis båndgapet er mindre enn 3 eV har vi en halvleder. I dette tilfellet vil temperatur og andre effekter kunne eksitere elektroner enkelt nok over båndgapet slik at de kan bevege seg i et ledningsbånd.
+
+\delkapittel{Bloch-funksjoner}
+Felix Bloch fant ut i 1929 at løsninger av Schrödingerlikningen med et periodisk potensial må være av en spesiell form:
+\begin{equation}
+    \label{eq:blochs_teorem}
+    \boxed{\psi_{\vec{k}}(\vec{r}) = u_{\vec{k}}(\vec{r}) = e^{i \vec{k} \cdot \vec{r}}}
+\end{equation}
+hvor $u_{\vec{k}}(\vec{r})$ har periodisiteten til krystallgiteret slik at $u(r + T) = u(r)$ hvor $T$ er en forskyvningsvektor til gitteret. Dette resultatet utrykker \underline{Blochs teorem}:
+\begin{center}
+\begin{adjustbox}{width=0.85\textwidth}
+\parbox{\linewidth}{
+Egenfunksjonene til bølgeligningen for et periodisk potensial er produktet av et planbølge $e^{i k r}$ multiplisert med en funksjon $u_k(r)$ med samme periodisitet somdet periodiske potensialet.
+}
+\end{adjustbox}
+\end{center}
+Et enkeltelektron i formen til likning \ref{eq:blochs_teorem} kalles for en Bloch funksjon og kan bli dekomponert i en sum av bevegende bølger, som vi vil se senere. Bloch-funksjoner kan bli samlet opp i bølgepakker som representerer elektroner som beveger seg fritt gjennom potensialfeltet til ionkjernene.
+
+\delkapittel{Kronnig-Penney modellen}
+Et potensial som kan bli løst analytisk er en lang rekke av firkantbrønner med høyde $U_0$ og bredde $b$. Da vil vi få brønner slik som tegnet her:
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\linewidth]{bilder/firkantbrønner.png}
+    \caption{Firkantbrønner}
+    \label{fig:firkantbrønner}
+\end{figure}
+I den første brønnen ved $0 < x < a$ hvor $U = 0$ vil vi ha bølger som er lineærkombinasjonen:
+\begin{equation}
+    \psi = Ae^{iKx} + Be^{-iKx}
+\end{equation}
+av planbølger som beveger seg til venstre og til høyre med fri energi. Videre vil de bølgene i regionen $-b < x < 0$ være en synkende løsning i formen:
+\begin{equation*}
+    \psi = Ce^{Qx} + De^{-Qx}
+\end{equation*}
+med potensialenergien minus den frie energien:
+\begin{equation}
+    E = U_0 - \frac{\hbar^2 Q^2}{2m} 
+\end{equation}
+Vi vil at den totale løsningen skal være i formen \ref{eq:blochs_teorem}. Da må følgende være sant:
+\begin{equation}
+    \label{eq:betingelse_firkantbrønner}
+    \psi(a < x < a + b) = \psi(-b < x < 0)e^{ik(a+b)}
+\end{equation}
+Konstantene $A, B, C, D$ er da valgt så $\psi$ og $d\psi / dx$ er kontinuerlige ved $x = 0$ og ved $x = a$. Altså normale grensebetingelser for firkantbrønner. Ved $x = 0$, vil vi få ved å sammenlikne bølgefunksjonene at:
+\begin{align}
+    A + B &= C + D \\
+    iK(A-B) &= Q(C-D)
+\end{align}
+For $x=a$, med å bruke \ref{eq:betingelse_firkantbrønner} for $\psi(a)$ under abrrieren i form av $\psi(-b)$ har vi at:
+\begin{align}
+    Ae^{iKa} + Be^{-iKa} = (Ce^{-Qb}+De^{Qb}) e^{ik(a+b)} \\
+    iK(Ae^{iKa} - Be^{iKa}) = Q(Ce^{-Qb}-De^{Qb}) e^{ik(a+b)}
+\end{align}
+Disse likningene har kun en løsning hvis koeffisientene til $A,B,C,D$ forsvinner. Da får vi at:
+\begin{equation}
+    \left[\frac{Q^2-K^2}{2QK}\right] \sinh(Qb) \sin(Ka) + \cosh(Qb) \cos(Ka) = \cos(k(a+b))
+\end{equation}
+Som er ekkelt å regne ut. Dette er også et litt ekkelt resultat. Hvis vi antar at alle brønnene våre var deltabrønner tar vi grensene $b \rightarrow 0$ og $U_0 \rightarrow \infty$ slik at $\frac{Q^2 ba}{2}=P$. I denne grensen når $Q >> K$ og $Qb << 1$ får vi at likningen over reduseres til:
+\begin{equation}
+    \frac{P}{Ka} \sin(Ka) + \cos(Ka) = \cos(ka)
+\end{equation}
+Verdiene av $K$ hvor denne likningen har en løsning kan plottes som:
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\linewidth]{bilder/energigap_kronigpenney_modellen.png}
+    \caption{Energigap i Kronnig-Penney modellen}
+\label{fig:energigap_kronigpenney_modellenl}
+\end{figure}
+Dette er plottet når $P = 3 \pi / 2$. Noter at venstresiden av likningen vi fant må være mellom $\pm 1$ for å følge likningen. Dette fordi høyresiden aldri kan bli større eller mindre en $\pm 1$ siden det bare er $\cos(x)$. Dermed får vi disse grå områdene i grafen over som representerer energigapene som ikke er lovlige. Her kan man også tegne hvordan energien vil se ut i forhold til $ka$. Man får da:
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\linewidth]{bilder/energibånd_i_kronig_penney_modellen.png}
+    \caption{Energibåndene}
+    \label{fig:energibånd_i_kronig_penney_modellen}
+\end{figure}
+Altså får vi som forventet, energigap ved $ka = n \pi$. Her har vi igjen at $ P = 3\pi / 2$.
+
+\delkapittel{Bølgelikningen til et Elektron i et periodisk potensial (Sentrallikningen)}
+Tidligere så vi for oss bølgelingningen ved en Brillouinsonegrense. Nå vi lvi se på bølgeligningen for et generelt potensial, ved generelle verdier for $k$. La $U(x)$ være et elektrons potensielle energi i et lineært gitter med gitterkonstant $a$. Vi vet at den potensielle energien er invariant under en krystallgitterforskyvning: $U(x) = U(x+a)$. En slik periodisk funksjon kan bli utvidet som en fourierrekke i de resiprokale gittervektorene $G$:
+\begin{equation}
+    U(x) = \sum_G U_G e^{i G x}
+\end{equation}
+Verdiene til koeffisientene $U_G$ for faktiske krystallpotensialer har en tendes til å minke raskts med økende magnitude av $G$. For et bart coloumb-potensial vil $U_G$ minke som $\propto\frac{1}{G^2}$.
+
+Videre vil vi at den potensielle energien skal være en reell funksjon:
+\begin{equation}
+    U(x) = \sum_{G>0} U_G \left(e^{iGx} + e^{-iGx}\right) = 2 \sum_{G>0} U_G \cos (Gx)
+\end{equation}
+hvor vi har antatt for enkelthetsargumenter at krystallen er symmetrisk rundt $x= 0$ og at $U_0 = 0$.
+
+Bølgelikningen til et elektron i krystallen er Schrödingerlikningen. Løsningene kalles egenfunksjoner eller orbitaler eller Bloch funksjoner. Eksplisitt ser bølgeligningen ut som:
+\begin{equation}
+    \left(\frac{1}{2m}p^2 + U(x)\right)\psi(x) = \left(\frac{1}{2m}p^2 + \sum_G U_G e^{iGx}\right) \psi(x) = \epsilon \psi(x)
+\end{equation}
+som antar at vi kun har ett elektron i gitterpotensialet og snittpotensialet til alle de andre ledningselektronene. Bølgelikningen $\psi(x)$ kan videre bli utrykt som en Fourier-rekke summet over alle lovlige bølgevektorer utrykket av grensebetingelsene slik at:
+\begin{equation}
+    \psi(x) = \sum_k C(k) e^{ikx}
+\end{equation}
+Hvor $k$er reell i formen $\frac{2\pi n}{L}$ siden disse verdiene tilfredsstiller periodiske grensebetingelser over lengden $L$.
+
+Vi antar ikke og heller er det ikke sant at $\psi(x)$ er periodisk på nøyaktig samme måte som gitterperiodisiteten $a$. De bevegelige egenskapende til $\psi(x)$ er bestemt av Bloch-teoremet.
+
+Videre vil ikke alle bølgevektorene i mengden beskrevet over ta del i Fourier-utviklingen til en Bloch-funksjon. Hvis utviklingen inneholder bølgevektoren $k$ er alle andre bidrag gitt av $k + nG$. Altså vil bidragene  kun komme fra en uendelig, men også uendelig mye mindre mengde av vektorer.
+
+Ved å sette inn disse utviklingene inn i Schrödinger-likningen får vi:
+\begin{equation}
+    \sum_k \frac{\hbar^2}{2m} k^2 C(k) e^{ikx} + \sum_G \sum_k u_G C(K) e^{i(k+G)x} = \epsilon \sum_k C(k) e^{ikx}
+\end{equation}
+Siden hver eneste Fourier-komponent må ha samme koefissient på begge sider av likningen får vi \underline{Sentrallikningen}:
+\begin{equation}
+    \boxed{(\lambda_k - \epsilon)C(k) + \sum_G u_G C(k-G) = 0}
+\end{equation}
+med notasjonen:
+\begin{equation}
+    \lambda_k = \frac{\hbar^2 k^2}{2m}
+\end{equation}
+Denne formen av Schrödingerlikningen er en veldig nyttig form i et periodisk gitter, selv om den er helt uvant siden differensiallikningen har blitt byttet med mange algebraiske likninger. Mengden ser ekkel ut, siden det er uendelig mange verdier $C(k-G)$ man må finne ut av, men typisk er bare en veldig liten mengde nok for å se på det vi vil se på. Ofte så få som to eller fire.
+
+
 % Forelesning {13.03.2024 10:15-12:00}
-\subsection{Blocks Teorem}
-\subsubsection{Oppsummering av Sentrallikningen}
+\seksjon{Oppsummering av Sentrallikningen}
 Så langt har vi funnet at for frie elektroner så følger de følgende energirelasjon:
 \begin{equation}
   \label{eq:energi_for_frie_elektroner}
@@ -740,7 +1324,7 @@ Denne likningen kobler hver ukjente koeffisient $c_k$ til et lite underset av al
 
 Mer mattematisk så kobler for eksempel $c_{k_0}$ til $\{..., c_{k_0 - 2g}, c_{k_0 - g}, c_{k_0}, c_{k_0 + g}, c_{k_0 + 2g}\}$
 
-\subsubsection{Å Bevise Teoremet}
+\seksjon{Å Bevise Teoremet}
 La oss nå anta at vi har en løsning til bølgefunksjonen $\psi(\vec{r})$.
 Her kan vi da gjøre:
 \begin{align*}
@@ -755,7 +1339,7 @@ Summen over $\vec{G}$ til slutt kan vi se at er $\vec{R}$ periodisk. Altså kunn
 \begin{equation*}
   u_k(\vec{r}) = \sum_{\vec{G}} c_{\vec{k} - \vec{G}} e^{-i \vec{G} \cdot \vec{R}}
 \end{equation*}
-\subsubsection{Konsekvensene til Block's teorem}
+\seksjon{Konsekvensene til Block's teorem}
 Vi antar at vi har $\psi_{k'}(\vec{r})$ for en gitt $\vec{k'}$. Da kan vi skrive fra Block's teorem, at: $\psi_{k'}(\vec{r}) = e^{i\vec{k}\cdot\vec{r}} u_{k'}(\vec{r})$. Nå lar vi: $\vec{k} = \vec{k'} + \vec{G}$, hvor $\vec{G}$ er en resiprokalgittervektor. Nå kan vi da skrive:
 \begin{align*}
   \psi_k{\vec{r}} &= e^{i \vec{k} \cdot \vec{r}} e^{i \vec{G} \cdot \vec{r} u_{\vec{k} - \vec{G}}u(\vec{r})} \\
@@ -764,12 +1348,12 @@ Vi antar at vi har $\psi_{k'}(\vec{r})$ for en gitt $\vec{k'}$. Da kan vi skrive
 Hvor: ${u'}_{\vec{k}-\vec{g}} = {u}_{\vec{k}-\vec{g}} e^{-i \vec{G}\cdot \vec{r}}$.
 Denne nye Blockfunksjonen er \underline{like god} på alle måter som den originale. Konsekvensen her er at bølgevektoren $\vec{k}$ er vilkårlig med hensyn til addisjonen av en resiprokalgittervektor.
 
-\subsection{Fyllingen av Elektronbåndene}
+\delkapittel{Fyllingen av Elektronbåndene}
 Fra de periodiske grensebetingelsene så får vi at: $\Delta k = \frac{2\pi}{L} = \frac{2\pi}{Na}$. Hvis vi nå sier at $\vec{k}$-verdiene innenfor  Brillouin-sonen (enhetscellen i k-rommet) $\left[-\frac{\pi}{a}, \frac{\pi}{a} \right]$, skaper et bånd, så ser vi at hvert bånd har N mulige k-verdier. Men hver av disse verdiene kan enten ha spin opp ($\uparrow$) eller ned ($\downarrow$). Altså har vi N tilstander per slikt bånd, med totalt 2N elektroner.
 
 Hvis vi har \underline{et} valenselektron i hver primitive enhetscelle så vil materialet vårt være et \underline{metall}. Hvis det er \underline{to} valenselektroner per primitive enhetscelle så kan et bånd være helt fyllt, men ikke nødvendigvis. I 3 dimensjoner så kan båndene krysse over hverandre. Ved at disse båndene krysser hverandre mener jeg at: % fyll inn mer her.
 
-\subsubsection{Tomgitter Tilnærming}
+\seksjon{Tomgitter Tilnærming}
 I denne tilnærmingen lar vi potensialet $u \rightarrow 0$. Da blir alle Fourier-koeffisientene $u_g \rightarrow 0$. Konsekvensen her blir klart da at båndgapene forsvinner. Da blir sentrallikningen forenklet til at vi får frie elektroner igjen, som forventet. Det som er spennende å se på i denne frie modellen er hvordadan vi får energibånd får hver eneste $\vec{G}$. Dette er fordi alle løsninger med $\vec{k}$ vil også skape løsningene $\vec{k} + n \vec{G}, \tab[0.5cm] \vec{G} \in \mathbb{Z}$ Altså vil vi få veldig mange energinivåer: $E_n(\vec{k}) = \frac{\hbar^2(\vec{k} + \vec{G}_n)^2}{2m}$. Dette kan vi i se i bildet under:
 \begin{figure}[h]
   \centering
@@ -778,7 +1362,7 @@ I denne tilnærmingen lar vi potensialet $u \rightarrow 0$. Da blir alle Fourier
   \label{fig:1d_overlappende_tomgitter_tilnærming}
 \end{figure}
 %Forelesning 03.04.2024
-\subsubsection{Litt høyre potensial(fortsatt svakt)}
+\seksjon{Litt høyre potensial(fortsatt svakt)}
 
 Fra kapittel 6 fant vi en dispersasjonsrelasjon for frie elektroner: $E = \frac{\hbar^2 k^2}{2m}$. I denne modellen så er alle materialer metaller siden vi alltid har et nytt nivå vi kan dytte elektroner opp i så de kan bevege seg "fritt". I kapittel 7 introduserte vi Bloch-funksjoner og fant ulike energibånd.
  I tillegg deriverte vi sentrallikningen: $\left(\frac{\hbar^2 k^2}{2m} - E\right) c_K + \sum_G u_G c_{k - G} = 0$. 
@@ -861,15 +1445,15 @@ B: $u_g = 0$, på grensen til B.Z-en
 
 C: Nær nok grensen til B.Z-en så er båndstrukturen parabolsk.
 
-\subsubsection{Parabolske bånd}
+\seksjon{Parabolske bånd}
 For et fritt elektron hadde vi jo da: $E = \frac{\hbar^2 k^2}{2m}$, som er parabolsk, men hvordan gjør vi de andre elektronene parabolske også? Vel vi vil introdusere en effektiv masse $m^*$. Men hvorfor ville massen ha endret seg? Den vil endre seg fordi elektronet vil vekselvirke med omgivelsene (ionene rundt seg), og dermed vil bevegelsen dens være vanskeligere å idusere. Altså øker "treghetsmomentet" dens og dermed "massen" og den effektive massen.
-\subsubsubsection{Krystall momentum}
+\delseksjon{Krystall momentum}
 $\vec{k}$ kan enten bli tolket som en bølgevektor eller som 3 kvantetall. $\hbar\vec{k}$ er \underline{ikke} det reelle/fysiske momentumet til elektronene. Vi har at $\hat{p} = -i \hbar \nabla$. For en Bloch-tilstand: $\psi_k(\vec{r}) = e^{i \vec{k} \cdot \vec{r}} u_k(\vec{r})$. La oss nå bruke $\hat{p}$ på denne:
 \begin{align*}
   \hat{p} \psi_k(\vec{r}) = -i \hbar \nabla \psi_k(\vec{r}) = \underbrace{\hbar \vec{k} \psi_K (\vec{r}) - e^{i \vec{k} \cdot \vec{r}} i \hbar \nabla u_k(\vec{r})}_{\text{Ingen skarp egenverdi}}
 \end{align*}
 Selv om vi ikke har noen skarp egenverdi så er $\hbar \vec{k}$ fortsatt nyttig. Det er kalt krystall-momentum.
-\subsubsubsection{Gruppehastighet og effektiv masse}
+\delseksjon{Gruppehastighet og effektiv masse}
 Vi husker at gruppehastighet er definert som: $v_g = \frac{d \omega(k)}{dk} = \frac{1}{\hbar} \frac{dE(k)}{dk}$.
 
 Som gir oss aksellerasjonen: $a = \frac{d v_g}{dt} = \frac{1}{\hbar} \frac{d}{dt} \frac{dE(k)}{dk} = \frac{1}{\hbar}\left (\frac{d^2 E(k)}{dk^2} \frac{dk}{dt}\right)$.
@@ -883,8 +1467,8 @@ Hvis vi nå definerer at $m^* = \left(\hbar^2 \frac{d^2 E}{dk^2}\right)^{-1}$ s�
 For frie elektroner blir jo da $m^* = m$, fra: $\frac{d^2 E}{dk^2} = \frac{d^2}{dk^2} \left(\frac{\hbar^2 k^2}{2m}\right) = \frac{\hbar^2}{m}$
 
 %Forelesning 08.04.2024
-\newpage
-\section{Kapittel VIII: Halvledere}
+\nyside
+\kapittel{Kapittel VIII: Halvledere}
 Ved null temperatur vil halvledere bli til insulatorer. Dette er fordi ved null temperatur vil et system ha falt ned i alle orbitalene så alle elektronene "sitter fast". Altså kreves det mye energi og et stort potensial over stoffet for å få til at elektroner hopper ut av disse orbitalene og begynner å bevege seg. 
 Altså kan vi si for halvledere at:
 \begin{itemize}
@@ -979,16 +1563,15 @@ Så kan vi tegne frie elektroner og elektroner i et periodisk potensial, i tille
 \end{tikzpicture}
 
 % HER Videre har vi... (legg til mer her Sebastian)
-Noter at det kjemiske potensialet $\mu$ er i midten av båndgapet.
-\dots
+Noter at det kjemiske potensialet $\mu$ vil være i midten av båndgapet.
 
-\subsection{Hull}
+\delkapittel{Hull}
 Et hull er en ledig orbital ("tilstand") i et ellers fylt bånd. Det oppfører seg som en partikkel med motsatt ladning til elektronene i båndene. Den effektive massen til et slikt hull vil også være motsatt. Altså $m^{*}_h = -m_e^{*}$.
 
 Fra før visste vi at effektiv masse $m^* \defeq \left(\hbar^2 \frac{d^2 E}{dk^2}\right)^{-1}$
 Har vi huller i båndene våre kan elektronene bevege seg i motsatt retning i forhold til det man hadde forventet når man legger til et potnesial. Altås får man da en slags negativ effektive masse på elektronene, mens hullene får en positiv masse.
 
-\subsubsection{Båndstrukturen til GaAs og silikon}
+\seksjon{Båndstrukturen til GaAs og silikon}
 \begin{tikzpicture}
   \begin{axis}[
     axis lines = left,
@@ -1040,7 +1623,7 @@ Sammenlign med $g_1 = \frac{2 \pi}{a} \propto 10^{10} m^{-1}$.
 
 Altså ser vi at endringen man ville hatt i momentum ikke er i nærheten av nok til å komme seg ut av B.S-en. Altså er prosessen her en vertikal prosess til en veldig god approksimasjon. 
 
-\subsubsection{Å bruke absorbsjon til å forstå halvledere}
+\seksjon{Å bruke absorbsjon til å forstå halvledere}
 Vi kan bruke lys til å forstå halvledere. La oss se på hvor mye lys som er absorbert i forhold til energi:
 \begin{tikzpicture}
   \centering
@@ -1072,8 +1655,8 @@ Her er de to fargene direkte versus inderekte absorbsjon. Altså ser vi at de to
 
 
 % Forelesning 15.04.2024
-\subsection{Inneboende/Rene halvledere}
-\subsection{Dopede/Urene halvledere}
+\delkapittel{Inneboende/Rene halvledere}
+\delkapittel{Dopede/Urene halvledere}
 Som vi har utledet i forrige delkappitel hadde vi at:
 \begin{align*}
   n &= \frac{1}{V} \int_{E_g}^{\infty} D_c(E) f_c(E, T)dE = \underbrace{\frac{1}{\sqrt{2}} \left( \frac{m_e^{*} k_B T}{\pi \hbar^2}\right)^{\frac{3}{2}} e^{-\frac{(E_g - \mu)}{k_B T}} }_{\propto 10^{25} m^{-3}\text{ for } T \approx T_{\text{romtemp}}} \\
@@ -1102,7 +1685,7 @@ Typiske tall her er da at man har mellom  0.0000001\% - 0.001\% med urenheter i 
 Denne dopingen gir nye tilstander i båndgapet og endrer det kjemiske potensialet. Disse ligger mellom ledningsbåndet og valensbåndet og for en n-type halvleder ligger den over, mens for en p-type halvleder ligger den under. Da flyttes det kjemiske potensialet fra halvveis til mellom disse donortilstandene og ledningsbåndet for n-type halvledere mens for p-type halvledere ligger de da nede mellom donortilstandene og  valensbåndet.
 
 Ved en lav temperatur har man for donorer at $\mu$ må være mellom donortilstandene og lednignsbåndet. Ved en høyere temperatur vil alle donorelektroner gå i ledningsbåndet mens $\mu$ vil bevege seg mot $\frac{E_g}{2}$ fordi man da må ta elektroner fra valensbåndet for å eksitere dem til ledningsbåndet.
-\section{Kapittel IX: Nanoforskning}
+\kapittel{Kapittel IX: Nanoforskning}
 Hvorfor er  folk så interesserte i nanoforskning? Vel. Vi kan begynne med å se på endelige faste stoffer (nano-strukturer). Når vi er i disse små skaalaene får vi kvanteinnesperring, endring av bulken, og vi har et stort overflateareal med reaksjoner.
 
 Så langt i kurset har vi snakket om periodiske grensebetingelser. Vi har gjort dette for å fjerne alle overflateeffektene. Altså er vi uavhengige av hvor vi er på overflaten ved at vi har et potensial $u(x,y,z)=u(x+L,y+L,z+L)$. På grunn av disse periodiske grensebetingelsene får vi at momentumet til partikler i systemet er kvantiserte: $k = \frac{2 \pi}{a N} n$. Vi har også da at N atomer vil gi N normalmoder av vibrasjon. For lange men endelige kjeder vil tilstandstettheten være høy. Når vi har en film av tykkelse $d \propto \lambda$, vil vi ha kvanteeffekter gjennom dimensjonen til denne tykkelsen. Altså kan man få fripartikkelø tilstander langs den lengden som er veldig lang $k = \frac{2\pi}{\lambda}$, men kvantiserte tilstander langs den tynne lengden.
@@ -1114,7 +1697,7 @@ Områder man kan bruke dette er hvis man har en halvleder og et vakuum. Hvis man
 
 For en endelig brønn kan man vise at: $2k_z d + \Phi_i + \Phi_v = 2\pi n$.
 
-\subsection{Kvantekorall}
+\delkapittel{Kvantekorall}
 En kvantekorall har en diameter på $\approx 70 Å$. Man før frie elektroner på overfaltten denne ligger på. Den er også bygget opp av cirka 50 jernatomer på en kobberoverflatefilm. Se bildet for hvordan de ser ut:
 \begin{figure}[h]
   \centering
@@ -1124,7 +1707,7 @@ En kvantekorall har en diameter på $\approx 70 Å$. Man før frie elektroner p�
 \end{figure}
 
 Den letteste måten å modellere denne er ved å velge et potensial som er uendelig utenfor korallen og 0 innenfor. Altså blir dette en sfærisk uendelig brønn. Med dette potensialet får vi løsninger i formen til bessel-funksjonene: $\\psi_x(R) = AJ_m(kr) + \underbrace{BY_m(kr)}_{=0 \text{ fordi $Y_m$ divergerer når $r\rightarrow 0$}}$, med betingelsen $J_m(ka)$ og $\varepsilon = \frac{\hbar^2 \alpha*2}{2ma^2}$
-\subsection{Halvleder-nanopartikler / Kvantepunkter ($r \le 100nm$)}
+\delkapittel{Halvleder-nanopartikler / Kvantepunkter ($r \le 100nm$)}
 For å lage et elektron-hull par må du ha like mye energi som båndgapet i halvederen. I en halvleder nano-krystall vil vi få:
 \begin{equation}
   E^{\text{nano}}_{\text{min}} = E_{\text{gap}} + \underbrace{ \frac{\hbar^2 \pi^2}{2 \mu r^2}}_{\substack{\text{Kvanteinnespering av elektronet og hullet} \\ \text{ som begge er lokalisert mer enn i bulken.}}} - \underbrace{\frac{1.8 e^2}{4 \pi \varepsilon_0 r}}_{\text{Coloumb-vekselsvirkning mellom hullet og elektronet}}
@@ -1138,7 +1721,7 @@ Hvor her $\mu$ er den reduserte massen til elektronet og hullets effektive masse
 \end{figure}
 
 
-\newpage
+\nyside
 \printbibliography
 
 \end{document}
