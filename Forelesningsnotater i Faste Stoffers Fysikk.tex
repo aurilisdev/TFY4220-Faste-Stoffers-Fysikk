@@ -42,9 +42,9 @@ En tegning av disse er:
 I disse enkeltkrystallene har vi en eller annen translasjonell symmetri i domenet deres. Slik som en rotasjon, en speiling eller rene translasjoner.
 \delkapittel{Bravais Gitter}
 Et slikt gitter er bygd opp av en uendelig mengde med punkter som ser likt ut fra hvert eneste punkt. I en viss dimensjon d kan vi definere ethvert slikt punkt som:
-\begin{align*}
+\begin{align}
     \vec{R} = \sum_{i} n_i \vec{a}_i
-\end{align*}
+\end{align}
 I 2 dimensjoner finnes det kun 5 gyldige Bravais-gittere som alle er repeterende versjoner av 5 ulike figurer. Disse er repeterende firkant-, rektangulært-, heksagonalt-, sentrert-rektangulært og skråmønstere. Videre finnes det i 3 dimensjoner:
 \begin{itemize}
     \item Triklinisk: $a\ne b\ne c$, $\alpha \ne \beta \ne \gamma \ne 90$ = 3D prisme
@@ -151,13 +151,13 @@ Dette fører for eksempel til at vi ser blått lys i himmelen og rødt ved en so
 
 \seksjon{Kinematisk Diffraksjonteori}
 For å se litt nøyere på diffraksjon tar vi for oss kinematikken bak det. La oss anta at vi har en enkelt spredningshendelse. Vi har elastisk Rayleigh-spredning med en spredningsvektor definert som $\vec{Q} \defeq \vec{k}_f - \vec{k}_i$ og $|\vec{Q}| = \frac{4\pi}{\lambda} \sin(\theta)$. Dette blir faseforskjellen til bølgene. Når vi har et momentum $k_i$ før og $k_f$ etter og bølgene ser ut som $\propto e^{i \vec{k} \cdot \vec{r}}$, vil faseforskjellen bli til $e^{-i \vec{Q} \cdot \vec{r}}$. Spredningen som kommer fra et lite volumelement i en et gitter blir da noe som:
-\begin{align*}
+\begin{align}
     dF(\vec{Q}) = \underbrace{\rho(\vec{r})}_{\text{elektron-tetthet}} \underbrace{e^{-i \vec{Q} \cdot \vec{r}}}_{\text{fasefaktor}} dV
-\end{align*}
+\end{align}
 Her er F spredningsamplituden. Altså vil litt spredning avhenge av elektrontettheten ganger faseforskjellen til spredning i en retning $\vec{r}$. Totalt sett har vi:
-\begin{align*}
+\begin{align}
     F(\vec{Q}) = \int_{\text{prøven}} dV \rho(\vec{r})e^{-i \vec{Q} \cdot \vec{r}}
-\end{align*}
+\end{align}
 Her ser vi da at spredningsamplituden er fourier-transformen av elektrontettheten. Altså kan vi finne elektrontettheten ved å gjøre en invers-fouriertransform av spredningsamplituden.
 
 Dessverre kan vi ikke måle F(Q). Det eneste vi kan måle er strålingsintensiteten: $I(\vec{Q}) \propto |F(\vec{Q})|^2$.
@@ -167,48 +167,48 @@ Ved å gjøre en fourier-transformasjon kan vi komme til Impulsrommet ($\vec{r} 
 \underline{Fouriertransformen av et gitter er ett nytt gitter}.
 
 Videre må vi ha for det resiprokte gitteret at for gittervektorene: $e^{i \vec{G} \cdot \vec{R}} \Rightarrow \vec{G} \cdot \vec{R} = 2 \pi n$. For de gittervektorene vi har, har vi videre:
-\begin{align*}
+\begin{align}
     \vec{R}: \vec{R}_{mno} &= m \vec{a}_1 + n\vec{a}_2 + o \vec{a}_3 \text{  | Bravais-gitter} \\
 \vec{G}: \vec{G}_{hkl} &= h \vec{a}^{*}_1 + k\vec{a}^{*}_2 + l\vec{a}^{*}_3 \text{  | Resiprokale-gittervektor} \\
 \Rightarrow a_i^{*} &= 2 \pi \frac{\vec{a}_j \times \vec{a}_k}{\vec{a}_1 \cdot (\vec{a}_2 \times \vec{a}_3)} \varepsilon_{ijk} \\
 \Rightarrow \vec{a}_i \cdot \vec{a}^{*}_{j} &= \delta_{ij} 2 \pi \\
 \Rightarrow e^{i \vec{G} \cdot \vec{r}} &= e^{i \vec{G} \cdot \vec{r}} \\\cdot e^{i \vec{G} \cdot \vec{R}} &= e^{i \vec{G} \cdot(\vec{R} + \vec{r})}
-\end{align*}
+\end{align}
 Vi har dermed at enhver fysisk egenskap må ha periodisiteten til gitteret. Dette er \underline{veldig} viktig. Videre fra logikken utført over vil $\vec{R}$ definere Bravaisgitteret i posisjonsrommet, mens $\vec{G}$ definerer det samme Bravaisgitteret i impulsrommet. Et viktig teorem er at $d_{hkl} = \frac{2\pi}{|\vec{G}_{hkl}|}$
 
 Vi kan dermed definere:
-\begin{align*}
+\begin{align}
     \text{Generell fourier-rekke: } n(\vec{r}) &= \sum_{\vec{q}} n_{\vec{q}} e^{i \vec{q} \cdot \vec{r}} \\
    \text{Periodisk fourier-rekke: } n(\vec{r}) &= \sum_{\vec{G}} n_{\vec{G}} e^{i \vec{G} \cdot \vec{r}} \\
-\end{align*}
+\end{align}
 Her vil vi jo da ha et mengden med periodiske elementer vil være en undermengde av alle fourierelementene. Altså $\{\vec{G}\} \in \{\vec{g}\}$
 \seksjon{Spredning av et krystallgitter}
 Vi har som sagt at:
-\begin{equation*}
+\begin{equation}
     F(\vec{Q}) = \int \rho(\vec{r}) e^{-i \vec{Q} \cdot \vec{r}} dv \tab[2cm] I(\vec{Q}) \propto |F(\vec{Q})|^2
-\end{equation*}
+\end{equation}
 På en atomisk skala vil $\rho(\vec{r})$ være diskret: $\int_{\text{prøve}} dV \rightarrow \sum_\alpha \underset{\text{krystallisk}}{\rightarrow} \underbrace{\sum_{u}}_{\text{enhetsceller}} \underbrace{\sum_{\alpha \in u}}_{\text{atomer i enhetscelle}}$.
 
 Dette vil da gjøre om $F$ til:
-\begin{equation*}
+\begin{equation}
     F(\vec{Q}) \rightarrow \sum_n \sum_j\underbrace{f_j(\vec{Q})}_{\substack{\text{Atom-formfaktoren.} \\ \text{Spredningsmulighet fra det j. atomet.} \\ \text{F.T av elektrontettheten på det j. atomet.}}} e^{-i\vec{Q}(\vec{R_n} + \vec{r_j})}
-\end{equation*}
+\end{equation}
 Her kommer da $(\vec{R_n} + \vec{r_j})$ fra at $R$ tar oss til enhetscellen, mens $r$ tar oss til individuelle atomer i basisen rundt ved cellen. Denne likningen for F kan vi dele og den blir videre til:
-\begin{equation*}
+\begin{equation}
     F(\vec{Q}) = \underbrace{\sum_n e^{-i \vec{Q} \cdot \vec{R}_n} }_{\text{Gittersum}}\cdot \underbrace{\sum_j e^{-i \vec{Q} \cdot \vec{r}_j}}_{\text{Strukturfaktor}}
-\end{equation*}
+\end{equation}
 Her er det nyttig hvis vi ser på disse to delene, og hva som skjer her:
 
 \begin{minipage}{0.45\textwidth}
 \delseksjon{Enhetscell-Strukturfaktor}
-Strukturfaktoren er som sagt definert som: \begin{equation*}
+Strukturfaktoren er som sagt definert som: \begin{equation}
     S = \sum_J f_j (Q) e^{-i \vec{Q} \cdot \vec{r}_j}
-\end{equation*}
+\end{equation}
 Ved å da se på når gittersummen blir stor har vi at $\vec{Q} = \vec{G}$, som beskrevet til høyre. Videre blir da:
-\begin{align*}
+\begin{align}
     \vec{Q} \cdot \vec{r}_j &= (h \vec{a}^{*} + k \vec{b}^{*} + l \vec{c}^{*}) \cdot(x_J \vec{a} + y_j \vec{b} + z_j \vec{c}) \\
     &= 2 \pi (h x_j + ky_j + lz_j)
-\end{align*}
+\end{align}
 Altså har vi totalt sett at strukturfaktoren, når vi har sterkest diffraksjon blir:
 \begin{equation}
 \label{eq:strukturfaktoren}
@@ -232,13 +232,13 @@ Her kommer $n$ til å være enorm. I tillegg kommer summen av $n$ slike eksponen
         \caption{FCC enhetscelle}
         \label{fig:fcc_enhets_celle}
     \end{wrapfigure}I denne figuren ser vi at den røde kuben inne i fcc-gitteret representerer enhetscellen vi bryr oss om. Her vil vi da summe over alle atomene som ikke er ekvivalente her. Siden posisjonene til de ytterste atomene er halvparten av hele fcc-gitteret får de posisjoner i enten x, y eller z som blir $1/2$. Posisjonene blir da: $(0,0,0), (\frac{1}{2}, \frac{1}{2}, 0), (\frac{1}{2}, 0, \frac{1}{2}), (0, \frac{1}{2}, \frac{1}{2})$. Vi får da for strukturformfaktoren:
-    \begin{equation*}
+    \begin{equation}
         S = f\left\{1 + e^{-i \pi(h+k)} + e^{-i \pi(h+l)} + e^{-i \pi(k+l)}\right\}
-    \end{equation*}
+    \end{equation}
     Hvor vi har sagt at $f_j = f$ og dermed uavhengig av atom. Videre har vi ved å ta hensyn til at $h, k, l$ er heltall:
-        \begin{equation*}
+        \begin{equation}
         S = \Bigg\{ \substack{4f \tab[0.25cm]|\tab[0.25cm] h, k, l \text{ alle like/odde} \\ 0 \tab[0.25cm]|\tab[0.25cm] h,k,l \text{ ellers.      }}
-    \end{equation*}
+    \end{equation}
 
 \end{tcolorbox}
 
@@ -253,13 +253,13 @@ Her kommer $n$ til å være enorm. I tillegg kommer summen av $n$ slike eksponen
         \caption{BCC enhetscelle}
         \label{fig:bcc_enhetscelle}
     \end{wrapfigure}I denne figuren ser vi at den røde kuben inne i bcc-gitteret representerer enhetscellen vi bryr oss om. Her vil vi da summe over alle atomene som ikke er ekvivalente her. Siden posisjonene til det midterste atomet er halvparten av hele fcc-gitteret får den posisjoner i x, y eller z som blir $1/2$. Posisjonene blir da: $(0,0,0), (\frac{1}{2}, \frac{1}{2}, \frac{1}{2})$. Vi får da for strukturformfaktoren:
-    \begin{equation*}
+    \begin{equation}
         S = f\left\{1 + e^{-i \pi(h+k + l)}\right\}
-    \end{equation*}
+    \end{equation}
     Hvor vi har sagt at $f_j = f$ og dermed uavhengig av atom. Videre har vi ved å ta hensyn til at $h, k, l$ er heltall:
-        \begin{equation*}
+        \begin{equation}
         S = \Bigg\{ \substack{2f \tab[0.25cm]|\tab[0.25cm] h+k+l \text{ like} \\ 0 \tab[0.25cm]|\tab[0.25cm] h+k+l \text{ odde}}
-    \end{equation*}
+    \end{equation}
     Dermed har vi at: $I \propto |S(Q)|^2 = \Bigg\{ \substack{4f^2\\0}$
 
 \end{tcolorbox}
@@ -270,12 +270,12 @@ I utrykket vårt for S (se \ref{eq:strukturfaktoren}) har vi størrelsen $f_j$, 
     f_j = \int dV n_j(\vec{r}) e^{-i \vec{G} \cdot \vec{r}}
 \end{equation}
 Her går integralet over elektronfordelingen til et atom. La $\vec{r}$ ha en vinkel $\alpha$ med $\vec{G}$. Altså: $\vec{G} \cdot \vec{r} = G r \cos(\alpha)$. Hvis elektronfordelingen nå er sfærisk symmetrisk rundt origo så har vi:
-\begin{align*}
+\begin{align}
     f_j &= \int dV n_j(\vec{r}) e^{-i \vec{G} \cdot \vec{r}} \\
     &= 2 \pi \int dr r^2 d(\cos(\alpha)) n_j(r) e^{- i G r \cos(\alpha)} \\
     &= 2 \pi \int dr r^2 n_j(r) \cdot \frac{e^{iGr} - e^{-iGr}}{iGr} \eqexplain{Her går $\cos(\alpha)$ fra $-1$ til $1$}\\
     &= 4 \pi \int dr n_j(r) r^2 = \frac{\sin(Gr)}{Gr}
-\end{align*}
+\end{align}
 Hvis nå, elektrontettheten var veldig konsentrert rundt r som vi ofte har, vil vi få at denne sinusfaktoren blir lik 1. Da får vi at $f_j$ kun blir integralet over elektrontettheten og dermed blir $f_Jj = Z$ som er et svært viktig resultat:
 \begin{equation}
 \label{eq:atomformfaktor_lik_z}
@@ -319,27 +319,27 @@ Typisk skriver man også om Van der Waals potensialet til:
 Her er som normalt kreftene funnet av $F = -\frac{dU}{dR}$.
 \seksjon{Gitterkonstantene ved Likevekt}
 Hvis vi forkaster den kinetiske energien til atomene i den ikkereagerende gassen, vil den sammenhengende energien til en slik gaskrystall være gitt av å summe over alle par av atomer i krystallen. Hvis det er N atomer i krystallen blir da deres potensielle energi:
-\begin{equation*}
+\begin{equation}
     U_{\text{tot}} = \frac{1}{2} N (4 \epsilon) \left[ \sum_j \left( \frac{\sigma}{p_{ij} R}\right)^{12} - \sum_j \left( \frac{\sigma}{p_{ij} R}\right)^6 \right]
-\end{equation*}
+\end{equation}
 Her er $p_{ij} R$ avstanden mellom et referanseatom $i$ og alle andre atomer $j$, uttrykket i form av den næreste nabo-avstanden $R$. Faktoren $\frac{1}{2}$ kommer av at vi teller antall par dobbelt. For fcc-strukturen er summene over regnet ut til:
-\begin{align*}
+\begin{align}
     \sum_j p_{ij}^{-12} = 12.13188 \tab[2cm] \sum_j p_{ij}^{-6} = 14.45392
-\end{align*}
+\end{align}
 Mens for hcp-strukturen har vi:
-\begin{align*}
+\begin{align}
     \sum_j p_{ij}^{-12} = 12.13229 \tab[2cm] \sum_j p_{ij}^{-6} = 14.45489
-\end{align*}
+\end{align}
 Hvis vi nå hadde funnet likevektsavstanden for disse to strukturene (som er veldig like), må vi sette kraften lik null. Da får vi at:
-\begin{equation*}
+\begin{equation}
 \frac{R_0}{\sigma} = 1.09
-\end{equation*}
+\end{equation}
 De observerte og målte verdiene til ulike stoffer er svært likt dette. For Ne (1.14), Ar(1.11), Kr(1.10) og Xe(1.09). Dette er kjempenærme og veldig merkverdig. De små forskjellene kommer av nullpunkt-kvanteeffekter.
 \seksjon{Den Sammenhengende Energien}
 Den sammenhengende energien til ikkereagerende gaskrystaller ved det absolutte nullpunkt og ved null trykk er funnet ved å sette inn $R_0$ i Leonard-Jones potensialet. Da får vi at:
-\begin{equation*}
+\begin{equation}
     U_{\text{tot}}(R_0) = - (2.15) (4 N\epsilon)
-\end{equation*}
+\end{equation}
 Dette er da det samme for alle slike gassser og er den utregnede sammenhengende energien når atomene er i likevekt. Kvantemekaniske korreksjoner vil redusere bindingsenergien med opptil 30\% for de nevnte stoffene over. Mest for Ne(28\%)
 
 Jo tyngre atomet er, jo mindre er kvantekorreksjonene.
@@ -351,25 +351,25 @@ Ioniske krystaller er bygget opp av positive og negative ioner Det ioniske bånd
 Den langtvirkende vekselvirkningen mellom motsatt ladde ioner er Coulomb-vekselvirkningen $\pm \frac{q^2}{r}$. Selv om vi har snakket om Van der Waals-krefter er det ikke de som skaper mesteparten av den sammenhengende energien i ioniske krystaller. Det er faktisk bare 1 til 2\% av energien som kommer av slike krefter. Merparten kommer fra elektrostatiske krefter og kalles for \underline{Madelung energien}.
 
 Hvis $U_{ij}$ er vekselvirkningsenergien mellom ion $i$ og ion $j$ kan vi definere en energi som inneholder alle vekselvirkninger med et ion som:
-\begin{equation*}
+\begin{equation}
     U_i = \sum_j U_{ij}
-\end{equation*}
+\end{equation}
 Vi antar at $U_{ij}$ kan bli skrevet som summen av et sentralt frastøtende felt i formen $\lambda e^{-\frac{r}{\rho}}$, og et Coulomb-potensiale $\pm \frac{q^2}{r}$:
-\begin{equation*}
+\begin{equation}
     U_{ij} = \lambda e^{-\frac{r_{ij}}{\rho}}\pm \frac{q^2}{r_{ij}}
-\end{equation*}
+\end{equation}
 Hvis vi nå igjen definerer $r_{ij} = p_{ij} R$ og bare tar med den frastøtende vekselvirkningen blant næreste-naboer har vi:
-\begin{equation*}
+\begin{equation}
  U_{ij} = \Bigg \{
 \begin{array}{c}
 \lambda e^{- \frac{R}{\rho}} - \frac{q^2}{R} \text{ Næreste naboer}\\ 
 \pm \frac{1}{p_{ij}}\frac{q^2}{R} \text{ ellers}
 \end{array}
-\end{equation*}
+\end{equation}
 Da får vi totalt med $N$ atomer og $z$ næreste naboer:
-\begin{equation*}
+\begin{equation}
     U_{\text{tot}} = N U_i = N\left(z\lambda e^{-\frac{R}{\rho}} - \alpha\frac{q^2}{R}\right)
-\end{equation*}
+\end{equation}
 Hvor vi her har definert det vi kaller for \underline{Madelung konstanten}:
 \begin{equation}
     \label{eq:madelung_konstant}
@@ -382,22 +382,22 @@ Man kan også skrive om denne likningen for $U_{\text{tot}}$ i forhold til likev
 Man kan også finne ut at $\rho \propto 0.1 R_0$ og dermed har denne frastøtende kraften veldig liten rekkevidde.
 \seksjon{Utregning av Madelung-konstanten}
 Ved å se på definisjonen av Madelung-konstanten kan vi bytte litt og få følgende formel:
-\begin{equation*}
+\begin{equation}
     \frac{\alpha}{R} = \sum_j \frac{\pm}{r_j}
-\end{equation*}
+\end{equation}
 Her får vi $+$ for positive ioner og $-$ for negative ioner. Man kan da bruke denne formelen hvis man kan avstanden til de næreste naboene i en krystall så har man $R$, og hvis man vet hvordan alle de andre avstandene er fra et referanseatom kan man sette inn disse for $r_j$ og regne ut $\alpha$.
 
 \begin{tcolorbox}[breakable,boxrule=0pt]
     \delseksjon{Eksempel: Uendelig linje av alternerende ioner}
     La oss forestille oss at vi har en uendelig linje av alternerende ioner. Vi velger et negativt ion som referanseione og får derfor at:
-    \begin{equation*}
+    \begin{equation}
         \sum_j \frac{\pm}{r_j} = 2\left( \frac{1}{R} - \frac{1}{2R} + \frac{1}{3R} + \dots\right) = 2 \ln(2) / R
-    \end{equation*}
+    \end{equation}
     Altså har vi:
-    \begin{align*}
+    \begin{align}
         \frac{\alpha}{R} &= \frac{2\ln(2)}{R} \\
         \alpha &= 2 \ln(2)
-    \end{align*}
+    \end{align}
 \end{tcolorbox}
 
 \delkapittel{Kovalente Krystaller}
@@ -452,19 +452,19 @@ Her kan vi kalle $u_n$ for forskyvingen fra likevektsposisjonene. Altså har vi 
     &= -\gamma(2 u_n - u_{n-1} - u_{n+1})
 \end{align}
 Hvis vi nå antar at vi har en normal friforplantende bølge multiplisert med gitterposisjonene for å ha samme periodisitet som dem, får vi at:
-\begin{align*}
+\begin{align}
     u_n &= u e^{i(k a n - \omega t)} \\
     \Rightarrow \frac{d^2 u_n}{dt^2}  &= u -\omega^2 e^{i(k a n - \omega t)} \\
     u_{n\pm1} &= u e^{i (ka(n\pm1) - \omega t)}
-\end{align*}
+\end{align}
 Vi kan nå sette inn disse i kraftlikningen over. Da får v i:
-\begin{align*}
+\begin{align}
     -m\omega^2  u e^{i(k a n - \omega t)} ) &=-\gamma\left( 2 u e^{i(k a n - \omega t)} -u e^{i (ka(n+1) - \omega t)} - u e^{i (ka(n-1) - \omega t)}   \right)\\
     \Rightarrow -m \omega^2 &= -\gamma \left(2 - e{-ika} - e^{ika}\right) \\
     &=-\gamma \left(2 - 2 \cos(ka)\right)\\
     \Rightarrow \omega(k) &= \sqrt{\frac{2 \gamma\left(1 - \cos(ka)\right)}{m} }\\
     &= 2 \sqrt{\frac{\gamma}{m}}\left|\sin\left(\frac{ka}{2}\right)\right|
-\end{align*}
+\end{align}
 Vi får da spredningsrelasjonen:
 \begin{equation}
     \label{eq:spredningsrelasjon_monoatomisk_kjede}
@@ -480,9 +480,9 @@ Denne spredningsrelasjonen ser ut som følgende:
 Her kan vi se at $\omega$ varierer mellom $0$ og $\omega_{\text{maks}}$ og er periodisk med $T = \frac{2\pi}{a} = \frac{4 \pi}{\lambda}$. Vi kan nå ta for oss to grenser. Når $\lambda$ er stor og $k \rightarrow 0$ og når $\lambda$ er så liten som mulig og dermed når $k \rightarrow \frac{\pi}{a}$. Altså midten eller kantene til den første Brillouinsonen.
 \seksjon{Stor $\lambda$-grensen. Sentrum av Brillouin-sonen}
 Her har vi da at $k \rightarrow 0$. På grunn av dette får vi at $\sin(\dots)$ kan bli tilnærmet i småvinkeltilnærmingen. Da har vi at:
-\begin{equation*}
+\begin{equation}
     \omega(k) \approx \sqrt{ \frac{\gamma}{m}} ka \eqexplain{$\sin(x) \rightarrow x$}
-\end{equation*}
+\end{equation}
 Vi har da at fasehastigheten vår blir: $\nu = \frac{\omega}{k}=a\sqrt{ \frac{\gamma}{m}} $.
 
 Videre har vi at gruppehastigheten blir: $\nu_g = \frac{\partial \omega}{\partial k} = \nu$. Siden vi har at gruppehastigheten er det samme som fasehastigheten har vi \enquote{\underline{lydbølger}}. \\
@@ -496,21 +496,21 @@ Videre har vi at gruppehastigheten blir: $\nu_g = \frac{\partial \omega}{\partia
 \seksjon{Små $\lambda$-grensen. Kanten av Brillouin-sonen}
 
 Her har vi da at $\lambda \rightarrow 2a$. Da går $k \rightarrow k_{\text{maks}} = \frac{\pi}{a}$. Da får vi at:
-\begin{equation*}
+\begin{equation}
     \omega(k) = a\sqrt{ \frac{\gamma}{m}} \eqexplain{$\sin(ka/2) \rightarrow \sin(\pi / 2) = 1$}
-\end{equation*}
+\end{equation}
 Altså får vi en gruppehastighet: $\nu_g = \frac{\partial \omega}{\partial k} = 0$. 
 Siden vi ikke har noen gruppehastighet, beveger ikke bølgen på seg og vi har dermed stående bølger. Dette kan tegnes som til høyre.
 
 \seksjon{Estimering av Oscillasjonsamplituden}
 Det kan være nyttig å se hvor sterk amplituden til disse fononene kan bli. Da tar vi først for oss hva energien vår er. Deretter kan vi sammenligne den potensielle energien og den potensielle energien for å så finne ut oscillasjonsamplituden:
-\begin{equation*}
+\begin{equation}
     E = \frac{1}{2} mv^2 + \frac{1}{2} \gamma x^2
-\end{equation*}
+\end{equation}
 Ekvipartisjonsteoremet sier at hvert kvadratisk ledd i energifunksjonen vil bidra med $\frac{1}{2} k_B T$ til den termiske energien. Altså får vi:
-\begin{align*}
+\begin{align}
     \frac{1}{2} \gamma x^2 = 2 * \frac{1}{2 } k_B T
-\end{align*}
+\end{align}
 Som gir oss at:
 \begin{equation}
     x = \sqrt{\frac{2 k_B T}{\gamma}}
@@ -520,9 +520,9 @@ Som gir oss at:
 Videre kan det være nyttig å se litt tilbake på hvordan vi tidligere har sett på spredningsrelasjonene i andre tilfeller:
 \seksjon{Frie partikler i kvantemekanikk}
 For frie partikler i kvantemekanikk har vi følgende:
-\begin{align*}
+\begin{align}
     E = \hbar \omega = \frac{p^2}{2m} = \frac{\hbar^2 k^2}{2m}
-\end{align*}
+\end{align}
 Altså får vi følgende spredningsrelasjon:
 \begin{equation}
     \label{eq:spredningsrelasjon_kvantemekanikk}
@@ -532,11 +532,11 @@ Altså får vi følgende spredningsrelasjon:
 Vi må også ta for oss lys i ulike stoffer. 
 \delseksjon{Vakuum}
 Først kan vi jo da nevne lys i vakuum. Da har vi at:
-\begin{align*}
+\begin{align}
     v\lambda &= c \\
     \Rightarrow \underbrace{(2\pi v)}_{= \omega} \underbrace{(\frac{\lambda}{2 \pi})}_{= 1/k} &= c \eqexplain{Gange med $\frac{2\pi}{2\pi}$}\\
     \Rightarrow \frac{\omega}{k} &= c
-\end{align*}
+\end{align}
 Altså har vi for lys i vakuum at:
 \begin{equation}
     \label{eq:spredningsrelasjon_lys_i_vakuum}
@@ -563,30 +563,30 @@ Her kan vi gjøre mye av det samme som vi gjorde for den monoatomiske kjeden. Vi
     v_n &= v e^{i (kan - \omega t)}
 \end{align}
 Vi må også ha to kraftlikninger. Vi har da ved å se på kjeden at vi har to forskjellige masser med forskjellige likninger for begge disse:
-\begin{align*}
+\begin{align}
     M \frac{d^2 u_n}{dt^2} &= F_{u_n \leftrightarrow v_n} + F_{u_n \leftrightarrow v_{n+1}}\\
                            &= -\gamma( u_n - v_n) -\gamma( u_n - v_{n+1}) \\
                            &= -\gamma(2u_n - v_{n} - v_{n+1}) \\
     m \frac{d^2 v_n}{dt^2} &= F_{v_n \leftrightarrow u_n} + F_{v_n \leftrightarrow u_{n-1}}\\
                            &= -\gamma( v_n - u_n) -\gamma( v_n - u_{n-1}) \\
                            &= -\gamma(2v_n - u_{n} - u_{n-1})
-\end{align*}
+\end{align}
 Vi kan nå sette inn likningene våre for $u_n$ og $v_n$ fra tidligere. Etter å ha satt inn dette vil vi kunne dele vekk flere av eksponentene men vil få noen cosinuser. La oss først ta for oss den første likningen så den andre:
-\begin{align*}
+\begin{align}
     M \frac{d^2 u_n}{dt^2} &= -\gamma(2u_n - v_{n} - v_{n+1})\\
     \Rightarrow M \omega^2 u e^{i(kan - \omega t)} &= \gamma\left(2 u e^{i(kan - \omega t)} - v e^{i(kan - \omega t)} - v e^{i(ka(n+1) - \omega t)}\right) \\
     \Rightarrow M \omega^2 u e^{i(kan)} &= \gamma\left(2 u e^{i(kan)} - v e^{i(kan)} - v e^{i(ka(n+1))}\right) \\
     \Rightarrow M \omega^2 u  &= \gamma\left(2 u - v  - v e^{i(kan)}\right) \\
     \Rightarrow 0 &= u (2 \gamma - M \omega^2) - v \gamma (1 + e^{i kan}) \\
-\end{align*}
+\end{align}
 Så har vi den andre likningen:
-\begin{align*}
+\begin{align}
     m \frac{d^2 v_n}{dt^2} &= -\gamma(2v_n - u_{n} - u_{n-1})\\
 \Rightarrow m \omega^2 v e^{i(kan - \omega t)} &= \gamma\left(2 v e^{i(kan - \omega t)} - u e^{i(kan - \omega t)} - u e^{i(ka(n-1) - \omega t)}\right) \\
 \Rightarrow m \omega^2 v e^{i(kan)} &= \gamma\left(2 v e^{i(kan)} - u e^{i(kan)} - u e^{i(ka(n-1))}\right) \\
 \Rightarrow m \omega^2 v &= \gamma ( 2v - u - u e^{-ikan})\\
 \Rightarrow 0 &= -u \gamma(1 + e^{-ikan}) + v (2\gamma - m \omega^2 )  
-\end{align*}
+\end{align}
 Altså har vi funnet et likningsett:
 \begin{align}
     \label{eq:sprednings_relasjoner_diatomisk}
@@ -599,11 +599,11 @@ Disse kan bli omskrevet i matriseform ( vi har ganget med -1 også):
     \twomatrix{ M \omega^2 - 2 \gamma }{\gamma  + \gamma e^{i kan}}{\gamma + \gamma e^{-i kan}}{ m \omega^2 - 2\gamma } \twovec{u}{v} = 0
 \end{equation}
 For at denne matrisen skal kunne løses må determinanten bli null. Da får vi:
-\begin{align*}
+\begin{align}
     & ( M \omega^2-2 \gamma ) \cdot ( m \omega^2 - 2\gamma) - (\gamma + \gamma e^{i kan}) \cdot (\gamma + \gamma e^{-i kan}) \\
     =& ( M \omega^2-2 \gamma ) \cdot ( m \omega^2 - 2\gamma) - \gamma^2 (2 + e^{ikan} + e^{-ikan})\\
     =& ( M \omega^2-2 \gamma ) \cdot ( m \omega^2 - 2\gamma) - \gamma^2 (2 + 2\cos(kan))
-\end{align*}
+\end{align}
 Dette blir et annengradspolynom i $\omega^2$ som man kan løse trivielt. Vi har dermed at:
 \begin{align}
     \label{eq:spredingslikning_diatomisk}
@@ -672,23 +672,23 @@ Bidraget fra fononene til varmekapasiteten til et krystrall kalles for gittervar
 Her modelleres dette gjennomsnittlige antallet gjennom Planck-fordelingen.
 \seksjon{Planck-fordelingen}
 Vi tar for oss en mengde identiske harmoniske oscillatorer i termisk likevekt. Antall oscillatorer i ($n+1$)-tilstanden i forhold til den $n$. tilstanden vil være:
-\begin{equation*}
+\begin{equation}
     \frac{N_{n+1}}{N_n}= e^{-\frac{\hbar \omega}{k_B T}}
-\end{equation*}
+\end{equation}
 på grunn av statistisk fysikk og da fra $N_n = e^{-\frac{E_n}{k_B T}}$. Vi får da at det gjennomsnittlige antallet tilstander i $n$ blir:
-\begin{align*}
+\begin{align}
     \braket{n} &=  \frac{\sum_x x \rho(x)}{\sum_x \rho (x)}\\
     &= \frac{\sum_n n e^{-n\frac{\hbar \omega}{k_B T} }}{\sum_n e^{-n\frac{\hbar \omega}{k_B T} }}
-\end{align*}
+\end{align}
 Ved å nå bruke ulike summerelasjoner kan vi finne at:
 \begin{equation}
     \braket{n} = \frac{1}{e^{\frac{\hbar \omega}{k_B T}}-1}
 \end{equation}
 \seksjon{Finne varmekapasiteten}
 Vi kan nå finne varmekapasiteten. Vi har da at:
-\begin{equation*}
+\begin{equation}
     U = \sum_K \sum_p \frac{\hbar \omega_{K, p}}{e^{\frac{\hbar \omega_{K, p}}{k_B T}}-1}
-\end{equation*}
+\end{equation}
 Her har vi såpass mange mulige verdier for $K$ at vi kan bytte om denne summen til et integral. Hvis vi nå da for hver polarisering har $D_p(\omega) d\omega$ antall moder på et lite intervall $d \omega$ vil vi si at $D_p(\omega)$ er tilstandstettheten vår. Altså hvor mange moder vi har per polarisering per omega. Vi får da:
 \begin{equation}
     U = \sum_p \int d\omega D_p(\omega) \frac{\hbar \omega}{e^{\frac{\hbar \omega}{k_B T}} - 1}
@@ -706,10 +706,10 @@ Før vi ser på hvordan vi finner tilstandstetthetene er det greit med litt \enq
     E = \frac{1}{2} m \vec{v}^2 + \frac{1}{2} \gamma \vec{r}^2
 \end{equation}
 Dette blir til 6 kvadratledd i energien, som ekvipartisjonsteoremet sier at gir oss $3 k_B T$ med termisk energi. For ett mol med oscillatorer har vi da at:
-\begin{align*}
+\begin{align}
     \braket{E} &= 3 N_A k_B T = 3 R T\\
     \Rightarrow C_V &=  \left(\frac{\partial U}{\partial T}\right)_V = 3 R
-\end{align*}
+\end{align}
 Altså har vi det som kalles for \underline{Dulong-Petit loven}. Denne loven fungerer bra ved høy temperatur, men er helt feil ved lav temperatur. Ved lav temperatur viser det seg at man får en $T^3$-avhengighet i varmekapasiteten. Dette kan vi tegne som:
 \begin{figure}
     \centering
@@ -720,15 +720,15 @@ Altså har vi det som kalles for \underline{Dulong-Petit loven}. Denne loven fun
 Her er da den røde linjen Dulong-Petit loven, mens den svarte linjen er det man faktisk måler.
 \seksjon{Semi-Kvantiserte modellen (Einstein)}
 Einstein klarte å finne en bedre modell enn det over. Han brukte nesten samme ståsted som vi hadde øverst, med en liten forskjell. Istedenfor at vi tar hensyn til at vi kan ha forskjellige oscillatorer som tar del i varmekapasiteten som vi fant i likning (\ref{eq:varmekapasitet_fononer_ferdig}), så antok han at vi bare har en stor mengde med samme type oscillator. Altså vil i vår likning $D_p(\omega) = \delta(\omega - \omega_E) N$ for å få riktig antall oscillatorer ($N$) og kun en frekvens. Da får vi at:
-\begin{align*}
+\begin{align}
     C_{\text{gitter}} &= 3N \left(\frac{\hbar \omega_E}{k_B T}^2\right) \frac{e^{\frac{\hbar \omega_E}{k_B T}}}{\left(\frac{\hbar \omega_E}{k_B T} - 1\right)^2}
-\end{align*}
+\end{align}
 Denne fungerer mye bedre helt ned til en ganske så lav temperatur. Derimot fungerer den heller ikke ved en veldig lav temperatur. Dette er fordi vi her ikke har tatt hensyn til at vi kan ha mer enn en type oscillator og har antatt at alle har samme frekvens. Videre kommer 3-eren fra at vi har 3 dimensjoner
 \delkapittel{Debye modellen}
 La oss skrive opp resultatet vårt for varmekapasiteten igjen (\ref{eq:varmekapasitet_fononer_ferdig}):
-\begin{equation*}
+\begin{equation}
     \Rightarrow C_{\text{gitter}} = k_B \sum_p \int d\omega D_p(\omega) \frac{x^2e^x}{\left(e^x-1\right)^2}
-\end{equation*}
+\end{equation}
 Her vil vi i Debye modellen anta  at vi har en konstant lydhastighet for begge polariseringstypene, slik som det ville vært for et klassisk elastisk medie. Spredningsrelasjonen blir her da:
 \begin{equation}
 \label{eq:spredningsrelasjon_konstant_lydhastighet}
@@ -1199,9 +1199,9 @@ I den første brønnen ved $0 < x < a$ hvor $U = 0$ vil vi ha bølger som er lin
     \psi = Ae^{iKx} + Be^{-iKx}
 \end{equation}
 av planbølger som beveger seg til venstre og til høyre med fri energi. Videre vil de bølgene i regionen $-b < x < 0$ være en synkende løsning i formen:
-\begin{equation*}
+\begin{equation}
     \psi = Ce^{Qx} + De^{-Qx}
-\end{equation*}
+\end{equation}
 med potensialenergien minus den frie energien:
 \begin{equation}
     E = U_0 - \frac{\hbar^2 Q^2}{2m} 
@@ -1311,10 +1311,10 @@ Videre ser Schrödinger likningen slik ut for et potensial:
   u(\vec{r}) = u(\vec{r} + \vec{R})
 \end{align}
 Altså blir potensialet her $\vec{R}$-periodisk. Ved å nå bruke foriertransformer så kan vi gjøre om denne differensiallikningen til en algebraisk likning. fouriertransformene er definert slik:
-\begin{align*}
+\begin{align}
   \psi(x) &= \sum_k c_k e^{ikx} \\
   u(x) &= \sum_G u_g e^{iGx}
-\end{align*}
+\end{align}
 Disse gir oss \enquote{sentrallikningen}:
 \begin{equation}
   \label{eq:den_sentrale_likningen}
@@ -1327,24 +1327,24 @@ Mer mattematisk så kobler for eksempel $c_{k_0}$ til $\{..., c_{k_0 - 2g}, c_{k
 \seksjon{Å Bevise Teoremet}
 La oss nå anta at vi har en løsning til bølgefunksjonen $\psi(\vec{r})$.
 Her kan vi da gjøre:
-\begin{align*}
+\begin{align}
   \psi(\vec{r}) &= \sum_{\vec{k}} c_{\vec{k}} e^{i \vec{k} {r}} \\
   \text{Gjennom sentrallikningen får vi:} \\
    \psi_k(\vec{r})&= \sum_{\vec{G}} c_{\vec{k} - \vec{G}} e^{i(\vec{k} - \vec{G}) 
    \vec{r}} \\
    &= e^{i\vec{k}\cdot\vec{r}} \sum_{\vec{G}}  c_{\vec{k} - \vec{G}}e^{-i \vec{G}\cdot\vec{R}}
-\end{align*}
+\end{align}
 Summen over $\vec{G}$ til slutt kan vi se at er $\vec{R}$ periodisk. Altså kunne vi ha kalt hele summen for en funksjon som er periodisk. Ved å sammenligne med definisjonen av Block-funksjonene, så har vi faktisk bevist at de er gyldige løsninger. Vi trenger bare å kalle summen for for $u(\vec{r})$ som vi brukte i definisjonen deres: 
 
-\begin{equation*}
+\begin{equation}
   u_k(\vec{r}) = \sum_{\vec{G}} c_{\vec{k} - \vec{G}} e^{-i \vec{G} \cdot \vec{R}}
-\end{equation*}
+\end{equation}
 \seksjon{Konsekvensene til Block's teorem}
 Vi antar at vi har $\psi_{k'}(\vec{r})$ for en gitt $\vec{k'}$. Da kan vi skrive fra Block's teorem, at: $\psi_{k'}(\vec{r}) = e^{i\vec{k}\cdot\vec{r}} u_{k'}(\vec{r})$. Nå lar vi: $\vec{k} = \vec{k'} + \vec{G}$, hvor $\vec{G}$ er en resiprokalgittervektor. Nå kan vi da skrive:
-\begin{align*}
+\begin{align}
   \psi_k{\vec{r}} &= e^{i \vec{k} \cdot \vec{r}} e^{i \vec{G} \cdot \vec{r} u_{\vec{k} - \vec{G}}u(\vec{r})} \\
   &= e^{i\vec{k}\cdot\vec{r}}{u'}_{\vec{k}-\vec{g}}
-\end{align*}
+\end{align}
 Hvor: ${u'}_{\vec{k}-\vec{g}} = {u}_{\vec{k}-\vec{g}} e^{-i \vec{G}\cdot \vec{r}}$.
 Denne nye Blockfunksjonen er \underline{like god} på alle måter som den originale. Konsekvensen her er at bølgevektoren $\vec{k}$ er vilkårlig med hensyn til addisjonen av en resiprokalgittervektor.
 
@@ -1370,7 +1370,7 @@ Fra kapittel 6 fant vi en dispersasjonsrelasjon for frie elektroner: $E = \frac{
 Videre så vi at i grensen $u_G \rightarrow 0$ så kunne disse parabolene overlappe slik som i figuren over i tomgittertilnærmingen \ref{fig:1d_overlappende_tomgitter_tilnærming}.
 
 La oss nå øke potensialet (forstatt svakt) og anta at: $u(x) = 2 u_g cos(\frac{2\pi x}{G}) = \sum_G u_G e^{iGx}$, hvor $u_G$ er reell. Vi har også at $u_G = u_{-G}$ fra tidligere. Vi definerer nå at $u_g = u_{-g} = u$ hvor alle andre $u_G=0$. La oss nå se på sentrallikningen:
-\begin{align*}
+\begin{align}
   \left(\frac{\hbar^2 k^2}{2m} - E \right)c_k &+ \sum_G u_G c_{k-G} = 0 \\
   \left(\frac{\hbar^2 k^2}{2m} - E \right)c_k  &+ ... \\
   &+ u_{-2g} c_{k - (-2g)} \\
@@ -1378,9 +1378,9 @@ La oss nå øke potensialet (forstatt svakt) og anta at: $u(x) = 2 u_g cos(\frac
   &+ u_{0} c_{k} \\
   &+ u_{g} c_{k - g} \\
   &+ u_{2g} c_{k - 2g}  = 0\\
-\end{align*}
+\end{align}
 Her kan vi simplifisere dette utrykket siden alt annet enn $u_g$ og $u_{-g}$ blir lik null siden vi antok det før vi begynte. Altså får vi:
-\begin{align*}
+\begin{align}
   \left(\frac{\hbar^2 k^2}{2m} - E \right)c_k  &+ ... \\
   &+ u_{-2g} c_{k - (-2g)} \\
   &+ u_{-g} c_{k - (-g)} \\
@@ -1390,15 +1390,15 @@ Her kan vi simplifisere dette utrykket siden alt annet enn $u_g$ og $u_{-g}$ bli
   \left(\frac{\hbar^2 k^2}{2m} - E \right)c_k  &+ ... \\
   &+ u_{-g} c_{k - (-g)} \\
   &+ u_{g} c_{k - g} = 0
-\end{align*}
+\end{align}
 Men nå vet vi jo at $k\rightarrow k-g$ også er en løsning. Altså gjelder også:
-\begin{align*}
+\begin{align}
   \left(\frac{\hbar^2 k^2}{2m} - E \right)c_k  &+ ... \\
   &+ u_{-g} c_{k - g - (-g)} \\
   &+ u_{g} c_{k - g - g} = 0
-\end{align*}
+\end{align}
 Videre så er jo også $k \rightarrow k+g$ og $k\rightarrow k+2g$ og så videre for evig. Vi kan få dette i matriseform. Vi skriver derfor at: $\lambda_k \defeq \frac{\hbar^2k^2}{2m}$ og får:
-\begin{align*}
+\begin{align}
   \begin{bmatrix}
     \lambda_{k-2g} - E& u_g & 0 & 0 & 0 \\
     u_g & \lambda_{k-g} - E & u_g & 0 & 0\\
@@ -1419,23 +1419,23 @@ Videre så er jo også $k \rightarrow k+g$ og $k\rightarrow k+2g$ og så videre 
    0& 0 & u_g & \lambda_{k+g} - E& u_g  \\
    0& 0 & 0 & u_g & \lambda_{k+2g} - E  \\
   \end{bmatrix} \right | = 0
-\end{align*}
+\end{align}
 Vi kan trekke ut en mindre determinant av denne med dominante termer. Vi velger firkanten 11-22:
-\begin{align*}
+\begin{align}
   \left | \begin{bmatrix}
       u_g & \lambda_{k-g} - E & u_g\\
      u_g & \lambda_{k} - E &  u_g \\
     \end{bmatrix} \right | &= 0 \\
      \Rightarrow (\lambda_{k-g} - E)(\lambda_k - E) - u_g^2 &= 0 \\
      \Rightarrow E(k) &= \frac{1}{2}\left(\lambda_k + \lambda_{k-g}\right) \pm \left[\frac{1}{4}\left(\lambda_{k-g} - \lambda_k\right) +u_g^2 \right]^{\frac{1}{2}}
-\end{align*}
+\end{align}
 
 Ved å nå ta for oss sone-grensen $k=\frac{g}{2} = \frac{\pi}{a}$ så får vi at:
-\begin{align*}
+\begin{align}
   \lambda_k &= \frac{\hbar^2 k^2}{2m} = \frac{\hbar^2}{2m}\frac{g^2}{4} \\
   \lambda_{k-g} &= \frac{\hbar^2(k-g)^2}{2m} = \frac{\hbar^2 (\frac{g}{2}-g)^2}{2m} = \lambda_k \\
   \Rightarrow E(B.Z) = E\left(\frac{g}{2}\right) &= \lambda_{\frac{g}{2}} \pm u_g = \frac{\hbar^2 (\frac{1}{2}g)^2}{2m} \pm u_{1} = \underbrace{\frac{\hbar^2 \left(\frac{\pi}{a}\right)^2}{2m}}_{\text{Fritt elektron } E = \frac{\hbar^2 k^2}{2m}} \pm \underbrace{u_{1}}_{\text{Båndgap av størrelse } 2u_1}
-\end{align*}
+\end{align}
 
 Vi kan også vise at: 
 
@@ -1449,9 +1449,9 @@ C: Nær nok grensen til B.Z-en så er båndstrukturen parabolsk.
 For et fritt elektron hadde vi jo da: $E = \frac{\hbar^2 k^2}{2m}$, som er parabolsk, men hvordan gjør vi de andre elektronene parabolske også? Vel vi vil introdusere en effektiv masse $m^*$. Men hvorfor ville massen ha endret seg? Den vil endre seg fordi elektronet vil vekselvirke med omgivelsene (ionene rundt seg), og dermed vil bevegelsen dens være vanskeligere å idusere. Altså øker "treghetsmomentet" dens og dermed "massen" og den effektive massen.
 \delseksjon{Krystall momentum}
 $\vec{k}$ kan enten bli tolket som en bølgevektor eller som 3 kvantetall. $\hbar\vec{k}$ er \underline{ikke} det reelle/fysiske momentumet til elektronene. Vi har at $\hat{p} = -i \hbar \nabla$. For en Bloch-tilstand: $\psi_k(\vec{r}) = e^{i \vec{k} \cdot \vec{r}} u_k(\vec{r})$. La oss nå bruke $\hat{p}$ på denne:
-\begin{align*}
+\begin{align}
   \hat{p} \psi_k(\vec{r}) = -i \hbar \nabla \psi_k(\vec{r}) = \underbrace{\hbar \vec{k} \psi_K (\vec{r}) - e^{i \vec{k} \cdot \vec{r}} i \hbar \nabla u_k(\vec{r})}_{\text{Ingen skarp egenverdi}}
-\end{align*}
+\end{align}
 Selv om vi ikke har noen skarp egenverdi så er $\hbar \vec{k}$ fortsatt nyttig. Det er kalt krystall-momentum.
 \delseksjon{Gruppehastighet og effektiv masse}
 Vi husker at gruppehastighet er definert som: $v_g = \frac{d \omega(k)}{dk} = \frac{1}{\hbar} \frac{dE(k)}{dk}$.
@@ -1614,11 +1614,11 @@ Videre vil jeg definere "Radierende Rekombinasjon":
 \end{itemize}
 
 Hvis vi ser på et foton som har lik energi som båndgapet har vi:
-\begin{align*}
+\begin{align}
   \hbar \omega_{optisk} = E_g \\
   \omega \propto \frac{E_g}{\hbar} \propto 10^{14} s^{-1} \\
   k_{optisk} = \frac{\omega_{optisk}}{c} \propto 10^6 m^{-1}
-\end{align*}
+\end{align}
 Sammenlign med $g_1 = \frac{2 \pi}{a} \propto 10^{10} m^{-1}$.
 
 Altså ser vi at endringen man ville hatt i momentum ikke er i nærheten av nok til å komme seg ut av B.S-en. Altså er prosessen her en vertikal prosess til en veldig god approksimasjon. 
@@ -1643,9 +1643,9 @@ Vi kan bruke lys til å forstå halvledere. La oss se på hvor mye lys som er ab
 
 
 Her er de to fargene direkte versus inderekte absorbsjon. Altså ser vi at de to tilfellene gir forskjellige grafer.
-\begin{equation*}
+\begin{equation}
   I(\lambda) = I_0(\lambda) e^{-\mu (\lambda) s}
-\end{equation*}
+\end{equation}
 
 
 
@@ -1658,15 +1658,15 @@ Her er de to fargene direkte versus inderekte absorbsjon. Altså ser vi at de to
 \delkapittel{Inneboende/Rene halvledere}
 \delkapittel{Dopede/Urene halvledere}
 Som vi har utledet i forrige delkappitel hadde vi at:
-\begin{align*}
+\begin{align}
   n &= \frac{1}{V} \int_{E_g}^{\infty} D_c(E) f_c(E, T)dE = \underbrace{\frac{1}{\sqrt{2}} \left( \frac{m_e^{*} k_B T}{\pi \hbar^2}\right)^{\frac{3}{2}} e^{-\frac{(E_g - \mu)}{k_B T}} }_{\propto 10^{25} m^{-3}\text{ for } T \approx T_{\text{romtemp}}} \\
   p &=\frac{1}{V} \int_{-\infty}^0 D_v(E) (1-f_e) dE = \frac{1}{\sqrt{2}} \left( \frac{m_h^{*} k_B T}{\pi \hbar^2}\right)^{\frac{3}{2}} e^{-\frac{\mu}{k_B T}}\\
   \Rightarrow np &= 4 \left(\frac{k_B T}{2 \pi \hbar^2}\right)^3 (m_e^{*} m_h^{*})^{\frac{3}{2}} e^{-\frac{E_g}{k_B T}}
-\end{align*}
+\end{align}
 Altså har vi ingen $\mu$-avhengighet. Ved inneboende halvledere har vi at $n=p$ (noter at np = konstant), som gir oss (ved å løse likningene over for $\mu$):
-\begin{equation*}
+\begin{equation}
   \mu = \frac{E_g}{2} + \frac{3}{4} k_B T \ln{\left(\frac{m_h^{*}}{m_e^{*}}  \right)}
-\end{equation*}
+\end{equation}
 Nå har vi da at dopede halvledere deles inn i to grupper. N og P-type.
 \begin{itemize}
   \item N-Type:
@@ -1691,9 +1691,9 @@ Hvorfor er  folk så interesserte i nanoforskning? Vel. Vi kan begynne med å se
 Så langt i kurset har vi snakket om periodiske grensebetingelser. Vi har gjort dette for å fjerne alle overflateeffektene. Altså er vi uavhengige av hvor vi er på overflaten ved at vi har et potensial $u(x,y,z)=u(x+L,y+L,z+L)$. På grunn av disse periodiske grensebetingelsene får vi at momentumet til partikler i systemet er kvantiserte: $k = \frac{2 \pi}{a N} n$. Vi har også da at N atomer vil gi N normalmoder av vibrasjon. For lange men endelige kjeder vil tilstandstettheten være høy. Når vi har en film av tykkelse $d \propto \lambda$, vil vi ha kvanteeffekter gjennom dimensjonen til denne tykkelsen. Altså kan man få fripartikkelø tilstander langs den lengden som er veldig lang $k = \frac{2\pi}{\lambda}$, men kvantiserte tilstander langs den tynne lengden.
 
 Områder man kan bruke dette er hvis man har en halvleder og et vakuum. Hvis man setter en tynn film over halvlederen, vil vi få en slags brønn i potensialet mellom halvlederen og vakuumet. Da kan vi gjøre en Ansatz: $\psi_{tot}(r) = \psi(z) \psi_{side}(x,y)$ hvor: $\psi(z) = Ae^{ik_z z}+Be^{-ik_z z}$. Hvis man da har en uendelig brønn, må bølgefunksjonen være null ved overgangen mellom disse tre stoffene. Da får vi det som kalles for en De-Broglie-betingelse: $2d = n\lambda \Rightarrow 2k_z d = 2\pi n$, som gir oss at:
-\begin{equation*}
+\begin{equation}
   E_n = \frac{\hbar^2 k_z^2}{2m} = \frac{n^2 \pi^2 \hbar^2}{2m d^2}
-\end{equation*}
+\end{equation}
 
 For en endelig brønn kan man vise at: $2k_z d + \Phi_i + \Phi_v = 2\pi n$.
 
