@@ -290,7 +290,15 @@ En primvitiv celle kan bli laget ved å følge denne prosedyren:
     \item På midtpunktet av disse linjene mellom gitterpunktene lager vi et plan/linje som er normal på linja som utvider seg utover.
     \item Det minste volumet rundt det originale gitterpunktet som er skapt av disse planene skaper da den primitive wigner-seitz-cellen.
 \end{enumerate}
-
+\seksjon{Ewald Sfæren}
+Ewald sfæren er en nyttig visualisering av Laue-betingelsen $\vec{Q}=\vec{G}$. Krystallgitteret er vist ved de resiprokale gitterpunktene i svart. Retningene til den innkommende og reflekterte strålen vises av de to vektorene $\vec{k}$ og $\vec{k'}$. Endepunktet til k er plassert ved opprinnelsen til rekrystalliserende rom, og en sirkel (2D) eller kule (3D) er tegnet med senter ved startpunktet til $\vec{k'}$. Hvis sirkelen skjærer en annen rekrystallisert gitterpunkt, vil en diffraktert stråle bevege seg i retning av $\vec{k'}$.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.3\linewidth]{bilder/ewaldsfæren.png}
+    \caption{Ewald Sfæren}
+    \label{fig:ewaldsfæren}
+\end{figure}
+Dette er dermed en fin måte å se på hvordan diffraksjon foregår i det resiprokale gitteret i motsetning til i reelt rom.
 \nyside
 \kapittel{Kapittel III: Krystallbindinger og Elastiske konstanter}
 \delkapittel{Leonard-Jones Potensialet}
@@ -305,7 +313,9 @@ Vi har mange ulike situasjoner inne i atomer, men den første vi skal ta for oss
     \label{eq:leonard_jones_potensialet}
     u_{lj} \propto \frac{A}{r^{12}} - \frac{B}{r^6}
 \end{equation}
-Her skaper $r^6$ en Van der Waals vekselvirkning. Også kjent som London-vekselvirkningeen eller den induserte dipol-dipol vekselvirkningen. Det er hoved-tiltrekningskraften i krystaller av ikke-reagerende gasserr og i krystaller av mange organiske molekyler. Vekselvirkningen er en kvanteeffekt siden konstanten her vil avhenge av $\hbar$ og vil dermed forsvinne når vi tar grensen $\hbar \rightarrow 0$. Den vil også avhenge av $\alpha$ som er den elektroniske polariserbarheten.
+Her skaper $r^6$ en Van der Waals vekselvirkning. Også kjent som London-vekselvirkningeen eller den induserte dipol-dipol vekselvirkningen. Det er hoved-tiltrekningskraften i krystaller av ikke-reagerende gasser og i krystaller av mange organiske molekyler. Vekselvirkningen er en kvanteeffekt siden konstanten her vil avhenge av $\hbar$ og vil dermed forsvinne når vi tar grensen $\hbar \rightarrow 0$. Den vil også avhenge av $\alpha$ som er den elektroniske polariserbarheten.
+
+Kraften oppstår som følge av en midlertidig endring i elektrontettheten. Spesifikt kan elektrontettheten midlertidig skifte til å være større på den ene siden av kjernen. Dette skiftet genererer en midlertidig ladning som et nærliggende atom kan bli tiltrukket av eller frastøtt av.
 
 Videre skaper $r^{12}$ faktoren, kreftene forårsaket av Pauli's utelukkelsesprinsipp. Dette prinsippet går ut på at to fermioner ikke kan overlappe helt. Altså kan de ikke ha helt like kvantetall. Dette er i motsetning til bosoner. På grunn av dette vil det skapes en effektiv kraft mellom elektroner som holder dem unna hverandre som vil ha et potensial i form av $\frac{A}{r^{12}}$.
 
@@ -345,7 +355,7 @@ Dette er da det samme for alle slike gassser og er den utregnede sammenhengende 
 Jo tyngre atomet er, jo mindre er kvantekorreksjonene.
 
 \delkapittel{Ioniske Krystaller}
-Ioniske krystaller er bygget opp av positive og negative ioner Det ioniske båndet har sitt opphav i de elektrostatiske vekselvirkningene til motsatt ladde ioner. To vanlig krystallstrukturer for slike ioniske krystaller er krystallstrukturene til salt og cesium-klorid som består av et FCC-gitter med en basis som har ett atom i seg over det normale gitteret. 
+Ioniske krystaller er bygget opp av positive og negative ioner Den ioniske bindingen har sitt opphav i de elektrostatiske vekselvirkningene til motsatt ladde ioner. To vanlig krystallstrukturer for slike ioniske krystaller er krystallstrukturene til salt og cesium-klorid som består av et FCC-gitter med en basis som har ett atom i seg over det normale gitteret. 
 
 \seksjon{Elektrostatiske/Madelung- Energien}
 Den langtvirkende vekselvirkningen mellom motsatt ladde ioner er Coulomb-vekselvirkningen $\pm \frac{q^2}{r}$. Selv om vi har snakket om Van der Waals-krefter er det ikke de som skaper mesteparten av den sammenhengende energien i ioniske krystaller. Det er faktisk bare 1 til 2\% av energien som kommer av slike krefter. Merparten kommer fra elektrostatiske krefter og kalles for \underline{Madelung energien}.
