@@ -13,7 +13,7 @@
 
 \newpage
 \section*{Ingress}
-Skrevet av studenter. Notater er tatt under forelesningene i TFY4220 Faste Stoffers Fysikk av Dag Werner Breiby og er veldig basert på boken Introduction to Solid State Physics av C. Kittel. Øvingene er løst av Sebastian Siljuholtet Johansen.
+Skrevet av studenter. Notater er tatt under forelesningene i TFY4220 Faste Stoffers Fysikk av Dag Werner Breiby og er veldig basert på boken Introduction to Solid State Physics av C. Kittel. Øvingene er løst av Sebastian Siljuholtet Johansen og noen oppgaver (mer fokusert rundt forklaringer) tar utgangspunkt (eller er ren oversettelse) av løsningsforslagene gitt i løpet av semesteret.
 
 \newpage
 \tableofcontents
@@ -644,7 +644,14 @@ Når man tar absoluttverdien av den komplekse Fourier-transformasjonen, blir arg
 Bortsett fra: Legg merke til at i ultralydteknologi (som vanligvis brukes innen medisin), er frekvensen til (lyd)bølgen i 10 MHz-området, noe som kan måles elektronisk – derfor kan ultralyd danne bilder uten å bekymre seg for faseproblemet.
 
 \deloppgave{b}
-Hvordan i alle dager skal man finne ut av dette da?
+Her vil rette linjer roteres og flyttes sammen rundt origo. TIng vil bli rotert 90 grader men sentrert ved origo. Sirkler vil forbli sirkler, igjen fokusert ved origo. Derfor får vi følgende løsninger:
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.4\linewidth]{bilder_lf/løsninger_diffraksjon_bokstaver.png}
+    \caption{Løsninger til bokstavdiffraksjon}
+    \label{fig:løsninger_diffraksjon_bokstaver}
+\end{figure}
+
 \oppgave{4}
 \deloppgave{a}
 \begin{align}
@@ -753,12 +760,325 @@ Tar vi at alle konstantene er like og plotter disse to sammen får vi:
 \end{figure}
 \nyside
 \oving{8}
+\deloppgave{a}
+Drude modellen er basert på klassisk mekanikk og går ut på at elektronene kan bevege seg fritt rundt og kolliderer med atomene som klinkekuler. Denne modellen fungerer derimot ikke.
+
+Den frie-elektron-modellen er en kvantemekanisk modell der elektronene er begrenset innenfor en prøve ("partikkel i en boks"). I denne modellen er potensialet null, men partiklene er tvunget til å følge Pauliprinsippet. Denne modellen beskriver metaller ganske godt, spesielt alkalimetaller. Den modellerer også varmekapasiteten riktig, men klarer ikke å forklare hvorfor noen materialer er isolatorer eller halvledere, dvs. ikke metaller. For dette må vi begynne å se på atomenes vekselvirkninger med elektronene.
+\deloppgave{b}
+Bare valenselektronene blir modellert av den frie elektron Fermi-gassmodellen. Kjerneelektronene er bundet til kjernene og skjermer det elektrostatiske potensialet fra de positivt ladde kjernene. Den sentrale antakelsen til den frie elektronmodellen er at denne skjermingen er tilstrekkelig effektiv til at potensialet kan behandles som konstant overalt inne i det faste stoffet. Videre neglisjeres vekselvirkninger mellom valenselektronene, men Pauliprinsippet gjelder fortsatt. Effektivt okkuperer alle elektronene tilstander som modelleres av "partikkel i boks"-modellen (der boksen har størrelsen og formen til materialeprøven). Siden elektronene følger Paulis prinsipp, kan det være bare to elektroner i hver k-tilstand (en med spin opp, den andre med spin ned).
+\deloppgave{c}
+Modellen med frie elektroner forklarer godt egenskapene knyttet til kinetikken til elektroner. Eksempler inkluderer bidraget fra elektroner til:
+\begin{itemize}
+    \item Varmekapasiteten, som er lineær med T, mens varmekapasiteten til fononer er $\propto T^3$ for lave $T$. Som et resultat er det elektroniske bidraget til varmekapasiteten bare betydningsfullt ved lave temperaturer.
+    \item Den elektriske ledningsevnen til metaller (Ohms lov).
+    \item Forholdet mellom elektrisk og termisk ledningsevne (Wiedemann – Franz lov).
+    \item Formen på tettheten av tilstander, som i 3D gis av $D(E) \propto \sqrt{E}$.
+\end{itemize}
+\deloppgave{d}
+Viktigst av alt forklarer ikke Fermi-gass-modellen forskjellen mellom metaller, halvledere, halvmetaller og isolatorer; ifølge denne modellen er alle faste stoffer metaller. Videre er forekomsten av positive Hall-koeffisienter og mange transportegenskaper ikke korrekt modellert.
+\deloppgave{e}
+Fermi-gass-modellen fungerer bra for alkalimetallene (Li, Na, K, Cs og Rb), og også bra for de gode lederne Ag og Cu. Alkalimetallene har alle bare ett enkelt valenselektron, og på grunn av deres lukkede elektronstruktur ("oktettregelen") vil kjerneelektronene samhandle svært svakt med delokaliserte valenselektroner.
+\oppgave{2}
+\deloppgave{a}
+Fra det gitte uttrykket ser vi at det er to krefter: Lorentz-kraften (her antar vi B = 0) og en dissipativ bremsende kraft $F = - \Gamma v$ som stammer fra tilfeldige kollisjoner. Kollisjonene antas å være øyeblikkelige, og gir elektronet en ny hastighet $v_0$ i en tilfeldig retning. Etter en tid $t$ siden den siste kollisjonen, vil elektronet akselereres til $v = v_0 + \frac{Eq t}{m}$. Den gjennomsnittlige hastigheten er derfor:
+\begin{align}
+    <v> &= <v_0> + \left< \frac{Eq t}{m}\right> \\
+        &= 0 + \frac{Eq }{m}<t> \\
+        &= \frac{Eq \tau}{m} 
+\end{align}
+\deloppgave{b}
+Her vet vi at $\vec{j} = - ne \vec{v}$. Derfor $\vec{v} = -\frac{\vec{j}}{ne}$. Videre må vi også ha at $\vec{j} \propto e^{-i\omega_0 t}$ siden $\vec{E}$. Altså har vi at:
+\begin{equation}
+\vec{j} = \vec{j}_0 e^{-i\omega_0 t}
+\end{equation}
+For å finne denne faktoren foran, setter vi inn dette inn i kraftlikningen vi hadde. Altså har vi:
+\begin{align}
+    m \frac{d\vec{v}}{dt} &= q \vec{E} - \Gamma \vec{v}\\
+\Rightarrow m \frac{d}{dt} \left(-\frac{\vec{j}}{ne} \right) &= q \vec{E} + \Gamma\frac{\vec{j}}{ne} \\
+\Rightarrow m\frac{d}{dt} \left(-\frac{1}{ne}\vec{j}_0 e^{-i\omega_0 t} \right) &= -e \vec{E}_0 e^{-i\omega_0 t} + \frac{m}{\tau}\frac{1}{{ne}}\vec{j}_0 e^{-i\omega_0 t} \\
+\Rightarrow \vec{j_0} &= \frac{n e^2 \tau}{m}\frac{1+i \omega \tau}{1+(\omega\tau)^2} \vec{E}_0 \\
+\Rightarrow \sigma &=\frac{n e^2 \tau}{m}\frac{1+i \omega \tau}{1+(\omega\tau)^2} \\
+&= \sigma_0 \frac{1+i \omega \tau}{1+(\omega\tau)^2}
+\end{align}
+\deloppgave{c}
+Ved å skrive om likningen for $\sigma_0$ for å finne $\tau$ får vi at:
+\begin{equation}
+    \tau = \frac{m \sigma_0}{ne^2}
+\end{equation}
+Med ledningsevnen til kobber, massen og elektrontettheten får vi at $\tau_{Cu} \approx 2.48 
+\cdot 10^{-14}$s
+\oppgave{3}
+Vi får i oppgaven at:
+\begin{equation}
+    f(E, T) = \frac{1}{1 + e^{(E-E_F)/ k_BT}}
+\end{equation}
+\deloppgave{a}
+Vi setter grensene våre lik $f$ og får:
+\begin{align}
+    e ^{\frac{E-E_F /}{k_BT}}&= \frac{1}{f} - 1 \\
+    \Rightarrow \Delta E_f &= k_BT \ln ( \frac{1}{f} - 1 )
+\end{align}
+Ved å sette in $f=0.1$ og $f=0.9$ og ta forskjellen får vi at:
+\begin{equation}
+    \Delta E = |\Delta E_0.1-\Delta E_0.9| = 2 k_BT \ln(9) \approx 4.39 k_BT
+\end{equation}
+\deloppgave{b}
+Ved romtemperatur blir skalaen vår for den myke sonen at $\Delta E \approx 0.1 $ eV. Siden ferminivået for metaller er i ordenen 1.5 - 15 eV vil dette  være svært lite. Vi vet også at f vil være symmetrisk om $E_f$ og antar da at vi har en snittverdi rundt dette. Altså et rektangel med høyde $f(E_f) D_E(E_f)$, bredde $\Delta E$. Videre vet vi at i tre dimensjoner har vi at $D_E(E) = C \sqrt{E}$. Da får vi at:
+\begin{equation}
+    N_m =\Delta E f(E_f) D_E(E_f) \approx 2.2 k_BT C \sqrt{E_F}
+\end{equation}
+Videre vet vi at vi har N tilstander:
+\begin{equation}
+    N = \int_0^{E_F} D_E(E) dE = \frac{2C}{3} E_F^{\frac{3}{2}}
+\end{equation}
+Som gir oss et forhold:
+\begin{equation}
+    \frac{N_m}{N} = \frac{3 k_BT}{E_F}
+\end{equation}
 \nyside
 \oving{9}
+\oppgave{1}
+\deloppgave{a}
+Fermisfæren er definert av impulsen til bølgevektorene. Lengden til slike vektorer skaper en slags sfærisk form i impulsrommet. Den impulsen som definerer det høyeste fylte energinivået i grunntilstanden vil gi oss overflategrensen til det man kaller for fermisfæren. Denne kan være elliptisk hvis man har periodiske grensebetingelser, hvor de ulike retningene i stoffet har ulik lengde. Altså får man forskjellig lengde på impulsen i de ulike retningene.
+\deloppgave{b}
+Disse er alle koblet gjennom at $\frac{p_F^2}{2m} = E_F^2 = \frac{\hbar^2 k_F^2}{2m} = \frac{1}{2} mv_F^2 = \frac{3}{2} k_BT_F$. En typisk verdi for denne temperaturen er i orden av $10^4$ eller $10^5$ kelvin
+\deloppgave{c}
+$k_F $og $E_F$ har klare fysiske betydninger og kan måles ved hjelp av for eksempel fotoelektronspektroskopiteknikker (røntgenstråler eller elektroner inn; elektron ut). I det minste for våre formål kan $T_F$ og $v_F$ betraktes som nyttige alternative måter å beskrive $E_F$ på.
+\oppgave{2}
+Før jeg begynner er det nyttig å huske at $k \propto \sqrt{E}$:
+\begin{align}
+    D(E) &= \frac{dN}{dE} \\
+    &= \frac{d}{dE}\frac{\int_0^k dk S_n(k)}{\left(\frac{2\pi}{L}\right)^n} \\
+    &\propto \frac{d}{dE} \int_0^k dk S_n(k) \\
+    &\propto \frac{d}{dE} \int_0^k dk k^{n-1} \\
+    &\propto \frac{d}{dE} k^n \\
+    &\propto \frac{d}{dE} \sqrt{E}^n \\
+    &\propto E^{\frac{n}{2}-1}
+\end{align}
+\oppgave{3}
+La oss tegne en umklapp prosess og en N-prosess:
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\linewidth]{bilder_lf/umklapp_versus_n_prosess.png}
+    \caption{Umklapp versus N-prosess}
+    \label{fig:umklapp_versus_n_prosess}
+\end{figure}
+Anta at to fononer med bølgevektorene $\vec{k}_1$ og $\vec{k}_2$ kolliderer og produserer en tredje fonon med bølgevektor $\vec{k}_3$. Bevaring av krystallimpuls tillater de følgende to prosessene:
+\begin{equation}
+    \vec{k}_1 + \vec{k}_2 = \Bigg\{ \begin{array}{c} \vec{k}_3 \\ \vec{k}_3 + \vec{G}
+    \end{array}
+\end{equation}
+der G er en passende resiprokalgittervektor. Disse prosessene, kalt normal og Umklapp spredning, blir illustrert i figuren ovenfor. I tilfellet med Umklapp-spredning går summen $\vec{k}_1$ + $\vec{k}_2$ utenfor den første Brillouin-sonen og er dermed fullstendig ekvivalent med en bølge som kan beskrives innenfor Brillouin-sonen etter å ha lagt til en resiprokalgittervektor $\vec{G}$. I det normale tilfellet vil den totale bevaringen av fononsystemets moment bli opprettholdt i kollisjonen, noe som betyr at varmestrømtettheten ikke påvirkes av kollisjonen. Derfor bidrar ikke denne kollisjonen til termisk motstand (med andre ord er termisk ledningsevne uendelig). I Umklapp-prosessen vil den totale krystallimpulsen endre seg. Legg merke til at $\vec{k}_4 = \vec{k}_3+\vec{G}$ er rettet nesten motsatt av $\vec{k}_1$ og $\vec{k}_2$. Dette er dermed en svært effektiv mekanisme for å balansere temperaturen. Umklapp-prosessene gir med andre ord opphav til en endelig termisk motstand.
+\oppgave{4}
+Dette er hva man for når man kjører nettsiden:
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\linewidth]{bilder_lf/kode_øving_9.png}
+    \caption{Resultat av kode}
+    \label{fig:kode_øving_9}
+\end{figure}
+\deloppgave{a}
+Den første (øverste) undergrafen viser perioden til gitteret indikert med stjerner og en kontinuerlig linje som er en tilfeldig valgt periodisk funksjon med samme periode som gitteret, $ u_k(x) $.
+
+Den andre undergrafen viser de reelle og imaginære delene av planbølgen $\exp(i \vec{k} \cdot \vec{r}) $, dvs. $ \cos(kx) $ og $ \sin(kx) $ respektivt.
+Den tredje undergrafen viser de reelle og imaginære delene av Bloch-bølgefunksjonen $ \psi_k $.
+
+Til slutt viser den fjerde undergrafen den ikke normaliserte sannsynlighetsfordelingen $\rho(x) = |\psi_k|^2 $.
+\deloppgave{b}
+$a$ er gitterkonstanten.
+
+$B$ er en formparameter som endrer utseendet til den periodiske funksjonen.
+
+$k$ er bølgetallet til planbølgen.
+\deloppgave{c}
+Merk at fordelingen $p$ alltid har periodisitet lik gitterets og er symmetrisk med hensyn til gitterpunktene, uansett hvordan $a$, $B$ og $k$ er valgt!\ Sannsynlighetsfordelingen er en observerbar størrelse, og man ville derfor forvente at den viser periodisitet og symmetri til (Bravais) gitteret. Dette er ikke en formell bevis for Blochs teorem, men resultatene er definitivt konsistente og viser at Bloch-funksjonene har de ønskede egenskapene.
+
 \nyside
 \oving{10}
+\oppgave{1}
+\deloppgave{a}
+
+Isolatorer har bare fulle eller tomme bånd som er separert av store energiforskjeller. Som en konsekvens blir det derfor usannsynlig å termisk eksitere elektroner til høyere energitilstander.
+
+Ved null temperatur har også halvledere bare fulle eller tomme bånd. Imidlertid er energigapet mellom det høyeste fylte båndet og det laveste tomme båndet mindre enn for isolatorer, slik at ved en gitt endelig temperatur blir noen elektroner eksitert over energigapet og inn i et tomt bånd hvor de kan bidra til ladningsledning. Forskjellen mellom halvledere og isolatorer er ofte tatt å være en båndgap på noen få (2-3) eV.
+
+Metaller har minst ett delvis fylt energibånd, så det kreves bare en ubetydelig mengde energi for å flytte en elektron nær Fermi-energien til andre tilgjengelige tilstander. Metaller er derfor gode ledere.
+\deloppgave{b}
+ Et foton kan absorberes i et materiale hvis det er en fylt og en tom elektron-tilstand med en forskjell i energi som tilsvarer energien til fotonet. Videre må disse to tilstandene ha omtrent samme k-verdi, siden fotonenes bevegelsesmengde er liten sammenlignet med elektronene.
+\deloppgave{c}
+Energiforskjeller skyldes Bragg-spredte elektronbølger i krystallen. Ved Brillouinsonegrensen oppfylles Bragg-betingelsen, $2k \cdot G = G^2$. En bølge som beveger seg mot venstre (i en 1D-krystall) vil diffraktes mot høyre, og vice versa. Disse bølgene vil være stående bølger fordi de diffraktes ("reflekteres") frem og tilbake gjentatte ganger. For et periodisk potensial med atomer ved $x = na$, der $n$ er et heltall og $a$ er gitteravstanden, vil det være to typer stående bølger: en symmetrisk modus proporsjonal med $(\cos(\pi x/a)$, og en antisymmetrisk modus proporsjonal med $\sin(\pi x/a)$. Den symmetriske modusen vil ha høyere sannsynlighetstetthet for elektroner nær (positivt ladete) ioner og derfor lavere potensiell energi enn en bevegelig elektron. Elektronene i den antisymmetriske modusen vil ha høyere sannsynlighetstetthet mellom ionene og derfor høyere potensiell energi enn den bevegelige elektronen. Energiforskjellen er forskjellen i energi mellom den symmetriske og antisymmetriske modusen.
+\deloppgave{d}
+En Bloch-funksjon $\psi_{\vec{k}}(\vec{r}) = e^{i\vec{k}\cdot\vec{r}} u_{\vec{k}}(\vec{r})$ er en løsning til Schrödinger-likningen med et periodisk potensial. Det er produktet av en planbølge med restriksjoner på $\mathbf{k}$ pålagt av krystallens grensebetingelser, og en funksjon $u_{\mathbf{k}}(\mathbf{r})$ som har samme periodisitet som potensialet.
+\oppgave{2}
+\deloppgave{a}
+En primitiv enhetscelle er definert av at du har kun ett atom i hvert. Siden vi har $N$ atomer vil vi ha $N$ energinivåer for hvert bånd. På grunn av elektronenes spinnstruktur vil vi deretter få $2N$ for hvert bånd.
+\deloppgave{b}
+Siden vi har to elektroner per basis, vil vi få at hele valensbåndet/båndene er fylt opp. Derfor vil båndgapene avgjøre om vi får et metall, en isolator eller en halvleder. Jo større båndgap jo mer isolerende blir det. Hvis vi har rundt 1-3 elektronvolt vil vi ha en halvleder og alt under blir fort metaller og ledere.
+\deloppgave{c}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\linewidth]{bilder_lf/båndgap_divalent_1_dimensjon.png}
+    \caption{Båndgap til en divalent 1-dimensjonal kubisk krystall}
+    \label{fig:båndgap_divalent_1_dimensjon}
+\end{figure}
+I det tredimensjonale tilfellet har hver primitiv celle ett atom som bidrar med to valenselektroner. Følgelig er det akkurat nok elektroner til å fylle ett komplett bånd. Imidlertid er situasjonen mer komplisert enn i 1D, som illustrert i figur \ref{fig:båndgap_divalent_1_dimensjon}, der båndstrukturen er plottet langs to retninger i Brillouin-sonen. Vi ser at i deler av det første båndet, nær hjørnet av Brillouin-sonen (punkt R), er energien høyere enn i deler av det andre båndet nær sentrum av Brillouin-sonen (punkt X). Dette betyr at elektronene delvis vil fylle både det første og det andre båndet, noe som gjør denne krystallen til en metall og dermed en leder.
+\oppgave{3}
+\deloppgave{a}
+Midtpunktene på sidene vil ha et momentum i enten $k_x$ eller $k_y$ som er av orden $\sqrt{1}$. Hvis vi har det slik vet vi at hjørnene (på grunn av pytagoras) vil få en energi $\sqrt{2}$. Energien til frie elektroner er $E_k = \frac{\hbar^2k^2}{2m}$. Dermed ser vi med en gang at energien til elektronene i hjørnene vil bli $\sqrt{2}^2 = 2$ ganger så stort som de ved midtsidene.
+\deloppgave{b}
+På grunn av samme argument som i oppgave a vil vi i tre dimensjoner få 3 ganger så stor energi.
+\oppgave{4}
+\deloppgave{a}
+Ved å skrive om potensialet til eksponensialfunksjoner kan vi komme oss nærmere et svar her;
+\begin{equation}
+    U(x) = 2 U \cos(2\pi x / a) = U (e^{igx}+e^{-igx})
+\end{equation}
+Hvor vi har definert at $g = 2 \pi / a$. Altså vil $U_G = U$ når $G = \pm g$ og null ellers.
+\deloppgave{b}
+Sentrallikningen er:
+\begin{equation}
+    (\lambda_k - E)C_k + \sum_G U_G C_{k-G} = 0
+\end{equation}
+Ved å skrive ut summen har vi at:
+\begin{equation}
+    (\lambda_k - E)C_k + U C_{k+g}+  U C_{k-g} = 0
+\end{equation}
+Vi kan derimot en del av disse og få:
+\begin{align}
+    (\lambda_{k-2g} - E)C_{k-2g} + U C_{k-g}+  U C_{k-3g} &= 0\\
+    (\lambda_{k-g}- E)C_{k-g} + U C_{k}+  U C_{k-2g} &= 0\\
+    (\lambda_k - E)C_k + U C_{k+g}+  U C_{k-g} &= 0\\
+    (\lambda_{k+g} - E)C_{k+g}+ U C_{k+2g}+  U C_{k} &= 0\\
+    (\lambda_{k+2g}- E)C_{k+2g} + U C_{k+3g}+  U C_{k+g} &= 0
+\end{align}
+Som kan skrives som en matriselikning ( her forkaster vi $k\pm3g$ og får derfor en 5x5 matrise ):
+\begin{equation}
+    \begin{bmatrix} \lambda_{k-2g} - E & U & 0 & 0 & 0 \\
+     U &\lambda_{k-g} - E & U & 0 & 0  \\
+      0 & U &\lambda_{k} - E & U & 0  \\
+      0 & 0 & U &\lambda_{k+g} - E & U  \\
+      0 & 0 & 0 & U &\lambda_{k+2g} - E  \\
+      \end{bmatrix} \cdot \begin{bmatrix} C_{k-2g} \\ C_{k-g} \\ C_{k} \\ C{k+g} \\ C_{k+2g}\end{bmatrix} = \vec{0}
+\end{equation}
+For at dette skal være sant må determinanten til matrisen være null.
+\deloppgave{c}
+Hvis vi antar dette vil nesten alle matriseelementene bli null og ureleveante. Da får vi kun denne determinanten:
+\begin{align}
+    \left|\begin{bmatrix}
+     U &\lambda_{k-g} - E \\
+       \lambda_{k} - E & U\\
+      \end{bmatrix}\right| &= 0 \\
+\end{align}
+Ved sonegrensen er $k-g = k$. Da får vi:
+\begin{equation}
+    E = \lambda_k \pm U = \frac{\hbar^2 k^2}{2m} \pm U
+\end{equation}
+\deloppgave{d}
+\begin{align}
+    \psi(x) = \sum_k C_k e^{ikx} = \sum_{k-G} C_{k-G} e^{i(k-G)x} = e^{ikx} \sum_G e^{-iGx} = e^{ikx} u_k(x) = \psi_k(x)
+\end{align}
+\deloppgave{e}
+Ved å sette inn likningen for $E$ ved grensene inn i matrisen får vi at:
+\begin{equation}
+    \twomatrix{\pm U}{-U}{-U}{\pm U} \twovec{C_{k-g}}{C_{k}} = 0
+\end{equation}
+Dette har som løsning at $C_{k-g} = \pm C_k$. Da blir energiegentilstandene (ved å skrive ut summen av to elementer):
+\begin{align}
+    \psi^-_k &= \frac{2}{\sqrt{L}}\cos(\frac{1}{2} gx) \\
+    \psi^+_k &= \frac{2}{\sqrt{L}}\sin(\frac{1}{2} gx) \\
+\end{align}
+Vi kan plotte sannsynlighetsfordelingen til disse ved å ta de i annen. Vi plotter også U:
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\linewidth]{bilder_lf/øving_11_siste_bilde.png}
+    \caption{U(x) nede og sannsynlighetsfordelinger over}
+    \label{fig:øving_11_siste_bilde}
+\end{figure}
+
+Som vi har diskutert i klassen, gir diffraksjon ved sonegrensen stående bølger. Vi ser at én av løsningene fører til en opphopning av elektroner i områder med høy potensiell energi, mens den andre plasserer elektronene helst i områder med lav potensiell energi. Med andre ord løfter det periodiske krystallpotensialet degenerasjonen ved Brillouin-sonen-grensen, noe som resulterer i et båndgap.
 \nyside
 \oving{11}
+\oppgave{1}
+\deloppgave{a}
+Det kjemiske potensialet er energien som trengs for å legge til en partikkel til et system. I termodynamikk er dette definert som endringen i gibbs frie energi når man endrer antall partikler:
+\begin{equation}
+    \mu = \left(\frac{\partial G}{\partial N_i}\right)_{T, P \{N_j\}}
+\end{equation}
+Der G er Gibbs fri energi og $u_i$. $N_i$ er den kjemiske potensialet og antall partikler av type i. I metaller, er det kjemiske potensialet til elektronene ved null temperatur lik Fermi-energien, $\mu = E_F$. Ved romtemperatur er dette fortsatt en god tilnærming. Av denne grunn blir det kjemiske potensialet sjelden nevnt i sammenheng med metaller, og Fermi-energien brukes i stedet. For halvledere derimot, er det noe tvilsomt å definere Fermi-energien i det hele tatt, noe som resulterer i at det kjemiske potensialet brukes hyppigere for halvledere.
+\deloppgave{b}
+Doping av halvledere innebærer å legge til urenheter i et ellers rent metall. Her legger man da til enten stoffer som har mer eller mindre elektroner enn de atomene som allerede eksisterer i metallet. Da vil vi få mer elektroner enn trengs eller mindre atomer enn trengs i metallet. Altså har vi to typer doping. P-doping innebærer å legge til flere hull i stoffet, mens N-doping innebærer å legge til flere elektroner. Altså å gjøre stoffet mer negativt ladet. P-doping blir da å gjøre det mer positivt. Selv ved veldig lave temperaturer vil disse urenhetene drastisk endre på lederkonsentrasjonen i stoffet.
+\deloppgave{c}
+Elektronet refererer til den vanlige elementærpartikkelen. Siden elektronet har én enhet med negativ ladning, kan den virke som en ladningstransportør. Et hull er et nyttig konsept som forenkler mange argumenter og beregninger. Det er fraværet av et elektron i et ellers (nesten) fullt bånd. Når et hull beveger seg, er den underliggende mekanismen at elektroner beveger seg for å okkupere det ledige stedet, og effektivt etterlater et nytt hull et annet sted. Siden denne bevegelsen involverer mange elektroner, er det enklere å behandle dette som en partikkel med en enhet positiv ladning som beveger seg: et hull.
+\deloppgave{d}
+Effektiv masse er definert som:
+\begin{equation}
+    m^* = \left(\frac{1}{\hbar^2} \frac{d^2 E}{dk^2}\right)^{-1}
+\end{equation}
+Fra dette ser vi at den effektive massen avhenger av krumningen til energien/potensialet/energibåndene. 
+Vi ser at den effektive massen kan være både positiv og negativ. I tilfelle av en negativ effektiv masse, er elektrisk ledning hovedsakelig på grunn av hull, og ledningen kalles hull-lik.
+
+Viktigheten til den effektive massen kommer fra det faktum at elektronene i et bånd kan beskrives semi-klassisk som om de responderer på eksternt påførte elektromagnetiske felt med en masse lik den effektive massen. I mange tilfeller der vi trenger å kjenne et elektrons respons på et eksternt felt, kan vi derfor unngå mange av komplikasjonene til krystallen ved å erstatte elektronmassen med den effektive elektronmassen. For eksempel er mange-legeme-vekselvirkninger som neglisjeres når man forenkler Hamiltonfunksjonen til et enkelt-partikkelproblem, skjult i den effektive massen.
+\deloppgave{e}
+Hvis båndgapet er direkte (et godt eksempel er GaAs), kan et elektron bli eksitert over båndgapet uten å endre sin impuls-vektor. For et indirekte båndgap (et godt eksempel er Si), må k endres ved å involvere for eksempel absorpsjonen av en passende fonon med impuls $\kappa$ for at elektronet skal bli eksitert over båndgapet. Dette impliserer klart en mye mindre sannsynlig 3-partikkel-interaksjon.
+
+Typen båndgap kan bestemmes ved infrarød spektroskopi. Husk at fotoner i det synlige og infrarøde spekteret har neglisjerbar impuls sammenlignet med elektronbølgevektorer i faste stoffer. Hvis gapet er direkte, vil absorpsjonen øke brått så snart fotonenergien når Eg. For et indirekte gap bærer fotonet utilstrekkelig impuls for å gi endring i k. I stedet øker den fononassisterte absorpsjonen bare sakte. Først når fotonenergien blir tilstrekkelig høy til å eksitere en overgang uten en endring i k, sees en brå absorpsjonsøkning for indirekte gap halvledere. Denne energien blir ofte referert til som det optiske båndgapet \( E_G^{\text{optisk}} \). Denne energien blir da båndgapet nøyaktig der man kunne gått rett opp og bare eksiteres gjennom å endre kun energi som nevnt. Dette vil være mer energi enn hvis man også hadde fononer som hadde endret impulsen.
+
+\oppgave{2}
+Jeg eier ikke matlab.
+\oppgave{3}
+\deloppgave{a}
+I uelastisk spredning blir ikke den kinetiske energien bevart. For å måle fononspredningen, må energi utveksles mellom nøytronet og gitteret i spredningsprosessen.
+\deloppgave{b}
+Frie nøytroner følger samme energilov som alle andre frie massive partikler: $E = \frac{\hbar^2 k^2}{2m} = \hbar \omega$. Som gir oss at:
+\begin{equation}
+    \omega(k) = \frac{\hbar k^2}{2m}
+\end{equation}
+For den gitte bølgelengden blir $E = 3.28 meV, k = 1.26 Å^{-1}$.
+
+Vi legger merke til at for nøytroner er både energien og k av lignende størrelsesorden som de som finnes for fononer - dette er den viktigste grunnen til at nøytronspredning er så kraftig for å måle fonondispersjonsrelasjoner. (For teknikker basert på fotoner, er k tendens til å være for kort og energien for høy, noe som bare gir tilgang til "vertikale" overganger nær sonenaksens sentrum).
+\deloppgave{c}
+Vi vil her ha en generell type spredning i formen:
+\begin{equation}
+    \frac{\hbar^2 k^2}{2m_n^2} = \frac{\hbar^2 (k')^2}{2m_n^2} + \hbar\omega(\vec{q})
+\end{equation}
+Hvor vi har en partikkel (fonon) med impuls $\vec{q}$ som skapes. $\vec{k}$ er jo da impulsen til nøytronet før og $\vec{k'}$ er impulsen til nøytronet etter. For å ha bevaring av momentum må vi da ha:
+\begin{equation}
+    \hbar \vec{k} = \hbar \vec{k'} + \hbar \vec{q} - \hbar \vec{G}
+\end{equation}
+hvor vi har en resiprokalvektor for å passe på at sluttimpulsen forblir i den første Brillouinsonen. Altså trenger ikke impulsen å være bevart som vi har sett for krystallmimpulsen tidligere.
+\deloppgave{d}
+Siden fononer bare er relative bevegelser med hensyn til likevektsmassesentre, er deres fysiske impuls alltid null. Den fysiske impulsen bevares ved tilstrekkelig rekyl av krystallen som helhet. Likevel opptrer fononene som om de hadde fysisk impuls lik krystallimpulsen $\vec{q}$.
+\deloppgave{e}
+For å få $\omega$ vs $k$ er det nødvendig å måle energiforskjellen mellom de innkommende og spredte nøytronene som en funksjon av spredningsvektoren $Q = k' - k$. Monokromatoren brukes til å sette energien $E_i$ til de innkommende nøytronene. Den andre aksen bestemmer $Q = (4\pi \sin(\theta_s))/\lambda$, som tydeligvis er energiavhengig, ettersom $\lambda$ avhenger av $\theta_M$. Den tredje aksen brukes til å måle energien $E_f$ til nøytronene som har blitt spredt av prøven.
+
+\oppgave{4}
+\deloppgave{a}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\linewidth]{bilder_lf/halleffekten.png}
+    \caption{Hall-Effekten}
+    \label{fig:halleffekten}
+\end{figure}
+Vi vet at i et elektrisk felt vil elektronene bli påvirket av en Lorentz-kraft: $F_L = q \vec{v} \times \vec{B}$. Da er spørsmålet vårt, hva hastigheten her vil bli for strømningen vi kan se på bildet. Vel, vi vet at $I$ er mengde ladning per tidsenhet. Vi har da en viss mengde ladning som beveger seg gjennom lederen per sekund. Vel vi vet at $I = \rho * l * d * v * q$. Altså blir strømmen og mengde ladning per sekund blir ladningstettheten ganger arealet det strømmer gjennom ganger hastigheten det strømmer gjennom med ganger strømmen per lederenhet. Da har vi at:
+\begin{equation}
+    v = \frac{I}{\rho l d q}
+\end{equation}
+Vi vet at elektronene vil bevege seg gjennom stoffet langs strømmen (de blå pilene). De vil lorentzkraften pege til venstre eller til høyre langs de grønne pilene. Altså vil elektronene/Hullene klumpe seg opp langs kantene. Dette skjer fram til det er såpass mange der at de skaper et elektrisk felt $qE$ som er like sterkts som lorentz-krafta. Da vil vi få at:
+\begin{align}
+    F_E &= F_L \\
+    \Rightarrow qE = q v B = q  \frac{I}{\rho l d q} B \\
+    \Rightarrow E = \frac{IB}{\rho l d q}
+\end{align}
+Vi vet derimot at $V = -E * x = E * l = -\frac{IB}{\rho d q}$. Dermed har vi funnet spenningsfallet:
+\begin{equation}
+    V_H = -\frac{IB}{\rho d q}
+\end{equation}
+\deloppgave{b}
+
+Ladningsbærerne i halvledere er enten elektroner eller hull med ladning $-e$ og $+e$, henholdsvis. Fra forrige deloppgave, ser vi at spenningsfallet fortegn bestemmes av fortegnet til $q$. En Hall-måling kan derfor brukes til å avgjøre om elektroner eller hull er ansvarlige for ladningstransporten. Videre, ettersom absoluttverdien av ladningen til hver ladningsbærer alltid er $e$, kan størrelsen på Hall-spenningsfallet brukes til å bestemme konsentrasjonen av ledningselektroner eller ledningskull. Begge de ovennevnte uttalelsene er avhengige av om enten elektroner eller hull dominerer ladningstransporten (situasjoner der begge typer ladningsbærere gir betydelige bidrag til konduksjonen er ikke rett frem). I tillegg må forskjellige målinger av strømmen I, magnetfeltet $B$ og lederens tykkelse $d$ være tilgjengelig.
+
+Oppsummert vil enten elektroner eller hull klumpe seg på den ene siden og dette bestemmer fortegnet til spenningsfallet. Dette forteller oss hvilke som dominerer i stoffet.
+
 \newpage
 \printbibliography
 \end{document}

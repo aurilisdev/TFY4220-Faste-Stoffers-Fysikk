@@ -1,5 +1,5 @@
 % --- Template av Sebastian Siljuholtet Johansen ---
-% Oppdatert 07.05.2024
+% Oppdatert 11.05.2024
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesPackage{importer}[2024/05/07 Importer]
 
@@ -21,11 +21,11 @@
 % --- Custom Commands ---
 \newcommand{\subsubsubsection}[1]{\paragraph{#1}\mbox{}\\}
 \setcounter{tocdepth}{4}
-\newcommand{\twomatrix}[4]{\begin{pmatrix} #1 & #2 \\ #3 & #4 \end{pmatrix}}
-\newcommand{\threematrix}[9]{\begin{pmatrix} #1 & #2 & #3 \\ #4 & #5 & #6 \\ #7 & #8 & #9 \end{pmatrix}}
+\newcommand{\twomatrix}[4]{\begin{bmatrix} #1 & #2 \\ #3 & #4 \end{bmatrix}}
+\newcommand{\threematrix}[9]{\begin{bmatrix} #1 & #2 & #3 \\ #4 & #5 & #6 \\ #7 & #8 & #9 \end{bmatrix}}
 \newcommand{\twodiag}[2]{\twomatrix{#1}{0}{0}{#2}}
 \newcommand{\threediag}[3]{\threematrix{#1}{0}{0}{0}{#2}{0}{0}{0}{#3}}
-\newcommand{\fourdiag}[4]{\begin{pmatrix} #1 & 0 & 0 & 0 \\ 0 & #2 & 0 & 0 \\ 0 & 0 & #3 & 0 \\ 0 & 0 & 0 & #4 \end{pmatrix}}
+\newcommand{\fourdiag}[4]{\begin{bmatrix} #1 & 0 & 0 & 0 \\ 0 & #2 & 0 & 0 \\ 0 & 0 & #3 & 0 \\ 0 & 0 & 0 & #4 \end{bmatrix}}
 \newcommand{\twovec}[2]{\left(\!\!{\scriptsize\begin{array}{c}#1\\#2\end{array}}\!\!\right)}
 \newcommand{\threevec}[2]{\left(\!\!{\scriptsize\begin{array}{c}#1\\#2\end{array}}\!\!\right)}
 \newcommand{\fourvec}[2]{\left(\!\!{\scriptsize\begin{array}{c}#1\\#2\end{array}}\!\!\right)}
@@ -58,6 +58,8 @@
 \usepackage[a4paper, total={170mm, 245mm, footskip = 14mm}]{geometry}
 \setlength{\parindent}{0em}
 \setlength{\parskip}{0.8em}
+\usepackage{chngcntr}
+\counterwithin{equation}{section}
 
 % --- Mattematikk og fysikk ---
 \usepackage{siunitx}    % Si enheter

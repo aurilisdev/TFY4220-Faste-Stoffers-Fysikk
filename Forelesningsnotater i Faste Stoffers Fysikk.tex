@@ -14,7 +14,9 @@
 
 \nyside
 \section*{Ingress}
-Skrevet av studenter. Notater er tatt under forelesningene i TFY4220 Faste Stoffers Fysikk av Dag Werner Breiby. I tillegg har visse deler blitt utdypet og ekstra forklaringer har blitt lagt til visse deler.
+Skrevet av studenter. Notater er tatt under forelesningene i TFY4220 Faste Stoffers Fysikk av Dag Werner Breiby, men er hovedsakelig basert på boken Introduction to Solid State Physics av C. Kittel. Kapittel 9 og 10 derimot var relativt korte og alt var nok ikke skrevet ned av meg.
+
+Masse takk til Alexander Umansky som har stilt egne tegninger fra forelesning til disposisjon.
 \nyside
 \tableofcontents
 
@@ -927,7 +929,7 @@ Hvor $\vec{G}$ er en resiprokal gittervektor. Disse prosessene kalles for \under
 En annen måte å si dette er: Ethvert punkt utenfor den første Brillouin-sonen kan uttrykkes som et punkt innenfor sonen. Bølgevektoren kan bli matematisk transformert til et punkt innenfor den første Brillouin-sonen gjennom en $\vec{G}$-vektor. Denne transformasjonen tillater spredningsprosesser som ellers ville brutt impulsbevaring: to bølgevektorer som peker mot høyre kan kombineres for å lage en bølgevektor som peker mot venstre. Dette fordi man da må ha en $\vec{G}$-vektor som drar den resulterende impulsen til venstre igjen. Altså: hvis $\vec{K}_1 + \vec{K}_2 = \vec{K}_3$ ikke er i den første Brillouinsonen, vil man måtte legge til en $\vec{G}$ som drar den tilbake igjen. Denne ikke-bevaringen av impuls er grunnen til at krystallimpuls ikke er ekte impuls.
 \nyside
 \kapittel{Kapittel VI: Fri elektrongass / Fermigass}
-Vi kan forstå mange fysiske egenskaper til metaller, og ikke bare for enkle metaller, i forhold til den frie elektronmodellen. Ifølge denne modellen, blir valens-elektronene til de inneboende atomene i et stoff, ledningselektroner og kan bevege seg fritt gjennom volumet til metallet. Til og med i metaller hvor den frie elektrongassmodellen fungerer best, reflekterer ladningsfordelingen til ledningselektronene de sterke elektrostatiske potensialene til ionkjernen. Nytten til den frie elektromodellen er størst for egenskaper som mer eller mindre avhenger av de kinetiske egenskapene til ledningselektronene. Vekselvirkningene til ledningselektronene med ionene i gitteret vil bli sett på i \underline{neste} kapittel
+Vi kan forstå mange fysiske egenskaper til metaller, og ikke bare for enkle metaller, i forhold til den frie elektronmodellen. Ifølge denne modellen, blir valens-elektronene til de iboende atomene i et stoff, ledningselektroner og kan bevege seg fritt gjennom volumet til metallet. Til og med i metaller hvor den frie elektrongassmodellen fungerer best, reflekterer ladningsfordelingen til ledningselektronene de sterke elektrostatiske potensialene til ionkjernen. Nytten til den frie elektromodellen er størst for egenskaper som mer eller mindre avhenger av de kinetiske egenskapene til ledningselektronene. Vekselvirkningene til ledningselektronene med ionene i gitteret vil bli sett på i \underline{neste} kapittel
 
 De enkleste metallene er alkali-metallene: litium, sodium, potassium, cesium og rubidium. I et fritt elektron av sodium er valenselektronet i en 3s tilstand. I metallet blir dette elektron til et ledningselektron i 3s-ledningsbåndet.
 
@@ -1028,7 +1030,7 @@ Dette vil gi en løsning for hastigheten i formen:
 \begin{equation}
     v(t) = e^{- \Gamma t / m} - \underbrace{\frac{e}{\Gamma m} E}_{\text{Strømningshastighet}}
 \end{equation}
-Her vil elektroner fortsette å kollidere med fononer på grunn av gitterdefekter og urenheter. Ved å annerkjenne at $\Gamma = \frac{1}{\tau}$ vil vi da få en driftshastighet: $v_d = \frac{e \tau E}{m}$. Videre vil da elektronenes midlere frie veilengde bli til:
+Her vil elektroner fortsette å kollidere med fononer på grunn av gitterdefekter og urenheter. Ved å annerkjenne at $\Gamma = \frac{m}{\tau}$ vil vi da få en driftshastighet: $v_d = \frac{e \tau E}{m}$. Videre vil da elektronenes midlere frie veilengde bli til:
 \begin{equation}
     l = v_F \tau
 \end{equation}
@@ -1288,6 +1290,7 @@ Ved å sette inn disse utviklingene inn i Schrödinger-likningen får vi:
 \end{equation}
 Siden hver eneste Fourier-komponent må ha samme koefissient på begge sider av likningen får vi \underline{Sentrallikningen}:
 \begin{equation}
+\label{eq:sentrallikningen}
     \boxed{(\lambda_k - \epsilon)C(k) + \sum_G u_G C(k-G) = 0}
 \end{equation}
 med notasjonen:
@@ -1297,6 +1300,57 @@ med notasjonen:
 Denne formen av Schrödingerlikningen er en veldig nyttig form i et periodisk gitter, selv om den er helt uvant siden differensiallikningen har blitt byttet med mange algebraiske likninger. Mengden ser ekkel ut, siden det er uendelig mange verdier $C(k-G)$ man må finne ut av, men typisk er bare en veldig liten mengde nok for å se på det vi vil se på. Ofte så få som to eller fire.
 
 
+\begin{tcolorbox}[breakable,boxrule=0pt]
+  \seksjon{Kronig-Penney modellen med Sentrallikningen}
+  Som et eksempel av bruken til \ref{eq:sentrallikningen} tar vi for oss Kronig-penney modellen av en periodisk delta-funksjon potensial. Vi har dermed at:
+  \begin{equation}
+      U(x) = A a \sum_x \delta(x-sa) = 2 \sum_{G>0} U_G \cos(Gx)
+  \end{equation}
+  hvor $A$ er en konstant og $a$ er gitterlengdene. Summen over $s$ vil bli over alle heltall mellom $0$ og $\frac{1}{a}$. Grensebetingelsene er periodiske over en ring ev enhetslengde. Altså over $1 / a$ atomer. Dermed blir Fourier-komponentene til potensialet:
+  \begin{align}
+      U_G &= \int_0^1 dx U(x) \cos(Gx) = Aa\sum_s \int_0^1 dx \delta(x-sa) \cos(Gx) \\
+      &= Aa \sum_s \cos(Gsa) = A
+  \end{align}
+  Altså blir alle $U_G$ like for deltafunksjon-potensialet.
+
+    Vi skriver opp sentrallikningen med $k$ som Block-indeks:
+    \begin{equation}
+        (\lambda_k - \epsilon) C(k) + A \sum_n C(k - \frac{2\pi n}{a}) = 0 \tab[2cm] \lambda_k \defeq \frac{\hbar^2 k^2}{2m}
+    \end{equation}
+    hvor $n$ går over alle heltall. Vi definerer summeutrykket som $f(k)$;
+    \begin{equation}
+        f(k) = \sum_n C(k - \frac{2\pi n}{a}
+    \end{equation}
+    og får derfor at:
+    \begin{equation}
+        C(k) = - \frac{2mA/\hbar^2 f(k)}{k^2 - (2m\epsilon/\hbar^2)}
+    \end{equation}
+    Fordi summen vår for $f(k)$ går over alle koeffisientene $C$, har vi for enhver $n$ at:
+    \begin{equation}
+        f(k) = f(k - 2 \pi n / a)
+    \end{equation}
+    Hvis vi nå prøver å finne neste C får vi:
+    \begin{equation}
+        C(k-2\pi n/a) = - \frac{2mA/\hbar^2 f(k)}{(k-2\pi n/a)^2 - (2m\epsilon/\hbar^2)}
+    \end{equation}
+    Ved å nå summe over $n$ på begge sider vil vi på venstresiden av likningen få definisjonen av $f(k)$. Denne krysses med den fra høyresiden får å gi oss at:
+    \begin{equation}
+           1 = - \sum_n \frac{2mA/\hbar^2}{(k-2\pi n/a)^2 - (2m\epsilon/\hbar^2)}
+    \end{equation}
+    Som gir oss:
+    \begin{equation}
+           \frac{\hbar^2}{2mA} = - \sum_n \frac{1}{(k-2\pi n/a)^2 - (2m\epsilon/\hbar^2)}
+    \end{equation}
+    Vi kan nå bruke at ctn$(x) = \sum_n \frac{1}{n \pi + x}$, sammen med en relasjon for forskjellen mellom to kotangenter og for produktet av to kosinuser for å få at:
+    \begin{equation}
+          \frac{\hbar^2}{2mA} = - \frac{a^2 \sin(Ka)}{4Ka(\cos(ka) - \cos(Ka)} \tab[2cm] K^2 = \frac{2m\epsilon}{\hbar^2}
+    \end{equation}
+    Som gir oss at:
+    \begin{equation}
+        \frac{mA a^2}{2 \hbar^2} \frac{1}{Ka} \sin(Ka) + \cos(Ka) = \cos(ka)
+    \end{equation}
+    som er Kronig-Penney resultatet vi fikk tidligere, bare at da var $P = mA a^2 / 2 \hbar^2$
+\end{tcolorbox}
 % Forelesning {13.03.2024 10:15-12:00}
 \seksjon{Oppsummering av Sentrallikningen}
 Så langt har vi funnet at for frie elektroner så følger de følgende energirelasjon:
@@ -1364,7 +1418,7 @@ Fra de periodiske grensebetingelsene så får vi at: $\Delta k = \frac{2\pi}{L} 
 Hvis vi har \underline{et} valenselektron i hver primitive enhetscelle så vil materialet vårt være et \underline{metall}. Hvis det er \underline{to} valenselektroner per primitive enhetscelle så kan et bånd være helt fyllt, men ikke nødvendigvis. I 3 dimensjoner så kan båndene krysse over hverandre. Ved at disse båndene krysser hverandre mener jeg at: % fyll inn mer her.
 
 \seksjon{Tomgitter Tilnærming}
-I denne tilnærmingen lar vi potensialet $u \rightarrow 0$. Da blir alle Fourier-koeffisientene $u_g \rightarrow 0$. Konsekvensen her blir klart da at båndgapene forsvinner. Da blir sentrallikningen forenklet til at vi får frie elektroner igjen, som forventet. Det som er spennende å se på i denne frie modellen er hvordadan vi får energibånd får hver eneste $\vec{G}$. Dette er fordi alle løsninger med $\vec{k}$ vil også skape løsningene $\vec{k} + n \vec{G}, \tab[0.5cm] \vec{G} \in \mathbb{Z}$ Altså vil vi få veldig mange energinivåer: $E_n(\vec{k}) = \frac{\hbar^2(\vec{k} + \vec{G}_n)^2}{2m}$. Dette kan vi i se i bildet under:
+I denne tilnærmingen lar vi potensialet $u \rightarrow 0$. Da blir alle Fourier-koeffisientene $u_g \rightarrow 0$. Konsekvensen her blir klart da at båndgapene forsvinner. Da blir sentrallikningen forenklet til at vi får frie elektroner igjen, som forventet. Det som er spennende å se på i denne frie modellen er hvordan vi får energibånd får hver eneste $\vec{G}$. Dette er fordi alle løsninger med $\vec{k}$ vil også skape løsningene $\vec{k} + n \vec{G}, \tab[0.5cm] \vec{G} \in \mathbb{Z}$ Altså vil vi få veldig mange energinivåer: $E_n(\vec{k}) = \frac{\hbar^2(\vec{k} + \vec{G}_n)^2}{2m}$. Dette kan vi i se i bildet under:
 \begin{figure}[h]
   \centering
   \caption{1D - Overlappende Tomgitter Tilnærming: \cite{WikipediaEN:Empty_lattice_approximation}}
@@ -1397,17 +1451,17 @@ Her kan vi simplifisere dette utrykket siden alt annet enn $u_g$ og $u_{-g}$ bli
   &+ u_{0} c_{k} \\
   &+ u_{g} c_{k - g} \\
   &+ u_{2g} c_{k - 2g}  = 0 = \\
-  \left(\frac{\hbar^2 k^2}{2m} - E \right)c_k  &+ ... \\
+  \left(\frac{\hbar^2 k^2}{2m} - E \right)c_k \\
   &+ u_{-g} c_{k - (-g)} \\
   &+ u_{g} c_{k - g} = 0
 \end{align}
 Men nå vet vi jo at $k\rightarrow k-g$ også er en løsning. Altså gjelder også:
 \begin{align}
-  \left(\frac{\hbar^2 k^2}{2m} - E \right)c_k  &+ ... \\
+  \left(\frac{\hbar^2 (k-g)^2}{2m} - E \right)c_{k-g} \\
   &+ u_{-g} c_{k - g - (-g)} \\
   &+ u_{g} c_{k - g - g} = 0
 \end{align}
-Videre så er jo også $k \rightarrow k+g$ og $k\rightarrow k+2g$ og så videre for evig. Vi kan få dette i matriseform. Vi skriver derfor at: $\lambda_k \defeq \frac{\hbar^2k^2}{2m}$ og får:
+Videre så er jo også $k \rightarrow k+g$ og $k\rightarrow k+2g$ og så videre for evig. Vi kan få dette i matriseform. Vi skriver derfor at: $\lambda_k \defeq \frac{\hbar^2k^2}{2m}$ og får(husk at $u_g = u_{-g}$):
 \begin{align}
   \begin{bmatrix}
     \lambda_{k-2g} - E& u_g & 0 & 0 & 0 \\
@@ -1433,8 +1487,8 @@ Videre så er jo også $k \rightarrow k+g$ og $k\rightarrow k+2g$ og så videre 
 Vi kan trekke ut en mindre determinant av denne med dominante termer. Vi velger firkanten 11-22:
 \begin{align}
   \left | \begin{bmatrix}
-      u_g & \lambda_{k-g} - E & u_g\\
-     u_g & \lambda_{k} - E &  u_g \\
+      \lambda_{k-g} - E & u_g\\
+     u_g & \lambda_{k} - E \\
     \end{bmatrix} \right | &= 0 \\
      \Rightarrow (\lambda_{k-g} - E)(\lambda_k - E) - u_g^2 &= 0 \\
      \Rightarrow E(k) &= \frac{1}{2}\left(\lambda_k + \lambda_{k-g}\right) \pm \left[\frac{1}{4}\left(\lambda_{k-g} - \lambda_k\right) +u_g^2 \right]^{\frac{1}{2}}
@@ -1476,28 +1530,70 @@ Hvis vi nå definerer at $m^* = \left(\hbar^2 \frac{d^2 E}{dk^2}\right)^{-1}$ s�
 
 For frie elektroner blir jo da $m^* = m$, fra: $\frac{d^2 E}{dk^2} = \frac{d^2}{dk^2} \left(\frac{\hbar^2 k^2}{2m}\right) = \frac{\hbar^2}{m}$
 
-%Forelesning 08.04.2024
 \nyside
 \kapittel{Kapittel VIII: Halvledere}
+Ledningstettheten til forskjellige stoffer, forteller oss mye om dem. Om de er metaller, halvmetaller, halvledere og så videre. Verdiene for metaller er typisk i $10^{23}-10^{22}$, halvmetaller mellom $10^{22} - 10^{17}$ og halvledere går deretter ned til $10^{13}$. Halvledere er generelt klassifisert a v deres elektrisk motstand ved romtemperatur, med verdier mellom $10^{-2} - 10^9$ ohm-cm og avhenger sterkt av temperatur. Ved det absolutte nullpunkt vil en ren perfekt krystall av de fleste halvedere være en isolator, hvis vi definerer en isolator til å ha en motstand over $10^{14}$ ohm-cm.
+
+Enheter basert på halvledere inkluderer transistorer, brytere, dioder, fotovoltaiske celler, detektorer og termoresistorer. Disse kan bli brukt som enkeltkretser eller ta del i en. Vi hvil i dette kapitellet diskutere de sentrale egenskapene til noen av disse, og spesielt silicon, germanium og gallium arsenid. HVis man kaller et stoff for et $III-V$ stoff mener man at det ene atomet er trevalent og det andre er femvalent.
+
+En svært ren semileder som inneholder iboende ledningsevne er skilt fra urenhetsledningsevnen til mindre rene prøver. I det iboende temperaturområdet vil  de elektriske egenskapene til halvlederene ikke bli særdeles endret av unrenhetene.
+
+Båndgapet er forskjellen i energi mellom det laveste punktet i ledningspunktet og det høyeste punktet i valensbåndet. Disse punktente kalles for de respektive kantene til de to båndene.
+
+Når temperaturen øker, vil elektroner bli termisk eksitert fra valensbåndet til ledningsbåndet. Både elektronene i ledningsbåndet og de tomme orbitalene eller hullene i valensbåndet vil bidra til den elektriske ledningsevnen.
+
+Vi kaller antall hull i stoffet for $p$ og antall elektroner for $n$. Videre har vi to typer halvledere. Iboende/Rene eller urene halvledere. De rene halvlederene har at $n = p$, mens de urene ikke har det. Altså at $n \ne p$. Ved hjelp av å dope metaller (legge til andre atomer/urenheter i et rent metall) kan man øke eller minke $n$.
+\delkapittel{Båndgap}
+Den iboende ledningsevnen og iboende lederkonsentrasjonene er svært kontrollert av $E_g / k_B T$. Altså forholdet av båndgapet til varmeenergien. Når dette forholdet er stort vil konsentrasjonen av iboende ledere være lav og ledningsevnen vil være lav. Vi kan tegne et eksempel på hvordan tilstandstettheten vil se ut for de ulike stoffene vi har nevnt (\ref{fig:tilstandstetthet_metaller_isolatorer_osv}):
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\linewidth]{bilder/tilstandstetthet_metaller_isolatorer_osv.png}
+    \caption{Tilstandstettheten til ulike typer stoffer}
+    \label{fig:tilstandstetthet_metaller_isolatorer_osv}
+\end{figure}
+Her ser vi hvor fylte de ulike orbitalene vil være for de ulike stoffene. Vi ser også at grunnen til at isolatorer/halvledere har vansker for å ha en høy ledningsevne er på grunn av båndgapet. I disse stoffene er det vanskelig å eksitere elektroner over dette gapet og derfor vil det være få tilgjengelige lederelektroner.
+
+Det går an å måle disse båndgapene gjennom ulike prosesser. Direkte og indirekte absorsbjonsprosesser handler om at man kan måle visse båndgap gjennom å skyte fotoner på stoffet, for å eksistere elektroner. I andre må man indusere fononer i stoffet som så kan eksitere elektroner. Disse vil vi kunne måle og regne ut energien til når de faller tilbake igjen. Vi har derfor stoffer med indirekte og direkte båndgap.
+
+Man kan også regne ut båndgapet fra temperaturavhengigheten til ledningsevnen eller av lederkonsentrasjonen i det iboende spekteret. Denne lederkonsentrasjonen er målt gjennom målinger av Hall-spenn ingen og er noen ganger oppstøttet av andre typer ledningsevnemålinger.
+
+La oss derimot se litt nærmere på indirekte og direkte båndgap.
+
+\delseksjon{Direkte Båndgap}
+I materialer med et direkte båndgap, er den høyeste energitilstanden til valensbåndet plassert rett under den minste energitilstanden til ledningsbåndet i impulsrommet. Dette betyr at en elektron som eksiteres fra valensbåndet til ledningsbåndet kan gjøre dette uten endring i impuls.
+
+Som et resultat emitterer og absorberer direkte båndgapmaterialer lys effektivt fordi overgangen av et elektron fra valensbåndet til ledningsbåndet følges av utslipp eller absorpsjon av et foton med en energi tilsvarende båndgapet.
+
+Eksempler på materialer med direkte båndgap inkluderer galliumarsenid (GaAs), indiumfosfid (InP) og noen andre III-V-forbindelsessementer.
+\delseksjon{Indirekte Båndgap}
+I materialer med et indirekte båndgap, er den høyeste energitilstanden til valensbåndet ikke plassert rett over den minste energitilstanden til ledningsbåndet i impulsrommet. Som et resultat innebærer overgangen av et elektron fra valensbåndet til ledningsbåndet en endring i impuls.
+
+På grunn av denne impulsuoverensstemmelsen har indirekte båndgapmaterialer lavere effektivitet i lysutslipp og absorpsjon sammenlignet med direkte båndgapmaterialer. De krever ytterligere interaksjoner, som fononinteraksjoner, for å bevare impuls under overgangen.
+
+Silisium (Si) og germanium (Ge) er klassiske eksempler på materialer med indirekte båndgap. Selv om de kan utstede og absorbere lys, gjør de dette mindre effektivt sammenlignet med direkte båndgapmateriale
+\delseksjon{Direkte vs indirekte båndgap}
+Måten vi kan visualisere disse to prosessene er slik:
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.75\linewidth]{bilder/indirekte_versus_direkte_båndgap.png}
+    \caption{Indirekte versus direkte båndgap}
+    \label{fig:indirekte_versus_direkte_båndgap}
+\end{figure}
+\delkapittel{Hull}
+Egenskapene til ufylte orbitaler i et ellers fylt bånd er viktig i halvlederfysikk og i faststoffelektronikk. Disse ufylte orbitalene kalles ofte for hull, og uten hull ville det ikke vært noen transistorer. Et hull oppfører seg i et elektrisk og magnetisk felt som om dert har positiv elektrisk ladning $+e$. Grunnen er at hullet vil ha samme impuls som elektronet men i motsatt retning. Dette er det samme som å si at det har negativ masse men beveger seg i samme retning. Dette igjen kan tolkes som at hullet har motsatt ladning.
+
+%Forelesning 08.04.2024
 Ved null temperatur vil halvledere bli til insulatorer. Dette er fordi ved null temperatur vil et system ha falt ned i alle orbitalene så alle elektronene "sitter fast". Altså kreves det mye energi og et stort potensial over stoffet for å få til at elektroner hopper ut av disse orbitalene og begynner å bevege seg. 
+
 Altså kan vi si for halvledere at:
 \begin{itemize}
-  \item Konduktivitet øker når temperatur øker. Dette blir da fordi fler elektroner eksiteres til ledningsbåndene eller nærmere dem ved en høyere temperatur. Da er det lettere å bevege dem og dermed har vi som sagt at konduktiviteten øker.
+  \item Ledningsevne øker når temperatur øker. Dette blir da fordi fler elektroner eksiteres til ledningsbåndene eller nærmere dem ved en høyere temperatur. Da er det lettere å bevege dem og dermed har vi som sagt at konduktiviteten øker.
   
   NB!: I metaller vil en økende temperatur føre til mer og mer fononvekselsvirkninger som forstyrrer elektronene og dermed minker konduktiviteten.
   \item De har et båndgap på $\le 3 \text{eV}$.
   \item De har en ladningsbærerkonsentrasjon som er mye lavere enn for metaller. Altså har vi for metaller at $n \propto 10^{23} \ cm^{-3}$ elektroner, mens vi har opp til $n \propto 10^{13} \ cm^{-3}$ for halvlederen Germanium ved romtemperatur. Grunnen til at jeg spesifiserer romptemperatur er fordi metallene vil være fyllt opp med elektroner, mens de ikke er det for halvlederene. Altså vil antall elektroner i ledningsbåndene minke ved temperatur. Ladningsbærerkonsentrasjonen er jo da antall elektroner per volum i disse ledningsbåndene, og vil dermed også minke for halvledere ved lavere temperatur.
 \end{itemize}
-Nå definerer jeg at $n$ er antall elektroner i ledningsbåndene, mens $p$ er antall hull i valensbåndene. Da kan vi definere at:
 
-En \underline{iboende} eller \underline{ren} halvleder har $n = p$:
-\begin{itemize}
-  \item En slik halvleder må være \underline{veldig} ren. Derfor blir de ofte bare av akademisk interesse.
-\end{itemize}
-På den motsatte siden har vi \underline{ytre} eller \underline{urene} halvledere, som har $n \ne p$:
-\begin{itemize}
-  \item Her har vi \underline{Doping}: "urene" og andre typer atomer i krystallstrukturen som har en tendens til å ta eller gi elektroner til omgivelsene.
-\end{itemize}
 Så kan vi tegne frie elektroner og elektroner i et periodisk potensial, i tillegg til hvordan elektronene ville vært fylt opp i disse i metaller i motsetning til halvledere eller insulatorer:
 
 \begin{tikzpicture}
@@ -1572,14 +1668,7 @@ Så kan vi tegne frie elektroner og elektroner i et periodisk potensial, i tille
   \end{axis}
 \end{tikzpicture}
 
-% HER Videre har vi... (legg til mer her Sebastian)
 Noter at det kjemiske potensialet $\mu$ vil være i midten av båndgapet.
-
-\delkapittel{Hull}
-Et hull er en ledig orbital ("tilstand") i et ellers fylt bånd. Det oppfører seg som en partikkel med motsatt ladning til elektronene i båndene. Den effektive massen til et slikt hull vil også være motsatt. Altså $m^{*}_h = -m_e^{*}$.
-
-Fra før visste vi at effektiv masse $m^* \defeq \left(\hbar^2 \frac{d^2 E}{dk^2}\right)^{-1}$
-Har vi huller i båndene våre kan elektronene bevege seg i motsatt retning i forhold til det man hadde forventet når man legger til et potnesial. Altås får man da en slags negativ effektive masse på elektronene, mens hullene får en positiv masse.
 
 \seksjon{Båndstrukturen til GaAs og silikon}
 \begin{tikzpicture}
@@ -1631,49 +1720,72 @@ Hvis vi ser på et foton som har lik energi som båndgapet har vi:
 \end{align}
 Sammenlign med $g_1 = \frac{2 \pi}{a} \propto 10^{10} m^{-1}$.
 
-Altså ser vi at endringen man ville hatt i momentum ikke er i nærheten av nok til å komme seg ut av B.S-en. Altså er prosessen her en vertikal prosess til en veldig god approksimasjon. 
+Altså ser vi at endringen man ville hatt i impuls ikke er i nærheten av nok til å komme seg ut av B.S-en. Altså er prosessen her en vertikal prosess til en veldig god approksimasjon. 
 
-\seksjon{Å bruke absorbsjon til å forstå halvledere}
-Vi kan bruke lys til å forstå halvledere. La oss se på hvor mye lys som er absorbert i forhold til energi:
-\begin{tikzpicture}
-  \centering
-  \begin{axis}[
-    axis lines = left,
-    title = Lys absorbsjonn,
-    xlabel = k,
-    ylabel = E,
-    width = 10cm,
-    height = 7cm
-  ]
-  \addplot[domain=5:10, red]{3 / (1 + e^(-(x - 7.5)*1.5))};
-  \addplot[domain=5:10, blue]{3 / (1 + e^(-(x - 8.5)*5))};
-  \addplot[mark=none, black, dotted, thick] coordinates {(0,0) (0, 5)};
-  \end{axis}
-\end{tikzpicture}
-
-
-Her er de to fargene direkte versus inderekte absorbsjon. Altså ser vi at de to tilfellene gir forskjellige grafer.
+\delkapittel{Iboende lederkonsentrasjon}
+Vi vil vite konsentrasjonen av iboende ledere som en funksjon av temperatur i form av gåndgapet. Vi gjør  utregningen for enkle parabolske båndgrenser. Vi regner først ut antall elektroner i ledningsbåndet ved $T$ i form av $\mu$. Denne $\mu$-en vil være ferminivået. Ved temperaturene vi er interessert i vil $\epsilon - \mu >> k_BT$ slik at Fermi-Dirac-fordelingen reduseres til:
 \begin{equation}
-  I(\lambda) = I_0(\lambda) e^{-\mu (\lambda) s}
+    f_e  = \frac{1}{e^{(E - \mu ) /k_BT}+1}\approx e^{(\mu - E) /k_BT} = e^{(E_F - E)/k_BT}
 \end{equation}
+Ved et båndgap er dette en god antagelse, siden vi vil være under og over båndgapet. Slike båndgap er jo over 1eV, mens $k_B T$ vil ikke nå dette før 20000 kelvin. Vi vil være ved en energi som er halvparten av båndgapet unna ferminivået og derfor vil alltid dette være en god antagelse.
 
+For hullene vil vi ha at:
+\begin{equation}
+    f_h = 1 -f_e = \frac{1}{e^{(E_F - E)/ k_B T}  + 1}
+\end{equation}
+Her vil jo alltid E være mindre enn ferminivået. Og mindre eller lik $E_v$. På grunn av samme argument som for $f_e$ vil vi da kunne tilnærme det over:
+\begin{equation}
+    f_h = 1 - f_e \approx e^{(E - E_F)/ k_B T}
+\end{equation}
+For elektronene i ledningsbåndene vil vi ha at:
+\begin{equation}
+    \epsilon_k = E_c + \frac{\hbar^2 k^2}{2m_e}
+\end{equation} Og for valenselektronene:
+\begin{equation}
+    \epsilon_k = E_v - \frac{\hbar^2 k^2}{2m_h}
+\end{equation}
+Hvor $E_c$ er energien nederst i ledningsbåndet, $E_v$ er energien øverst i valensbåndet og hvor massene er de effektive massene til hullene og elektronene. Altså vil for eksempel bevegelsesenergien til hullene da bli mindre enn null. Hvis vi husker tilstandstettheten fra tidligere:
+\begin{equation}
+    D(E) = \frac{dN}{dE} = \frac{V}{2\pi^2} \left(\frac{2m}{\hbar^2}\right)^{\frac{3}{2}}\sqrt{E}
+\end{equation}
+Må vi ta hensyn til at den energien vi bryr oss om for denne tilstandstettheten er det som er vekk fra enten $E_c$ eller $E_v$. Altså er det som at vi er ved den minste mulige k'en når vi er ved disse verdiene. Derfor må formelen endres til å ta hensyn til at vi vil ha energier som starter ved denne verdien. Vi antar at vi har en normal tilstandsfordeling vekk fra disse punktene:
+\begin{align}
+    D_e(E) &= \frac{1}{2\pi^2} \left(\frac{2m_e}{\hbar^2}\right)^{\frac{3}{2}} \sqrt{E-E_c}\\
+    D_h(E) &= \frac{1}{2\pi^2} \left(\frac{2m_h}{\hbar^2}\right)^{\frac{3}{2}} \sqrt{E_v - E}
+\end{align}
+Vi får da at:
+\begin{align}
+    n &= \int_{E_c}^\infty D_e(E) f_e(E) dE \\&=\frac{1}{2\pi^2} \left(\frac{2m_e}{\hbar^2}\right)^{\frac{3}{2}} e^{E_F / k_BT}\int_{E_c}^\infty \sqrt{E-E_c} e^{-E/k_BT} \\
+    &= 2 \left(\frac{m_e k_BT}{2 \pi \hbar^2}\right)^{\frac{3}{2}} e^{(E_F - E_c) / k_BT}
+\end{align}
+På samme måte kan vi regne ut for hullene (her må vi integrere fra negativ uendelig siden hullene kan ha negativ uendelig energi):
+\begin{align}
+    p &= \int_{-\infty}^{E_v} D_e(E) f_e(E) dE \\&=\frac{1}{2\pi^2} \left(\frac{2m_e}{\hbar^2}\right)^{\frac{3}{2}} e^{-E_F / k_BT}\int_{-\infty}^{E_v} \sqrt{E_v-E} e^{E/k_BT} \\
+    &= 2 \left(\frac{m_h k_BT}{2 \pi \hbar^2}\right)^{\frac{3}{2}} e^{(E_v-E_F) / k_BT}
+\end{align}
+Ved å da gange disse sammen får vi:
+\begin{align}
+    np &= 4 \sqrt{m_h m_p}\left(\frac{ k_BT}{2 \pi \hbar^2}\right)^{3} e^{\underbrace{E_v-E_c}_{=-E_G} / k_BT}\\
+    &= \frac{\sqrt{m_h m_p}}{2} \left(\frac{ k_BT}{\pi \hbar^2}\right)^{3} e^{-E_G / k_BT}
+\end{align}
+Dette resultatet inneholder ikke ferminivået $E_f$. I tillegg er dette konstant ved en gitt temperatur i forhold til endringer i stoffet.
 
-
-% IVars notater
-% Forelesning en eller annen gang
-
-
-
-% Forelesning 15.04.2024
-\delkapittel{Inneboende/Rene halvledere}
+Hvis vi ser på en iboende halvleder får vi at $n = p$. Dette gir oss at:
+\begin{equation}
+    n_i = p_i = 2 \left(\frac{k_BT}{2\pi \hbar^2}\right)^{\frac{3}{2}} (m_e m_h)^{\frac{3}{4}}e^{-E_G / 2k_BT}
+\end{equation}
+Ved å nå sette svaret vårt for $n$ lik dette, vil vi få at:
+\begin{equation}
+    \mu = \frac{1}{2} E_g + \frac{3}{4} k_BT \ln(\frac{m_h}{m_e})
+\end{equation}
 \delkapittel{Dopede/Urene halvledere}
-Som vi har utledet i forrige delkappitel hadde vi at:
+Som vi har utledet i forrige delkapittel hadde vi at:
 \begin{align}
   n &= \frac{1}{V} \int_{E_g}^{\infty} D_c(E) f_c(E, T)dE = \underbrace{\frac{1}{\sqrt{2}} \left( \frac{m_e^{*} k_B T}{\pi \hbar^2}\right)^{\frac{3}{2}} e^{-\frac{(E_g - \mu)}{k_B T}} }_{\propto 10^{25} m^{-3}\text{ for } T \approx T_{\text{romtemp}}} \\
   p &=\frac{1}{V} \int_{-\infty}^0 D_v(E) (1-f_e) dE = \frac{1}{\sqrt{2}} \left( \frac{m_h^{*} k_B T}{\pi \hbar^2}\right)^{\frac{3}{2}} e^{-\frac{\mu}{k_B T}}\\
   \Rightarrow np &= 4 \left(\frac{k_B T}{2 \pi \hbar^2}\right)^3 (m_e^{*} m_h^{*})^{\frac{3}{2}} e^{-\frac{E_g}{k_B T}}
 \end{align}
-Altså har vi ingen $\mu$-avhengighet. Ved inneboende halvledere har vi at $n=p$ (noter at np = konstant), som gir oss (ved å løse likningene over for $\mu$):
+Altså har vi ingen $\mu$-avhengighet. Ved iboende halvledere har vi at $n=p$ (noter at np = konstant), som gir oss (ved å løse likningene over for $\mu$):
 \begin{equation}
   \mu = \frac{E_g}{2} + \frac{3}{4} k_B T \ln{\left(\frac{m_h^{*}}{m_e^{*}}  \right)}
 \end{equation}
@@ -1690,7 +1802,7 @@ Nå har vi da at dopede halvledere deles inn i to grupper. N og P-type.
     \item Igjen er det Si og Ge som brukes, men for å dope her bruker mann som oftest gruppe 3 elementer. Hovedbæreren i disse halvlederene er hull.
   \end{itemize}
 \end{itemize}
-Typiske tall her er da at man har mellom  0.0000001\% - 0.001\% med urenheter i et stoff. Å notere seg her er at Si har $5 * 10^{28}$ atomer per $m^3$, og en inneboende Ladningsbærerkonsentrasjon på $\approx 10^{16}$ per $m^3$ ved romtemperatur. Oppsummert kan vi da se at vi bruker elementer fra gruppe 4 som Si og Ge og doper dem med donorer eller motagere av elektroner fra gruppe 3 og 5. Slike små addisjoner av stoffer kan faktisk øke konduktiviteten til et stoff med hele 10 000x!
+Typiske tall her er da at man har mellom  0.0000001\% - 0.001\% med urenheter i et stoff. Å notere seg her er at Si har $5 * 10^{28}$ atomer per $m^3$, og en iboende Ladningsbærerkonsentrasjon på $\approx 10^{16}$ per $m^3$ ved romtemperatur. Oppsummert kan vi da se at vi bruker elementer fra gruppe 4 som Si og Ge og doper dem med donorer eller motagere av elektroner fra gruppe 3 og 5. Slike små addisjoner av stoffer kan faktisk øke konduktiviteten til et stoff med hele 10 000x!
 
 Denne dopingen gir nye tilstander i båndgapet og endrer det kjemiske potensialet. Disse ligger mellom ledningsbåndet og valensbåndet og for en n-type halvleder ligger den over, mens for en p-type halvleder ligger den under. Da flyttes det kjemiske potensialet fra halvveis til mellom disse donortilstandene og ledningsbåndet for n-type halvledere mens for p-type halvledere ligger de da nede mellom donortilstandene og  valensbåndet.
 
@@ -1716,7 +1828,7 @@ En kvantekorall har en diameter på $\approx 70 Å$. Man før frie elektroner p�
   \label{fig:kvantekorallen}
 \end{figure}
 
-Den letteste måten å modellere denne er ved å velge et potensial som er uendelig utenfor korallen og 0 innenfor. Altså blir dette en sfærisk uendelig brønn. Med dette potensialet får vi løsninger i formen til bessel-funksjonene: $\\psi_x(R) = AJ_m(kr) + \underbrace{BY_m(kr)}_{=0 \text{ fordi $Y_m$ divergerer når $r\rightarrow 0$}}$, med betingelsen $J_m(ka)$ og $\varepsilon = \frac{\hbar^2 \alpha*2}{2ma^2}$
+Den letteste måten å modellere denne er ved å velge et potensial som er uendelig utenfor korallen og 0 innenfor. Altså blir dette en sfærisk uendelig brønn. Med dette potensialet får vi løsninger i formen til bessel-funksjonene: $\psi_x(R) = AJ_m(kr) + \underbrace{BY_m(kr)}_{=0 \text{ fordi $Y_m$ divergerer når $r\rightarrow 0$}}$, med betingelsen $J_m(ka)$ og $\varepsilon = \frac{\hbar^2 \alpha*2}{2ma^2}$
 \delkapittel{Halvleder-nanopartikler / Kvantepunkter ($r \le 100nm$)}
 For å lage et elektron-hull par må du ha like mye energi som båndgapet i halvederen. I en halvleder nano-krystall vil vi få:
 \begin{equation}
@@ -1726,7 +1838,7 @@ Hvor her $\mu$ er den reduserte massen til elektronet og hullets effektive masse
 \begin{figure}[h]
   \centering
   \caption{Kvantepunktstoff}
-  \includegraphics[scale=0.4]{bilder/kvantepunktstoff.jpg}
+  \includegraphics[scale=0.3]{bilder/kvantepunktstoff.jpg}
   \label{fig:kvantepunktstoff}
 \end{figure}
 
